@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayfree.github.io/news/article-21888.htm" />
+    <title>css本文在背景之上,css实现文字在背景图片之上</title>
+        <meta name="description" content="效果：        非常感谢！ 您已投票：{{item.votetime}}  抱歉，您未完成投票~   data() { return { imgsrc1:require('@/common/im" />
+        <link href="/assets/website/css/clashv2rayfree/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="__ADDON__/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <!--google fonts-->
+    <script src="/assets/website/js/frontend/clashv2rayfree/jquery-1.11.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashv2rayfree/bootstrap.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NF953KP3Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0NF953KP3Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--header-top start here-->
+    <div class="top-header">
+    </div>
+    <!--header-top end here-->
+    <!--header start here-->
+    <!-- NAVBAR
+		================================================== -->
+    <div class="header w3l">
+        <div class="fixed-header">
+            <div class="navbar-wrapper">
+                <div class="container">
+                    <nav class="navbar navbar-inverse navbar-static-top">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                                                <a class="navbar-brand" href="/">Clash V2ray Free</a>
+                                                            </div>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <nav class="cl-effect-16" id="cl-effect-16">
+                                <ul class="nav navbar-nav">
+                                                                        <li>
+                                        <a href="/">首页</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/free-nodes/">免费节点</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/paid-subscribe/">推荐机场</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/news/">新闻资讯</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="#">关于</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">联系</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </nav>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--about strat here-->
+    <div class="about">
+        <div class="container">
+            <div class="about-main">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ol class="breadcrumb">
+                          <li><a href="/">首页</a></li>
+                          <li><a href="/news/">新闻资讯</a></li>
+                          <li class="active">正文</li>
+                        </ol>
+                        <div class="about-top">
+                            <h1>css本文在背景之上,css实现文字在背景图片之上</h1>
+                        </div>
+                        <div class="about-bottom">
+                                              				  				  				<div id="content_views" class="htmledit_views"> <div style="font-size:16px;"> <p>效果：</p> <p align="center"><img decoding="async" src="http://img.555519.xyz/uploads3/20220604/a4567d4f3d153a0e574f9725a4cb2ec7.jpg" alt="css本文在背景之上,css实现文字在背景图片之上"></p> <div class="imgs"> <div class="background"> <p align="center"> </div> <div class="front"> <div> <p>非常感谢！</p> <p>您已投票：{<!-- -->{item.votetime}}</p> </div> <p style="color:#999999;">抱歉，您未完成投票~</p> </div> </div> <pre><code class="Bash"><xmp>data() { return { imgsrc1:require('@/common/imgs/yitoupiao.png'),  imgsrc2:require('@/common/imgs/weiwancheng.png'),  }  },</xmp></code></pre> <p>外面大的div：设置宽高；</p> <p>背景图片：1)如果是铺满则宽高都设置100%，2)如果只占一个部分可设置定位。重点：z-index一定要比文字的层级低，否则会被遮住；</p> <p>文字：根据需求放置位置可定位可不定位，重点z-index设置高于图片；</p> <pre><code class="Bash"><xmp>.imgs { background: #fff;  position: relative;  width: 100%;  height: 250px;  color: #195541;  .background{ // width:100%;  // height:100%; /**宽高100%是为了图片铺满屏幕 */  // z-index:-1;  z-index:1;  position: absolute;  width: 250px;  height: 100%;  right: 20px;  bottom: 0px;  }  .front{ z-index:2;  position: absolute;  text-align: center;  top: 39%;  left: 25%;  font-weight: normal;  line-height: 40px;  font-size: 28px;  }  }</xmp></code></pre> <p>开发过程中遇到一个bug：就是我一开始设置的背景图片z-index为-1，导致在h5上，背景图片一会儿能显示一会儿没法显示，后来改为正数1，才解决了这个问题。</p> <p>到此这篇关于css实现文字在背景图片之上的文章就介绍到这了,更多相关css文字在背景图片上内容请搜索萬仟网以前的文章或继续浏览下面的相关文章，希望大家以后多多支持萬仟网！</p> </div> </div> <p></p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-21887.htm">SpringMVC 执行流程</a></p>
+                                        <p>下一个：<a href="/news/article-22346.htm">虚拟机搭建负载均衡，mysql主从复制和读写分离（四、搭建主从复制和读写分离）</a></p>
+                                    </div>
+                                        </div>
+
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-12-3-clash-node-daily-updates.htm" title="「12月3日」最高速度21.3M/S，2024年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接">「12月3日」最高速度21.3M/S，2024年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-3-free-subscribe-node.htm" title="「10月3日」最高速度21.9M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接">「10月3日」最高速度21.9M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-16-clash-v2ray-ss-ssr.htm" title="「11月16日」最高速度20.6M/S，2024年V2ray/SSR/Clash/Shadowrocket每天更新免费节点订阅链接">「11月16日」最高速度20.6M/S，2024年V2ray/SSR/Clash/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-17-free-shadowrocket-node.htm" title="「11月17日」最高速度22.4M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接">「11月17日」最高速度22.4M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-18617.htm" title="人用针剂跟畜用针剂一样吗（兽用针和人用针的针同的吗?）">人用针剂跟畜用针剂一样吗（兽用针和人用针的针同的吗?）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-26-free-node-subscribe.htm" title="「11月26日」最高速度21M/S，2024年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接">「11月26日」最高速度21M/S，2024年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-5-24-clash-v2ray-ss-ssr.htm" title="「5月24日」最高速度19.9M/S，2024年Clash/Shadowrocket/SSR/V2ray每天更新免费节点订阅链接">「5月24日」最高速度19.9M/S，2024年Clash/Shadowrocket/SSR/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-18-free-shadowrocket-node.htm" title="「11月18日」最高速度22.7M/S，2024年Clash/V2ray/SSR/Shadowrocket每天更新免费节点订阅链接">「11月18日」最高速度22.7M/S，2024年Clash/V2ray/SSR/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-20-free-shadowrocket-node.htm" title="「10月20日」最高速度19.5M/S，2024年Shadowrocket/V2ray/Clash/SSR每天更新免费节点订阅链接">「10月20日」最高速度19.5M/S，2024年Shadowrocket/V2ray/Clash/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-4-15-clash-node.htm" title="「4月15日」最高速度22.2M/S，2024年Shadowrocket/V2ray/SSR/Clash每天更新免费节点订阅链接">「4月15日」最高速度22.2M/S，2024年Shadowrocket/V2ray/SSR/Clash每天更新免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-05/" title="2024-05 归档">2024-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2024-04/" title="2024-04 归档">2024-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about end here-->
+        <!--copy rights start here-->
+    <div class="copy-rights">
+        <div class="container">
+            <div class="copy-rights-main">
+                <p>
+                    ClashV2rayFree官网节点站 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
