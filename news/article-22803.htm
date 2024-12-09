@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayfree.github.io/news/article-22803.htm" />
+    <title>Kafka如何保证可靠的数据传递</title>
+        <meta name="description" content="1、复制系数N replication.factor 每个主题的Partition都会有N个副本 这样，在N-1个broker失效的情况下，仍然能从主题读取数据或向主题写入数据 复制系数N需要至少N个" />
+        <link href="/assets/website/css/clashv2rayfree/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="__ADDON__/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <!--google fonts-->
+    <script src="/assets/website/js/frontend/clashv2rayfree/jquery-1.11.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashv2rayfree/bootstrap.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NF953KP3Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0NF953KP3Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--header-top start here-->
+    <div class="top-header">
+    </div>
+    <!--header-top end here-->
+    <!--header start here-->
+    <!-- NAVBAR
+		================================================== -->
+    <div class="header w3l">
+        <div class="fixed-header">
+            <div class="navbar-wrapper">
+                <div class="container">
+                    <nav class="navbar navbar-inverse navbar-static-top">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                                                <a class="navbar-brand" href="/">Clash V2ray Free</a>
+                                                            </div>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <nav class="cl-effect-16" id="cl-effect-16">
+                                <ul class="nav navbar-nav">
+                                                                        <li>
+                                        <a href="/">首页</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/free-nodes/">免费节点</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/paid-subscribe/">推荐机场</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/news/">新闻资讯</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="#">关于</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">联系</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </nav>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--about strat here-->
+    <div class="about">
+        <div class="container">
+            <div class="about-main">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ol class="breadcrumb">
+                          <li><a href="/">首页</a></li>
+                          <li><a href="/news/">新闻资讯</a></li>
+                          <li class="active">正文</li>
+                        </ol>
+                        <div class="about-top">
+                            <h1>Kafka如何保证可靠的数据传递</h1>
+                        </div>
+                        <div class="about-bottom">
+                                              				  				  				<div id="content_views" class="htmledit_views"> <h3>1、复制系数N</h3> <p>replication.factor</p> <p>每个主题的Partition都会有N个副本</p> <p>这样，在N-1个broker失效的情况下，仍然能从主题读取数据或向主题写入数据</p> <p>复制系数N需要至少N个broker，而且会有N个数据副本</p> <h3>2、不完全的首领选举</h3> <p>unclean.leader.election</p> <p>如果设为true，当分区首领不可用时，我们允许不同步的副本(不在ISR中)成为首领，需要承担丢失数据和出现数据不一致的风险。</p> <p>如果设为false，当分区首领不可用时，我们只允许同步的副本(在ISR中)成为首领，但如果此时没有同步的副本，我们只能等待原先的首领上线，降低了可用性。</p> <h3>3、最少同步副本</h3> <p>min.insync.replcas</p> <p>对于一个包含3个副本的主题，如果min.insync.replcas被设为2，那么至少要存在两个同步副本才能向分区写入数据</p> <p>如果不满足两个同步副本，那么broker会停止接受生产者的请求。尝试发送数据的生产者会受到NotEnoughReplicasException异常。消费者仍然可以继续读取已有的数据。</p> <p>这样是为了避免在发生不完全选举时数据的写入和读取出现非预期的行为</p> <h3>4、生产者保证</h3> <p>1)acks 0，1，-1/all</p> <p>通过acks=all，保证消息达到所有的副本</p> <p>2)retries 重试次数</p> <p>3)开发人员针对异常进行处理</p> <p>例如将异常的消息保存起来，后续处理</p> <h3>5、消费者保证</h3> <p>1）group.id</p> <p>消费者组，同一个消费者组中的消费者只会分到主题分区的一个子集</p> <p>2）auto.offset.reset</p> <p>在没有偏移量可提交时（比如消费者第一次启动时）或者请求的偏移量在broker上不存在时(发生了rebalance)，消费者应该获取什么偏移量</p> <p>earliest,消费者会从分区的开始位置读取数据，会导致消费重复数据</p> <p>lastest,消费者会从分区的末尾开始读取数据，这样可以减少处理重复数据，但很有可能会错过一些消息</p> <p>3) enable.auto.commit</p> <p>是否允许自动提交</p> <p>4) auto.commit.interval.ms</p> <p>自动提交间隔时间</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-22350.htm">宠物医院办证流程图（宠物医院办证流程图）</a></p>
+                                        <p>下一个：<a href="/news/article-22804.htm">动物疫苗管理法律法规有哪些要求 动物疫苗管理法律法规有哪些要求呢</a></p>
+                                    </div>
+                                        </div>
+
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-8-31-free-v2ray.htm" title="「8月31日」最高速度18.3M/S，2024年Shadowrocket/V2ray/Clash/SSR每天更新免费节点订阅链接">「8月31日」最高速度18.3M/S，2024年Shadowrocket/V2ray/Clash/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-5-29-free-v2ray.htm" title="「5月29日」最高速度19.4M/S，2024年Shadowrocket/Clash/SSR/V2ray每天更新免费节点订阅链接">「5月29日」最高速度19.4M/S，2024年Shadowrocket/Clash/SSR/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-8-20-free-high-speed-nodes.htm" title="「8月20日」最高速度20.9M/S，2024年SSR/V2ray/Clash/Shadowrocket每天更新免费节点订阅链接">「8月20日」最高速度20.9M/S，2024年SSR/V2ray/Clash/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-18618.htm" title="青浦二中本科录取率2021（青浦二中本科录取率美术班）">青浦二中本科录取率2021（青浦二中本科录取率美术班）</a></li>
+                        <li class="py-2"><a href="/news/article-19599.htm" title="全国宠物粮食基地排名第一（中国宠物粮之乡）">全国宠物粮食基地排名第一（中国宠物粮之乡）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-5-14-free-high-speed-nodes.htm" title="「5月14日」最高速度22.9M/S，2024年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接">「5月14日」最高速度22.9M/S，2024年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-12-free-subscribe-node.htm" title="「7月12日」最高速度22.9M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接">「7月12日」最高速度22.9M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-21-free-v2ray.htm" title="「7月21日」最高速度18.7M/S，2024年Shadowrocket/SSR/Clash/V2ray每天更新免费节点订阅链接">「7月21日」最高速度18.7M/S，2024年Shadowrocket/SSR/Clash/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-6-15-free-high-speed-nodes.htm" title="「6月15日」最高速度22.7M/S，2024年SSR/Shadowrocket/V2ray/Clash每天更新免费节点订阅链接">「6月15日」最高速度22.7M/S，2024年SSR/Shadowrocket/V2ray/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-28-free-node-subscribe.htm" title="「9月28日」最高速度19.6M/S，2024年V2ray/SSR/Clash/Shadowrocket每天更新免费节点订阅链接">「9月28日」最高速度19.6M/S，2024年V2ray/SSR/Clash/Shadowrocket每天更新免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-05/" title="2024-05 归档">2024-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2024-04/" title="2024-04 归档">2024-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about end here-->
+        <!--copy rights start here-->
+    <div class="copy-rights">
+        <div class="container">
+            <div class="copy-rights-main">
+                <p>
+                    ClashV2rayFree官网节点站 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
