@@ -11,7 +11,7 @@
     <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
     <!-- Custom Theme files -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="__ADDON__/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="/assets/website/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="application/x-javascript">
     addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
@@ -108,7 +108,8 @@
                             <h1>Kafka如何保证可靠的数据传递</h1>
                         </div>
                         <div class="about-bottom">
-                                              				  				  				<div id="content_views" class="htmledit_views"> <h3>1、复制系数N</h3> <p>replication.factor</p> <p>每个主题的Partition都会有N个副本</p> <p>这样，在N-1个broker失效的情况下，仍然能从主题读取数据或向主题写入数据</p> <p>复制系数N需要至少N个broker，而且会有N个数据副本</p> <h3>2、不完全的首领选举</h3> <p>unclean.leader.election</p> <p>如果设为true，当分区首领不可用时，我们允许不同步的副本(不在ISR中)成为首领，需要承担丢失数据和出现数据不一致的风险。</p> <p>如果设为false，当分区首领不可用时，我们只允许同步的副本(在ISR中)成为首领，但如果此时没有同步的副本，我们只能等待原先的首领上线，降低了可用性。</p> <h3>3、最少同步副本</h3> <p>min.insync.replcas</p> <p>对于一个包含3个副本的主题，如果min.insync.replcas被设为2，那么至少要存在两个同步副本才能向分区写入数据</p> <p>如果不满足两个同步副本，那么broker会停止接受生产者的请求。尝试发送数据的生产者会受到NotEnoughReplicasException异常。消费者仍然可以继续读取已有的数据。</p> <p>这样是为了避免在发生不完全选举时数据的写入和读取出现非预期的行为</p> <h3>4、生产者保证</h3> <p>1)acks 0，1，-1/all</p> <p>通过acks=all，保证消息达到所有的副本</p> <p>2)retries 重试次数</p> <p>3)开发人员针对异常进行处理</p> <p>例如将异常的消息保存起来，后续处理</p> <h3>5、消费者保证</h3> <p>1）group.id</p> <p>消费者组，同一个消费者组中的消费者只会分到主题分区的一个子集</p> <p>2）auto.offset.reset</p> <p>在没有偏移量可提交时（比如消费者第一次启动时）或者请求的偏移量在broker上不存在时(发生了rebalance)，消费者应该获取什么偏移量</p> <p>earliest,消费者会从分区的开始位置读取数据，会导致消费重复数据</p> <p>lastest,消费者会从分区的末尾开始读取数据，这样可以减少处理重复数据，但很有可能会错过一些消息</p> <p>3) enable.auto.commit</p> <p>是否允许自动提交</p> <p>4) auto.commit.interval.ms</p> <p>自动提交间隔时间</p> </div> 			                <div class="clearfix"></div>
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <h3>1、复制系数N</h3> <p>replication.factor</p> <p>每个主题的Partition都会有N个副本</p> <p>这样，在N-1个broker失效的情况下，仍然能从主题读取数据或向主题写入数据</p> <p>复制系数N需要至少N个broker，而且会有N个数据副本</p> <h3>2、不完全的首领选举</h3> <p>unclean.leader.election</p> <p>如果设为true，当分区首领不可用时，我们允许不同步的副本(不在ISR中)成为首领，需要承担丢失数据和出现数据不一致的风险。</p> <p>如果设为false，当分区首领不可用时，我们只允许同步的副本(在ISR中)成为首领，但如果此时没有同步的副本，我们只能等待原先的首领上线，降低了可用性。</p> <h3>3、最少同步副本</h3> <p>min.insync.replcas</p> <p>对于一个包含3个副本的主题，如果min.insync.replcas被设为2，那么至少要存在两个同步副本才能向分区写入数据</p> <p>如果不满足两个同步副本，那么broker会停止接受生产者的请求。尝试发送数据的生产者会受到NotEnoughReplicasException异常。消费者仍然可以继续读取已有的数据。</p> <p>这样是为了避免在发生不完全选举时数据的写入和读取出现非预期的行为</p> <h3>4、生产者保证</h3> <p>1)acks 0，1，-1/all</p> <p>通过acks=all，保证消息达到所有的副本</p> <p>2)retries 重试次数</p> <p>3)开发人员针对异常进行处理</p> <p>例如将异常的消息保存起来，后续处理</p> <h3>5、消费者保证</h3> <p>1）group.id</p> <p>消费者组，同一个消费者组中的消费者只会分到主题分区的一个子集</p> <p>2）auto.offset.reset</p> <p>在没有偏移量可提交时（比如消费者第一次启动时）或者请求的偏移量在broker上不存在时(发生了rebalance)，消费者应该获取什么偏移量</p> <p>earliest,消费者会从分区的开始位置读取数据，会导致消费重复数据</p> <p>lastest,消费者会从分区的末尾开始读取数据，这样可以减少处理重复数据，但很有可能会错过一些消息</p> <p>3) enable.auto.commit</p> <p>是否允许自动提交</p> <p>4) auto.commit.interval.ms</p> <p>自动提交间隔时间</p> </div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-22350.htm">宠物医院办证流程图（宠物医院办证流程图）</a></p>
                                         <p>下一个：<a href="/news/article-22804.htm">动物疫苗管理法律法规有哪些要求 动物疫苗管理法律法规有哪些要求呢</a></p>
@@ -124,16 +125,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-6-7-free-clash.htm" title="「6月7日」最高速度21M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接">「6月7日」最高速度21M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-24-free-high-speed-nodes.htm" title="「9月24日」最高速度22.7M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接">「9月24日」最高速度22.7M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-1-free-ssr-node.htm" title="「9月1日」最高速度23M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接">「9月1日」最高速度23M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-5-30-free-v2ray.htm" title="「5月30日」最高速度20.5M/S，2024年Shadowrocket/SSR/V2ray/Clash每天更新免费节点订阅链接">「5月30日」最高速度20.5M/S，2024年Shadowrocket/SSR/V2ray/Clash每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-22-clash-node.htm" title="「9月22日」最高速度21.9M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费节点订阅链接">「9月22日」最高速度21.9M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-26-free-v2ray.htm" title="「9月26日」最高速度18.7M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接">「9月26日」最高速度18.7M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-5-10-free-ssr-node.htm" title="「5月10日」最高速度21.3M/S，2024年Clash/Shadowrocket/V2ray/SSR每天更新免费节点订阅链接">「5月10日」最高速度21.3M/S，2024年Clash/Shadowrocket/V2ray/SSR每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-20973.htm" title="初中学历可以考什么证书（初中学历考什么证书才能月入过万）">初中学历可以考什么证书（初中学历考什么证书才能月入过万）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-5-29-free-v2ray.htm" title="「5月29日」最高速度19.4M/S，2024年Shadowrocket/Clash/SSR/V2ray每天更新免费节点订阅链接">「5月29日」最高速度19.4M/S，2024年Shadowrocket/Clash/SSR/V2ray每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-6-20-clash-node-daily-updates.htm" title="「6月20日」最高速度21.1M/S，2024年SSR/Clash/Shadowrocket/V2ray每天更新免费节点订阅链接">「6月20日」最高速度21.1M/S，2024年SSR/Clash/Shadowrocket/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-22-clash-v2ray-ss-ssr.htm" title="「11月22日」最高速度20.3M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接">「11月22日」最高速度20.3M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-1-free-subscribe-node.htm" title="「11月1日」最高速度19.4M/S，2024年SSR/Clash/Shadowrocket/V2ray每天更新免费节点订阅链接">「11月1日」最高速度19.4M/S，2024年SSR/Clash/Shadowrocket/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-8-clash-v2ray-ss-ssr.htm" title="「9月8日」最高速度19.1M/S，2024年Clash/Shadowrocket/SSR/V2ray每天更新免费节点订阅链接">「9月8日」最高速度19.1M/S，2024年Clash/Shadowrocket/SSR/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-6-24-free-subscribe-node.htm" title="「6月24日」最高速度22.7M/S，2024年Shadowrocket/V2ray/SSR/Clash每天更新免费节点订阅链接">「6月24日」最高速度22.7M/S，2024年Shadowrocket/V2ray/SSR/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-5-2-shadowrocket-node.htm" title="「5月2日」最高速度20.7M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接">「5月2日」最高速度20.7M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-6-8-free-clash-subscribe.htm" title="「6月8日」最高速度19.5M/S，2024年Shadowrocket/SSR/V2ray/Clash每天更新免费节点订阅链接">「6月8日」最高速度19.5M/S，2024年Shadowrocket/SSR/V2ray/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-18-free-ssr-subscribe.htm" title="「7月18日」最高速度20.6M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费节点订阅链接">「7月18日」最高速度20.6M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-9-free-high-speed-nodes.htm" title="「11月9日」最高速度19.2M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接">「11月9日」最高速度19.2M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-5-18-free-ssr-subscribe.htm" title="「5月18日」最高速度21.3M/S，2024年SSR/Shadowrocket/V2ray/Clash每天更新免费节点订阅链接">「5月18日」最高速度21.3M/S，2024年SSR/Shadowrocket/V2ray/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-22350.htm" title="宠物医院办证流程图（宠物医院办证流程图）">宠物医院办证流程图（宠物医院办证流程图）</a></li>
                     </ul>
     </div>
 </div>
@@ -145,7 +146,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+                <h4><span class="badge" style="float: right;">57</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">33</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
@@ -186,6 +187,15 @@
     <div class="copy-rights">
         <div class="container">
             <div class="copy-rights-main">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
                 <p>
                     ClashV2rayFree官网节点站 版权所有
                     <br />

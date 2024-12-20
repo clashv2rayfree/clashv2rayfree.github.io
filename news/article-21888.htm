@@ -11,7 +11,7 @@
     <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
     <!-- Custom Theme files -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="__ADDON__/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="/assets/website/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script type="application/x-javascript">
     addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
@@ -108,7 +108,8 @@
                             <h1>css本文在背景之上,css实现文字在背景图片之上</h1>
                         </div>
                         <div class="about-bottom">
-                                              				  				  				<div id="content_views" class="htmledit_views"> <div style="font-size:16px;"> <p>效果：</p> <p align="center"><img decoding="async" src="http://img.555519.xyz/uploads3/20220604/a4567d4f3d153a0e574f9725a4cb2ec7.jpg" alt="css本文在背景之上,css实现文字在背景图片之上"></p> <div class="imgs"> <div class="background"> <p align="center"> </div> <div class="front"> <div> <p>非常感谢！</p> <p>您已投票：{<!-- -->{item.votetime}}</p> </div> <p style="color:#999999;">抱歉，您未完成投票~</p> </div> </div> <pre><code class="Bash"><xmp>data() { return { imgsrc1:require('@/common/imgs/yitoupiao.png'),  imgsrc2:require('@/common/imgs/weiwancheng.png'),  }  },</xmp></code></pre> <p>外面大的div：设置宽高；</p> <p>背景图片：1)如果是铺满则宽高都设置100%，2)如果只占一个部分可设置定位。重点：z-index一定要比文字的层级低，否则会被遮住；</p> <p>文字：根据需求放置位置可定位可不定位，重点z-index设置高于图片；</p> <pre><code class="Bash"><xmp>.imgs { background: #fff;  position: relative;  width: 100%;  height: 250px;  color: #195541;  .background{ // width:100%;  // height:100%; /**宽高100%是为了图片铺满屏幕 */  // z-index:-1;  z-index:1;  position: absolute;  width: 250px;  height: 100%;  right: 20px;  bottom: 0px;  }  .front{ z-index:2;  position: absolute;  text-align: center;  top: 39%;  left: 25%;  font-weight: normal;  line-height: 40px;  font-size: 28px;  }  }</xmp></code></pre> <p>开发过程中遇到一个bug：就是我一开始设置的背景图片z-index为-1，导致在h5上，背景图片一会儿能显示一会儿没法显示，后来改为正数1，才解决了这个问题。</p> <p>到此这篇关于css实现文字在背景图片之上的文章就介绍到这了,更多相关css文字在背景图片上内容请搜索萬仟网以前的文章或继续浏览下面的相关文章，希望大家以后多多支持萬仟网！</p> </div> </div> <p></p> 			                <div class="clearfix"></div>
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <div style="font-size:16px;"> <p>效果：</p> <p align="center"><img decoding="async" src="http://img.555519.xyz/uploads3/20220604/a4567d4f3d153a0e574f9725a4cb2ec7.jpg" alt="css本文在背景之上,css实现文字在背景图片之上"></p> <div class="imgs"> <div class="background"> <p align="center"> </div> <div class="front"> <div> <p>非常感谢！</p> <p>您已投票：{<!-- -->{item.votetime}}</p> </div> <p style="color:#999999;">抱歉，您未完成投票~</p> </div> </div> <pre><code class="Bash"><xmp>data() { return { imgsrc1:require('@/common/imgs/yitoupiao.png'),  imgsrc2:require('@/common/imgs/weiwancheng.png'),  }  },</xmp></code></pre> <p>外面大的div：设置宽高；</p> <p>背景图片：1)如果是铺满则宽高都设置100%，2)如果只占一个部分可设置定位。重点：z-index一定要比文字的层级低，否则会被遮住；</p> <p>文字：根据需求放置位置可定位可不定位，重点z-index设置高于图片；</p> <pre><code class="Bash"><xmp>.imgs { background: #fff;  position: relative;  width: 100%;  height: 250px;  color: #195541;  .background{ // width:100%;  // height:100%; /**宽高100%是为了图片铺满屏幕 */  // z-index:-1;  z-index:1;  position: absolute;  width: 250px;  height: 100%;  right: 20px;  bottom: 0px;  }  .front{ z-index:2;  position: absolute;  text-align: center;  top: 39%;  left: 25%;  font-weight: normal;  line-height: 40px;  font-size: 28px;  }  }</xmp></code></pre> <p>开发过程中遇到一个bug：就是我一开始设置的背景图片z-index为-1，导致在h5上，背景图片一会儿能显示一会儿没法显示，后来改为正数1，才解决了这个问题。</p> <p>到此这篇关于css实现文字在背景图片之上的文章就介绍到这了,更多相关css文字在背景图片上内容请搜索萬仟网以前的文章或继续浏览下面的相关文章，希望大家以后多多支持萬仟网！</p> </div> </div> <p></p> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-21887.htm">SpringMVC 执行流程</a></p>
                                         <p>下一个：<a href="/news/article-22346.htm">虚拟机搭建负载均衡，mysql主从复制和读写分离（四、搭建主从复制和读写分离）</a></p>
@@ -124,16 +125,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-7-5-free-high-speed-nodes.htm" title="「7月5日」最高速度22.5M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接">「7月5日」最高速度22.5M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-10-free-shadowrocket-node.htm" title="「10月10日」最高速度22M/S，2024年V2ray/SSR/Clash/Shadowrocket每天更新免费节点订阅链接">「10月10日」最高速度22M/S，2024年V2ray/SSR/Clash/Shadowrocket每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-24-free-clash.htm" title="「11月24日」最高速度21.9M/S，2024年Clash/V2ray/Shadowrocket/SSR每天更新免费节点订阅链接">「11月24日」最高速度21.9M/S，2024年Clash/V2ray/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-17-free-shadowrocket-node.htm" title="「11月17日」最高速度22.4M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接">「11月17日」最高速度22.4M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-6-17-free-subscribe-node.htm" title="「6月17日」最高速度20.3M/S，2024年Shadowrocket/SSR/V2ray/Clash每天更新免费节点订阅链接">「6月17日」最高速度20.3M/S，2024年Shadowrocket/SSR/V2ray/Clash每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-7-node-share-links.htm" title="「10月7日」最高速度20.3M/S，2024年SSR/Shadowrocket/V2ray/Clash每天更新免费节点订阅链接">「10月7日」最高速度20.3M/S，2024年SSR/Shadowrocket/V2ray/Clash每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-5-28-node-share.htm" title="「5月28日」最高速度20.1M/S，2024年Clash/Shadowrocket/V2ray/SSR每天更新免费节点订阅链接">「5月28日」最高速度20.1M/S，2024年Clash/Shadowrocket/V2ray/SSR每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-9-18-free-node-subscribe-links.htm" title="「9月18日」最高速度20.3M/S，2024年SSR/Clash/Shadowrocket/V2ray每天更新免费节点订阅链接">「9月18日」最高速度20.3M/S，2024年SSR/Clash/Shadowrocket/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-20-free-v2ray.htm" title="「11月20日」最高速度19.9M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费节点订阅链接">「11月20日」最高速度19.9M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-1-free-ssr-subscribe.htm" title="「10月1日」最高速度20.3M/S，2024年Clash/Shadowrocket/SSR/V2ray每天更新免费节点订阅链接">「10月1日」最高速度20.3M/S，2024年Clash/Shadowrocket/SSR/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-6-7-free-clash.htm" title="「6月7日」最高速度21M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接">「6月7日」最高速度21M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-18-shadowrocket-node.htm" title="「10月18日」最高速度19.2M/S，2024年Shadowrocket/Clash/V2ray/SSR每天更新免费节点订阅链接">「10月18日」最高速度19.2M/S，2024年Shadowrocket/Clash/V2ray/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-8-2-free-node-subscribe.htm" title="「8月2日」最高速度20M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接">「8月2日」最高速度20M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-6-12-free-clash.htm" title="「6月12日」最高速度19.8M/S，2024年Clash/Shadowrocket/V2ray/SSR每天更新免费节点订阅链接">「6月12日」最高速度19.8M/S，2024年Clash/Shadowrocket/V2ray/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-25-node-share.htm" title="「9月25日」最高速度22.6M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接">「9月25日」最高速度22.6M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-31-clash-v2ray-ss-ssr.htm" title="「7月31日」最高速度22M/S，2024年Shadowrocket/Clash/V2ray/SSR每天更新免费节点订阅链接">「7月31日」最高速度22M/S，2024年Shadowrocket/Clash/V2ray/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-11-free-node-subscribe.htm" title="「12月11日」最高速度20M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费订阅源地址">「12月11日」最高速度20M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费订阅源地址</a></li>
                         <li class="py-2"><a href="/news/article-21887.htm" title="SpringMVC 执行流程">SpringMVC 执行流程</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-8-8-shadowrocket-node.htm" title="「8月8日」最高速度22.6M/S，2024年V2ray/SSR/Clash/Shadowrocket每天更新免费节点订阅链接">「8月8日」最高速度22.6M/S，2024年V2ray/SSR/Clash/Shadowrocket每天更新免费节点订阅链接</a></li>
                     </ul>
     </div>
 </div>
@@ -145,7 +146,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+                <h4><span class="badge" style="float: right;">57</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">33</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
@@ -186,6 +187,15 @@
     <div class="copy-rights">
         <div class="container">
             <div class="copy-rights-main">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
                 <p>
                     ClashV2rayFree官网节点站 版权所有
                     <br />

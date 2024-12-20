@@ -108,7 +108,8 @@
                             <h1>ES6基础语法之函数介绍_基础知识</h1>
                         </div>
                         <div class="about-bottom">
-                                              				  				  				<h2>一、函数参数的扩展</h2> <p>ES6支持参数的默认值：</p> <div class="ay1code"> <pre class="brush:js;">function fn(name,age,sex="男")  {  	console.log(`大家好,我是${name},性别${sex},今年${age}岁!`);  }  fn("刘德华",45); //大家好,我是刘德华,性别男,今年45岁!</pre> </div> <p>传递undefined,取默认值：</p> <div class="ay1code"> <pre class="brush:js;">function fn(name,sex="男",age)  {  	console.log(`大家好,我是${name},性别${sex},今年${age}岁!`);  }  fn("刘德华",undefined,45); //大家好,我是刘德华,性别男,今年45岁!</pre> </div> <p>不定参数:不定参数用来表示不确定参数个数：</p> <div class="ay1code"> <pre class="brush:js;">function Add(...items)  {  	// let sum = 0;  	// for(let item of items)  	// {  	// 	sum += item;  	// }  	// return sum;  	  	let sum = 0;  	for(var i = 0;i&lt; items.length;i++)  	{  		sum += items[i];  	}  	return sum;  }  let result1 = Add(1,2,3);  let result2 = Add(1,3,5,7,9);  console.log(result1); //6  console.log(result2); //25</pre> </div> <h2>二、箭头函数</h2> <p>箭头函数提供了一种更加简洁的函数书写方式,基本语法是：参数 =&gt; 函数体</p> <p>没有参数的函数(参数部分需要有一对空括号)：</p> <div class="ay1code"> <pre class="brush:js;">let f = ()=&gt;{console.log("hello,world!")}  f(); //hello,world</pre> </div> <p>等价于：</p> <div class="ay1code"> <pre class="brush:js;">function f()  {  	console.log("hello,world!");  }  f(); //hello,world</pre> </div> <p>只有一个参数的函数(参数部分不需要括号)：</p> <div class="ay1code"> <pre class="brush:js;">let f = num =&gt;{  	if(num%2 == 0)  		return "偶数";  	else  		return "奇数";  }  console.log(f(50)); //偶数</pre> </div> <p>有多个参数的函数(参数部分需要括号)：</p> <div class="ay1code"> <pre class="brush:js;">let f = (a,b)=&gt;{  	let c = a+b;  	return c;  }  console.log(f(2,3)); //5</pre> </div> <p>当只有一行语句，并且需要返回结果时，可以省略 {} , 结果会自动返回：</p> <div class="ay1code"> <pre class="brush:js;">let f = (a,b) =&gt; a+b;  console.log(f(2,3)); // 5</pre> </div> <p>当箭头函数要返回对象的时候，为了区分于代码块，要用 () 将对象包裹起来：</p> <div class="ay1code"> <pre class="brush:js;">let f = (id,name) =&gt; {id: id, name: name};  let obj = f("001","刘德华");  // 报错  console.log(obj);</pre> </div> <div class="ay1code"> <pre class="brush:js;">let f = (id,name) =&gt; {  	return {id: id, name: name};  };  let obj = f("001","刘德华");    console.log(obj); //{id:"001",name:"刘德华"}</pre> </div> <div class="ay1code"> <pre class="brush:js;">let f = (id,name) =&gt; ({id: id, name: name});  let obj = f("001","刘德华");  console.log(obj); //{id:"001",name:"刘德华"}</pre> </div> 			                <div class="clearfix"></div>
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<h2>一、函数参数的扩展</h2> <p>ES6支持参数的默认值：</p> <div class="ay1code"> <pre class="brush:js;">function fn(name,age,sex="男")  {  	console.log(`大家好,我是${name},性别${sex},今年${age}岁!`);  }  fn("刘德华",45); //大家好,我是刘德华,性别男,今年45岁!</pre> </div> <p>传递undefined,取默认值：</p> <div class="ay1code"> <pre class="brush:js;">function fn(name,sex="男",age)  {  	console.log(`大家好,我是${name},性别${sex},今年${age}岁!`);  }  fn("刘德华",undefined,45); //大家好,我是刘德华,性别男,今年45岁!</pre> </div> <p>不定参数:不定参数用来表示不确定参数个数：</p> <div class="ay1code"> <pre class="brush:js;">function Add(...items)  {  	// let sum = 0;  	// for(let item of items)  	// {  	// 	sum += item;  	// }  	// return sum;  	  	let sum = 0;  	for(var i = 0;i&lt; items.length;i++)  	{  		sum += items[i];  	}  	return sum;  }  let result1 = Add(1,2,3);  let result2 = Add(1,3,5,7,9);  console.log(result1); //6  console.log(result2); //25</pre> </div> <h2>二、箭头函数</h2> <p>箭头函数提供了一种更加简洁的函数书写方式,基本语法是：参数 =&gt; 函数体</p> <p>没有参数的函数(参数部分需要有一对空括号)：</p> <div class="ay1code"> <pre class="brush:js;">let f = ()=&gt;{console.log("hello,world!")}  f(); //hello,world</pre> </div> <p>等价于：</p> <div class="ay1code"> <pre class="brush:js;">function f()  {  	console.log("hello,world!");  }  f(); //hello,world</pre> </div> <p>只有一个参数的函数(参数部分不需要括号)：</p> <div class="ay1code"> <pre class="brush:js;">let f = num =&gt;{  	if(num%2 == 0)  		return "偶数";  	else  		return "奇数";  }  console.log(f(50)); //偶数</pre> </div> <p>有多个参数的函数(参数部分需要括号)：</p> <div class="ay1code"> <pre class="brush:js;">let f = (a,b)=&gt;{  	let c = a+b;  	return c;  }  console.log(f(2,3)); //5</pre> </div> <p>当只有一行语句，并且需要返回结果时，可以省略 {} , 结果会自动返回：</p> <div class="ay1code"> <pre class="brush:js;">let f = (a,b) =&gt; a+b;  console.log(f(2,3)); // 5</pre> </div> <p>当箭头函数要返回对象的时候，为了区分于代码块，要用 () 将对象包裹起来：</p> <div class="ay1code"> <pre class="brush:js;">let f = (id,name) =&gt; {id: id, name: name};  let obj = f("001","刘德华");  // 报错  console.log(obj);</pre> </div> <div class="ay1code"> <pre class="brush:js;">let f = (id,name) =&gt; {  	return {id: id, name: name};  };  let obj = f("001","刘德华");    console.log(obj); //{id:"001",name:"刘德华"}</pre> </div> <div class="ay1code"> <pre class="brush:js;">let f = (id,name) =&gt; ({id: id, name: name});  let obj = f("001","刘德华");  console.log(obj); //{id:"001",name:"刘德华"}</pre> </div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-25588.htm">猫咪多长时间驱虫一次 猫咪多长时间驱虫一次比较好</a></p>
                                         <p>下一个：<a href="/news/article-26059.htm">动物疫苗接种方法有哪些种类图片 动物疫苗接种方法有哪些种类图片大全</a></p>
@@ -124,16 +125,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-12-13-free-v2ray-subscribe.htm" title="「12月13日」最高速度18.5M/S，2024年Clash/Shadowrocket/V2ray/SSR每天更新免费订阅源地址">「12月13日」最高速度18.5M/S，2024年Clash/Shadowrocket/V2ray/SSR每天更新免费订阅源地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-4-24-free-clash-subscribe.htm" title="「4月24日」最高速度19.1M/S，2024年SSR/V2ray/Shadowrocket/Clash每天更新免费节点订阅链接">「4月24日」最高速度19.1M/S，2024年SSR/V2ray/Shadowrocket/Clash每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-4-13-node-share-links.htm" title="「4月13日」最高速度21.9M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接">「4月13日」最高速度21.9M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-20054.htm" title="C语言栈与队列面试题详解_C 语言">C语言栈与队列面试题详解_C 语言</a></li>
-                        <li class="py-2"><a href="/news/article-23261.htm" title="瑞鹏宠物中心医院（瑞鹏宠物医院中心医院）">瑞鹏宠物中心医院（瑞鹏宠物医院中心医院）</a></li>
-                        <li class="py-2"><a href="/news/article-23721.htm" title="动物医院翻译成英语 动物医院翻译成英语怎么说">动物医院翻译成英语 动物医院翻译成英语怎么说</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-3-free-subscribe-node.htm" title="「10月3日」最高速度21.9M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接">「10月3日」最高速度21.9M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-6-23-clash-node-daily-updates.htm" title="「6月23日」最高速度20.6M/S，2024年V2ray/Shadowrocket/Clash/SSR每天更新免费节点订阅链接">「6月23日」最高速度20.6M/S，2024年V2ray/Shadowrocket/Clash/SSR每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-5-6-node-share.htm" title="「5月6日」最高速度20.8M/S，2024年Clash/V2ray/Shadowrocket/SSR每天更新免费节点订阅链接">「5月6日」最高速度20.8M/S，2024年Clash/V2ray/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-4-9-free-shadowrocket-node.htm" title="4月9日|V2ray/Shadowrocket/SSR/Clash每天更新18.8M/S免费节点订阅链接">4月9日|V2ray/Shadowrocket/SSR/Clash每天更新18.8M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-8-free-v2ray-subscribe.htm" title="「7月8日」最高速度21.4M/S，2024年Clash/Shadowrocket/V2ray/SSR每天更新免费节点订阅链接">「7月8日」最高速度21.4M/S，2024年Clash/Shadowrocket/V2ray/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-22-clash-v2ray-ss-ssr.htm" title="「11月22日」最高速度20.3M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接">「11月22日」最高速度20.3M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-6-17-free-subscribe-node.htm" title="「6月17日」最高速度20.3M/S，2024年Shadowrocket/SSR/V2ray/Clash每天更新免费节点订阅链接">「6月17日」最高速度20.3M/S，2024年Shadowrocket/SSR/V2ray/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-9-clash-windows.htm" title="「10月9日」最高速度21.5M/S，2024年Shadowrocket/V2ray/SSR/Clash每天更新免费节点订阅链接">「10月9日」最高速度21.5M/S，2024年Shadowrocket/V2ray/SSR/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-11-free-node-subscribe.htm" title="「10月11日」最高速度21.6M/S，2024年SSR/V2ray/Clash/Shadowrocket每天更新免费节点订阅链接">「10月11日」最高速度21.6M/S，2024年SSR/V2ray/Clash/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-8-clash-v2ray-ss-ssr.htm" title="「12月8日」最高速度19.4M/S，2024年V2ray/Clash/SSR/Shadowrocket每天更新免费节点订阅链接">「12月8日」最高速度19.4M/S，2024年V2ray/Clash/SSR/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-4-node-share-links.htm" title="「10月4日」最高速度18.6M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接">「10月4日」最高速度18.6M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-4-6-free-node-subscribe-links.htm" title="4月6日|V2ray/Shadowrocket/SSR/Clash每天更新20.6M/S免费节点订阅链接">4月6日|V2ray/Shadowrocket/SSR/Clash每天更新20.6M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-8-19-free-clash-subscribe.htm" title="「8月19日」最高速度22.5M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接">「8月19日」最高速度22.5M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-6-6-free-node-subscribe-links.htm" title="「6月6日」最高速度23M/S，2024年Clash/Shadowrocket/V2ray/SSR每天更新免费节点订阅链接">「6月6日」最高速度23M/S，2024年Clash/Shadowrocket/V2ray/SSR每天更新免费节点订阅链接</a></li>
                     </ul>
     </div>
 </div>
@@ -145,7 +146,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">51</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+                <h4><span class="badge" style="float: right;">57</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">33</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
@@ -186,6 +187,15 @@
     <div class="copy-rights">
         <div class="container">
             <div class="copy-rights-main">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
                 <p>
                     ClashV2rayFree官网节点站 版权所有
                     <br />
