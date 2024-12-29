@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayfree.github.io/news/article-31688.htm" />
+    <title>python3.5上使用virtualenv创建虚拟环境的坑</title>
+        <meta name="description" content="一、坑一：安装的virtualenv版本太高 　　显示使用virtualenv 安装虚拟环境报错  　　出现这个问题就是说明你的virtualev安装的版本太高，降低一下版本重新安装即可，我这里使用的" />
+        <link href="/assets/website/css/clashv2rayfree/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/website/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <!--google fonts-->
+    <script src="/assets/website/js/frontend/clashv2rayfree/jquery-1.11.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashv2rayfree/bootstrap.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NF953KP3Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0NF953KP3Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--header-top start here-->
+    <div class="top-header">
+    </div>
+    <!--header-top end here-->
+    <!--header start here-->
+    <!-- NAVBAR
+		================================================== -->
+    <div class="header w3l">
+        <div class="fixed-header">
+            <div class="navbar-wrapper">
+                <div class="container">
+                    <nav class="navbar navbar-inverse navbar-static-top">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                                                <a class="navbar-brand" href="/">Clash V2ray Free</a>
+                                                            </div>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <nav class="cl-effect-16" id="cl-effect-16">
+                                <ul class="nav navbar-nav">
+                                                                        <li>
+                                        <a href="/">首页</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/free-nodes/">免费节点</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/paid-subscribe/">推荐机场</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/news/">新闻资讯</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="#">关于</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">联系</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </nav>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--about strat here-->
+    <div class="about">
+        <div class="container">
+            <div class="about-main">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ol class="breadcrumb">
+                          <li><a href="/">首页</a></li>
+                          <li><a href="/news/">新闻资讯</a></li>
+                          <li class="active">正文</li>
+                        </ol>
+                        <div class="about-top">
+                            <h1>python3.5上使用virtualenv创建虚拟环境的坑</h1>
+                        </div>
+                        <div class="about-bottom">
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<h3>一、坑一：安装的virtualenv版本太高</h3> <p>　　显示使用virtualenv 安装虚拟环境报错</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/0b6f027b83f77da46d434b31ae234e52.jpg" alt="python3.5上使用virtualenv创建虚拟环境的坑" width="700" loading="lazy"/></p> <p>　　出现这个问题就是说明你的virtualev安装的版本太高，降低一下版本重新安装即可，我这里使用的是15这个版本</p> <p>　　pip install virtualenv==15.0.0</p> <h3>二、坑2：pip的版本太高</h3> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/3ba4e323ad062b420755e198679229f7.jpg" alt="python3.5上使用virtualenv创建虚拟环境的坑" width="700" loading="lazy"/></p> <p>&nbsp;　　如果出现上面的错误，说明你的pip的版本太高，没办法，只能说是python3.5的版本太低了，工作历史遗留问题，没办法，必须要使用python3.5，只能乖乖将pip的版本</p> <p class="md-end-block md-p"><span class="md-plain">　　python3.5最高支持pip=20的版本</span></p> <p class="md-end-block md-p md-focus"><span class="md-plain">　　所以解决方案：将本机的pip版本降到20或20一下。</span></p> <p class="md-end-block md-p md-focus"><span class="md-plain">　　通过：python3 -m pip install pip==20.3.4 安装指定版本</span></p> <p class="md-end-block md-p md-focus"><span class="md-plain">　　安装好了以后在/usr/local/lib/python3.5/dist-packages下</span></p> <p class="md-end-block md-p md-focus"><span class="md-plain"><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/cfddefe0ab8b5ceeab55ab5041487cd2.jpg" alt="python3.5上使用virtualenv创建虚拟环境的坑" width="700" loading="lazy"/></span></p> <p>　　然后再将这两个文件复制到我们创建的虚拟环境中</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/c910d285cd08c9f446287d6a63e41eb2.jpg" alt="python3.5上使用virtualenv创建虚拟环境的坑" width="700" loading="lazy"/></p> <p class="md-end-block md-p md-focus"> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-31687.htm">SpringMVC拦截器配置方式</a></p>
+                                        <p>下一个：<a href="/news/article-32155.htm">给动物打狂犬疫苗能持续多久不死（动物打的狂犬疫苗管多久）</a></p>
+                                    </div>
+                                        </div>
+
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-4-19-clash-windows.htm" title="「4月19日」最高速度22.5M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费节点订阅链接">「4月19日」最高速度22.5M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-13-node-share-links.htm" title="「7月13日」最高速度18M/S，2024年V2ray/Clash/SSR/Shadowrocket每天更新免费节点订阅链接">「7月13日」最高速度18M/S，2024年V2ray/Clash/SSR/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-30736.htm" title="深圳市宠物领养之家官网查询电话（深圳宠物领养平台）">深圳市宠物领养之家官网查询电话（深圳宠物领养平台）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-4-17-free-node-subscribe-links.htm" title="「4月17日」最高速度22M/S，2024年Clash/Shadowrocket/SSR/V2ray每天更新免费节点订阅链接">「4月17日」最高速度22M/S，2024年Clash/Shadowrocket/SSR/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-19-free-node-subscribe.htm" title="「12月19日」最高速度21.8M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费订阅源地址">「12月19日」最高速度21.8M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-4-5-clash-v2ray-ss-ssr.htm" title="4月5日|SSR/Shadowrocket/Clash/V2ray每天更新22.4M/S免费节点订阅链接">4月5日|SSR/Shadowrocket/Clash/V2ray每天更新22.4M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-24-free-v2ray.htm" title="「10月24日」最高速度18M/S，2024年V2ray/Shadowrocket/Clash/SSR每天更新免费节点订阅链接">「10月24日」最高速度18M/S，2024年V2ray/Shadowrocket/Clash/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-5-2-shadowrocket-node.htm" title="「5月2日」最高速度20.7M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接">「5月2日」最高速度20.7M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-15-shadowrocket-node.htm" title="「11月15日」最高速度20.8M/S，2024年Clash/Shadowrocket/SSR/V2ray每天更新免费节点订阅链接">「11月15日」最高速度20.8M/S，2024年Clash/Shadowrocket/SSR/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-22803.htm" title="Kafka如何保证可靠的数据传递">Kafka如何保证可靠的数据传递</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">87</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-05/" title="2024-05 归档">2024-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2024-04/" title="2024-04 归档">2024-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about end here-->
+        <!--copy rights start here-->
+    <div class="copy-rights">
+        <div class="container">
+            <div class="copy-rights-main">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                <p>
+                    ClashV2rayFree官网节点站 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
