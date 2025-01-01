@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayfree.github.io/news/article-33130.htm" />
+    <title>Python 路径处理(os.path模块)</title>
+        <meta name="description" content="dest_file = r'D:\PythonProject\TestPython\test.py' # 实际存在 dest_fake_file = r'X:\PythonProject\TestPy" />
+        <link href="/assets/website/css/clashv2rayfree/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/website/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <!--google fonts-->
+    <script src="/assets/website/js/frontend/clashv2rayfree/jquery-1.11.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashv2rayfree/bootstrap.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NF953KP3Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0NF953KP3Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--header-top start here-->
+    <div class="top-header">
+    </div>
+    <!--header-top end here-->
+    <!--header start here-->
+    <!-- NAVBAR
+		================================================== -->
+    <div class="header w3l">
+        <div class="fixed-header">
+            <div class="navbar-wrapper">
+                <div class="container">
+                    <nav class="navbar navbar-inverse navbar-static-top">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                                                <a class="navbar-brand" href="/">Clash V2ray Free</a>
+                                                            </div>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <nav class="cl-effect-16" id="cl-effect-16">
+                                <ul class="nav navbar-nav">
+                                                                        <li>
+                                        <a href="/">首页</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/free-nodes/">免费节点</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/paid-subscribe/">推荐机场</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/news/">新闻资讯</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="#">关于</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">联系</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </nav>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--about strat here-->
+    <div class="about">
+        <div class="container">
+            <div class="about-main">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ol class="breadcrumb">
+                          <li><a href="/">首页</a></li>
+                          <li><a href="/news/">新闻资讯</a></li>
+                          <li class="active">正文</li>
+                        </ol>
+                        <div class="about-top">
+                            <h1>Python 路径处理(os.path模块)</h1>
+                        </div>
+                        <div class="about-bottom">
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <pre><code class="prism language-cpp">dest_file <span class="token operator">=</span> r<span class="token string">'D:\PythonProject\TestPython\test.py'</span> # 实际存在 dest_fake_file <span class="token operator">=</span> r<span class="token string">'X:\PythonProject\TestPython\test.py'</span># 实际不存在 dest_dir <span class="token operator">=</span> r<span class="token string">'D:\PythonProject\TestPython'</span> # 实际存在 dest_fake_dir <span class="token operator">=</span> r<span class="token string">'X:\PythonProject\TestPython'</span> # 实际不存在 dest_data <span class="token operator">=</span> <span class="token punctuation">[</span>dest_file<span class="token punctuation">,</span> dest_fake_file<span class="token punctuation">,</span> dest_dir<span class="token punctuation">,</span> dest_fake_dir<span class="token punctuation">]</span> </code></pre> <p>os.path主要对文件、文件夹进行处理，常用的函数可以分为四类：</p> <ul> <li>解析路径</li> <li>获取路径与文件名以及将路径与文件名合并成带路径文件名</li> <li>获取绝对路径</li> <li>获取文件时间相关数据(时间戳)</li> <li>判断是否是文件、是否是路径、是否存在</li> </ul> <p><strong>1 解析路径</strong>[都不会判断路径是否真实存在]</p> <ul> <li>split() <code>将路径分离成路径和文件名</code> </li> <li>splitext() <code>将路径分离成路径和文件后缀</code> </li> <li>splitdriver() <code>将路径费力成盘符和文件路径</code> </li> </ul> <p>测试数据</p> <pre><code class="prism language-cpp"><span class="token keyword">for</span> one_data in dest_data<span class="token operator">:</span>     <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'--------------------------------------------'</span><span class="token punctuation">)</span>     <span class="token function">print</span><span class="token punctuation">(</span>f<span class="token string">'{one_data}'</span><span class="token punctuation">)</span>     <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'split: {}'</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span>one_data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>     <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'splitext: {}'</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span><span class="token function">splitext</span><span class="token punctuation">(</span>one_data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>     <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'splitdrive: {}'</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span><span class="token function">splitdrive</span><span class="token punctuation">(</span>one_data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> </code></pre> <pre><code class="prism language-cpp"><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> D<span class="token operator">:</span>\PythonProject\TestPython\test<span class="token punctuation">.</span>py split<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token string">'D:\\PythonProject\\TestPython'</span><span class="token punctuation">,</span> <span class="token string">'test.py'</span><span class="token punctuation">)</span> splitext<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token string">'D:\\PythonProject\\TestPython\\test'</span><span class="token punctuation">,</span> <span class="token string">'.py'</span><span class="token punctuation">)</span> splitdrive<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token string">'D:'</span><span class="token punctuation">,</span> <span class="token string">'\\PythonProject\\TestPython\\test.py'</span><span class="token punctuation">)</span> <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> X<span class="token operator">:</span>\PythonProject\TestPython\test<span class="token punctuation">.</span>py split<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token string">'X:\\PythonProject\\TestPython'</span><span class="token punctuation">,</span> <span class="token string">'test.py'</span><span class="token punctuation">)</span> splitext<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token string">'X:\\PythonProject\\TestPython\\test'</span><span class="token punctuation">,</span> <span class="token string">'.py'</span><span class="token punctuation">)</span> splitdrive<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token string">'X:'</span><span class="token punctuation">,</span> <span class="token string">'\\PythonProject\\TestPython\\test.py'</span><span class="token punctuation">)</span> <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> D<span class="token operator">:</span>\PythonProject\TestPython split<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token string">'D:\\PythonProject'</span><span class="token punctuation">,</span> <span class="token string">'TestPython'</span><span class="token punctuation">)</span> splitext<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token string">'D:\\PythonProject\\TestPython'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span> splitdrive<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token string">'D:'</span><span class="token punctuation">,</span> <span class="token string">'\\PythonProject\\TestPython'</span><span class="token punctuation">)</span> <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> X<span class="token operator">:</span>\PythonProject\TestPython split<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token string">'X:\\PythonProject'</span><span class="token punctuation">,</span> <span class="token string">'TestPython'</span><span class="token punctuation">)</span> splitext<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token string">'X:\\PythonProject\\TestPython'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span> splitdrive<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token string">'X:'</span><span class="token punctuation">,</span> <span class="token string">'\\PythonProject\\TestPython'</span><span class="token punctuation">)</span> </code></pre> <hr/> <p><strong>2 获取路径与文件名以及将路径与文件名合并成带路径文件名</strong>[都不会判断路径是否真实存在]</p> <ul> <li>basename() <code>获取文件名</code> </li> <li>dirname() <code>获取路径</code> </li> <li>join() <code>将路径和文件名合并成带路径文件名</code> </li> </ul> <pre><code class="prism language-cpp">dest_data <span class="token operator">=</span> <span class="token punctuation">[</span>dest_file<span class="token punctuation">,</span> dest_fake_file<span class="token punctuation">]</span> <span class="token keyword">for</span> one_data in dest_data<span class="token operator">:</span>         <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'--------------------------------------------'</span><span class="token punctuation">)</span>         <span class="token function">print</span><span class="token punctuation">(</span>f<span class="token string">'{one_data}'</span><span class="token punctuation">)</span>         dir_name <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span><span class="token function">dirname</span><span class="token punctuation">(</span>one_data<span class="token punctuation">)</span>         base_name <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span><span class="token function">basename</span><span class="token punctuation">(</span>one_data<span class="token punctuation">)</span>         <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'dir_name: {}'</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>dir_name<span class="token punctuation">)</span><span class="token punctuation">)</span>         <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'base_name: {}'</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>base_name<span class="token punctuation">)</span><span class="token punctuation">)</span>         <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'after join: {}'</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>dir_name<span class="token punctuation">,</span> base_name<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> </code></pre> <pre><code class="prism language-cpp"><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> D<span class="token operator">:</span>\PythonProject\TestPython\test<span class="token punctuation">.</span>py dir_name<span class="token operator">:</span> D<span class="token operator">:</span>\PythonProject\TestPython base_name<span class="token operator">:</span> test<span class="token punctuation">.</span>py after join<span class="token operator">:</span> D<span class="token operator">:</span>\PythonProject\TestPython\test<span class="token punctuation">.</span>py <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> X<span class="token operator">:</span>\PythonProject\TestPython\test<span class="token punctuation">.</span>py dir_name<span class="token operator">:</span> X<span class="token operator">:</span>\PythonProject\TestPython base_name<span class="token operator">:</span> test<span class="token punctuation">.</span>py after join<span class="token operator">:</span> X<span class="token operator">:</span>\PythonProject\TestPython\test<span class="token punctuation">.</span>py </code></pre> <hr/> <p><strong>3 获取绝对路径</strong><br /> absdir() <code>根据相对路径获取绝对路径</code></p> <pre><code class="prism language-cpp">import os<span class="token punctuation">.</span>path  <span class="token function">print</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span><span class="token function">abspath</span><span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> # 当前路径为D<span class="token operator">:</span>\PythonProject\TestPython </code></pre> <pre><code class="prism language-cpp">D<span class="token operator">:</span>\PythonProject\TestPython </code></pre> <hr/> <p><strong>4 获取文件时间相关数据(时间戳)</strong>[都会判断路径是否真实存在]</p> <ul> <li>getctime() <code>获取文件创建时间(create)</code> </li> <li>getatime() <code>获取文件访问时间(access)</code> </li> <li>getmtime() <code>获取文件修改时间(modify)</code> </li> </ul> <pre><code class="prism language-cpp">dest_data <span class="token operator">=</span> <span class="token punctuation">[</span>dest_file<span class="token punctuation">,</span> dest_dir<span class="token punctuation">]</span> # 如果加入dest_fake_file或者dest_fake_dir会报错找不到 <span class="token keyword">for</span> one_data in dest_data<span class="token operator">:</span>     <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'--------------------------------------------'</span><span class="token punctuation">)</span>     <span class="token function">print</span><span class="token punctuation">(</span>f<span class="token string">'{one_data}'</span><span class="token punctuation">)</span>     <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'create time: {}'</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span><span class="token function">getctime</span><span class="token punctuation">(</span>one_data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>     <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'access time: {}'</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span><span class="token function">getatime</span><span class="token punctuation">(</span>one_data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>     <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'modify time: {}'</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span><span class="token function">getmtime</span><span class="token punctuation">(</span>one_data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> </code></pre> <pre><code class="prism language-cpp"><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> D<span class="token operator">:</span>\PythonProject\TestPython\test<span class="token punctuation">.</span>py create time<span class="token operator">:</span> <span class="token number">1619795451.78109</span> access time<span class="token operator">:</span> <span class="token number">1619795451.78109</span> modify time<span class="token operator">:</span> <span class="token number">1619795451.78109</span> <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> D<span class="token operator">:</span>\PythonProject\TestPython create time<span class="token operator">:</span> <span class="token number">1619795443.6216414</span> access time<span class="token operator">:</span> <span class="token number">1620021754.546589</span> modify time<span class="token operator">:</span> <span class="token number">1619795457.3491347</span> </code></pre> <hr/> <p><strong>5 判断是否是文件、是否是路径、是否存在</strong>[都会判断路径是否真实存在]</p> <ul> <li>exsits() # <code>文件或目录实际是否存在</code> </li> <li>isfile() # <code>是否是文件 前提是exisits()为True</code> </li> <li>isdir() # <code>是否是目录 前提是exisits()为True</code> </li> </ul> <pre><code class="prism language-cpp"><span class="token keyword">for</span> one_data in dest_data<span class="token operator">:</span>     <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'--------------------------------------------'</span><span class="token punctuation">)</span>     <span class="token function">print</span><span class="token punctuation">(</span>f<span class="token string">'{one_data}'</span><span class="token punctuation">)</span>     <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'is file: {}'</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span><span class="token function">isfile</span><span class="token punctuation">(</span>one_data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>     <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'is dir: {}'</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span><span class="token function">isdir</span><span class="token punctuation">(</span>one_data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>     <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'is exsit：{}'</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span><span class="token function">exists</span><span class="token punctuation">(</span>one_data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> </code></pre> <pre><code class="prism language-cpp"><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> D<span class="token operator">:</span>\PythonProject\TestPython\test<span class="token punctuation">.</span>py is file<span class="token operator">:</span> True is dir<span class="token operator">:</span> False is exsit：True <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> X<span class="token operator">:</span>\PythonProject\TestPython\test<span class="token punctuation">.</span>py is file<span class="token operator">:</span> False is dir<span class="token operator">:</span> False is exsit：False <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> D<span class="token operator">:</span>\PythonProject\TestPython is file<span class="token operator">:</span> False is dir<span class="token operator">:</span> True is exsit：True <span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> X<span class="token operator">:</span>\PythonProject\TestPython is file<span class="token operator">:</span> False is dir<span class="token operator">:</span> False is exsit：False </code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-32638.htm">宠物医院申请条件（宠物医院的条件）</a></p>
+                                        <p>下一个：<a href="/news/article-33131.htm">济南宠物免费领养中心在哪儿（济南哪里有免费领养宠物的地方）</a></p>
+                                    </div>
+                                        </div>
+
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-7-8-free-v2ray-subscribe.htm" title="「7月8日」最高速度21.4M/S，2024年Clash/Shadowrocket/V2ray/SSR每天更新免费节点订阅链接">「7月8日」最高速度21.4M/S，2024年Clash/Shadowrocket/V2ray/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-4-node-share-links.htm" title="「10月4日」最高速度18.6M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接">「10月4日」最高速度18.6M/S，2024年SSR/Shadowrocket/Clash/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-25587.htm" title="猫粮机器怎么做猫粮的 猫粮机器怎么做猫粮的视频">猫粮机器怎么做猫粮的 猫粮机器怎么做猫粮的视频</a></li>
+                        <li class="py-2"><a href="/news/article-24494.htm" title="[转载] Python中format函数用法">[转载] Python中format函数用法</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-8-9-node-share.htm" title="「8月9日」最高速度18.4M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费节点订阅链接">「8月9日」最高速度18.4M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-30262.htm" title="动物疫苗可以自己打吗多少钱啊一针啊（给动物打一次疫苗多少钱）">动物疫苗可以自己打吗多少钱啊一针啊（给动物打一次疫苗多少钱）</a></li>
+                        <li class="py-2"><a href="/news/article-22804.htm" title="动物疫苗管理法律法规有哪些要求 动物疫苗管理法律法规有哪些要求呢">动物疫苗管理法律法规有哪些要求 动物疫苗管理法律法规有哪些要求呢</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-21-free-clash-subscribe.htm" title="「10月21日」最高速度20.6M/S，2024年Shadowrocket/SSR/Clash/V2ray每天更新免费节点订阅链接">「10月21日」最高速度20.6M/S，2024年Shadowrocket/SSR/Clash/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-7-9-free-subscribe-node.htm" title="「7月9日」最高速度19.5M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接">「7月9日」最高速度19.5M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-26520.htm" title="领养宠物用不用钱（领养宠物要给红包吗）">领养宠物用不用钱（领养宠物要给红包吗）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-07/" title="2024-07 归档">2024-07</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2024-06/" title="2024-06 归档">2024-06</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-05/" title="2024-05 归档">2024-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2024-04/" title="2024-04 归档">2024-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about end here-->
+        <!--copy rights start here-->
+    <div class="copy-rights">
+        <div class="container">
+            <div class="copy-rights-main">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                <p>
+                    ClashV2rayFree官网节点站 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
