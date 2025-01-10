@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayfree.github.io/news/article-37449.htm" />
+    <title>Error response from daemon: Get https://registry-1.docker.io/v2/ &#8230; read: connection refused</title>
+        <meta name="description" content="使用docker拉取镜像时出现下面状况，根据个人理解这个情况应该是docker无法解析https://registry-1.docker.io/v2/这个网站，所以需要修改类似DNS server这样" />
+        <link href="/assets/website/css/clashv2rayfree/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/website/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <!--google fonts-->
+    <script src="/assets/website/js/frontend/clashv2rayfree/jquery-1.11.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashv2rayfree/bootstrap.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NF953KP3Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0NF953KP3Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--header-top start here-->
+    <div class="top-header">
+    </div>
+    <!--header-top end here-->
+    <!--header start here-->
+    <!-- NAVBAR
+		================================================== -->
+    <div class="header w3l">
+        <div class="fixed-header">
+            <div class="navbar-wrapper">
+                <div class="container">
+                    <nav class="navbar navbar-inverse navbar-static-top">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                                                <a class="navbar-brand" href="/">Clash V2ray Free</a>
+                                                            </div>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <nav class="cl-effect-16" id="cl-effect-16">
+                                <ul class="nav navbar-nav">
+                                                                        <li>
+                                        <a href="/">首页</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/free-nodes/">免费节点</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/paid-subscribe/">推荐机场</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/news/">新闻资讯</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="#">关于</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">联系</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </nav>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--about strat here-->
+    <div class="about">
+        <div class="container">
+            <div class="about-main">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ol class="breadcrumb">
+                          <li><a href="/">首页</a></li>
+                          <li><a href="/news/">新闻资讯</a></li>
+                          <li class="active">正文</li>
+                        </ol>
+                        <div class="about-top">
+                            <h1>Error response from daemon: Get https://registry-1.docker.io/v2/ &#8230; read: connection refused</h1>
+                        </div>
+                        <div class="about-bottom">
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>使用docker拉取镜像时出现下面状况，根据个人理解这个情况应该是docker无法解析https://registry-1.docker.io/v2/这个网站，所以需要修改类似DNS server这样的东西，在这里修改的是resolv.conf文件里面的nameserver</p> <pre><code>zy@zy:~$ sudo docker pull ubuntu:16.04 Error response from daemon: Get https://registry-1.docker.io/v2/: dial tcp: lookup registry-1.docker.io on [::1]:53: read udp [::1]:58060-&gt;[::1]:53: read: connection refused</code></pre> <p>修改文件/etc/resolv.conf</p> <pre><code>sudo vim /etc/resolv.conf</code></pre> <p>将nameserver修改为8.8.8.8或者114.114.114.114</p> <blockquote> <p>这里提供一个网址<a href="https://dns.icoa.cn/" rel="nofollow">https://dns.icoa.cn/</a>，通过这个网址可以查看很多可用的DNS服务器</p> </blockquote> <pre><code># Dynamic resolv.conf(5) file for glibc resolver(3) generated by resolvconf(8) #     DO NOT EDIT THIS FILE BY HAND -- YOUR CHANGES WILL BE OVERWRITTEN # nameserver 127.0.1.1 nameserver 114.114.114.114</code></pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-37448.htm">C/C++内存申请函数总结</a></p>
+                                        <p>下一个：<a href="/news/article-37913.htm">IDEA2020配置maven环境</a></p>
+                                    </div>
+                                        </div>
+
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-23721.htm" title="动物医院翻译成英语 动物医院翻译成英语怎么说">动物医院翻译成英语 动物医院翻译成英语怎么说</a></li>
+                        <li class="py-2"><a href="/news/article-36949.htm" title="南京有没有免费领养宠物的地方啊（南京领养宠物都要做什么条件）">南京有没有免费领养宠物的地方啊（南京领养宠物都要做什么条件）</a></li>
+                        <li class="py-2"><a href="/news/article-35887.htm" title="农大动物医院营业时间是几点（农大动物医院预约挂号）">农大动物医院营业时间是几点（农大动物医院预约挂号）</a></li>
+                        <li class="py-2"><a href="/news/article-27904.htm" title="动物疫苗过敏打什么药最好（宠物疫苗过敏如何处理）">动物疫苗过敏打什么药最好（宠物疫苗过敏如何处理）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-16-free-shadowrocket-node.htm" title="「10月16日」最高速度18.3M/S，2024年Clash/V2ray/Shadowrocket/SSR每天更新免费节点订阅链接">「10月16日」最高速度18.3M/S，2024年Clash/V2ray/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-30736.htm" title="深圳市宠物领养之家官网查询电话（深圳宠物领养平台）">深圳市宠物领养之家官网查询电话（深圳宠物领养平台）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-22-clash-node.htm" title="「10月22日」最高速度18M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费节点订阅链接">「10月22日」最高速度18M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-35407.htm" title="Controller层代码这么写，简洁又优雅！">Controller层代码这么写，简洁又优雅！</a></li>
+                        <li class="py-2"><a href="/news/article-20513.htm" title="动物诊疗机构管理规范（动物诊疗机构管理办法2021）">动物诊疗机构管理规范（动物诊疗机构管理办法2021）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-9-free-high-speed-nodes.htm" title="「11月9日」最高速度19.2M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接">「11月9日」最高速度19.2M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about end here-->
+        <!--copy rights start here-->
+    <div class="copy-rights">
+        <div class="container">
+            <div class="copy-rights-main">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                <p>
+                    ClashV2rayFree官网节点站 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

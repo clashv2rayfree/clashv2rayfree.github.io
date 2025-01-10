@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayfree.github.io/news/article-38412.htm" />
+    <title>Vue学习笔记v-for的key</title>
+        <meta name="description" content="参考文档：https://cn.vuejs.org/v2/guide/ 当使用v-for遍历数组时，如果没有指定key，则当数组元素顺序发生变更时，dom绑定的数据会更新，而dom本身的顺序不会变化；" />
+        <link href="/assets/website/css/clashv2rayfree/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/website/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <!--google fonts-->
+    <script src="/assets/website/js/frontend/clashv2rayfree/jquery-1.11.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashv2rayfree/bootstrap.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NF953KP3Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0NF953KP3Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--header-top start here-->
+    <div class="top-header">
+    </div>
+    <!--header-top end here-->
+    <!--header start here-->
+    <!-- NAVBAR
+		================================================== -->
+    <div class="header w3l">
+        <div class="fixed-header">
+            <div class="navbar-wrapper">
+                <div class="container">
+                    <nav class="navbar navbar-inverse navbar-static-top">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                                                <a class="navbar-brand" href="/">Clash V2ray Free</a>
+                                                            </div>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <nav class="cl-effect-16" id="cl-effect-16">
+                                <ul class="nav navbar-nav">
+                                                                        <li>
+                                        <a href="/">首页</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/free-nodes/">免费节点</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/paid-subscribe/">推荐机场</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/news/">新闻资讯</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="#">关于</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">联系</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </nav>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--about strat here-->
+    <div class="about">
+        <div class="container">
+            <div class="about-main">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ol class="breadcrumb">
+                          <li><a href="/">首页</a></li>
+                          <li><a href="/news/">新闻资讯</a></li>
+                          <li class="active">正文</li>
+                        </ol>
+                        <div class="about-top">
+                            <h1>Vue学习笔记v-for的key</h1>
+                        </div>
+                        <div class="about-bottom">
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <p>参考文档：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://cn.vuejs.org/v2/guide/"  rel="nofollow">https://cn.vuejs.org/v2/guide/</a></p> <p>当使用v-for遍历数组时，如果没有指定key，则当数组元素顺序发生变更时，dom绑定的数据会更新，而dom本身的顺序不会变化；如果指定了key，则当数组元素顺序发生变更时，dom会和数据同步更新。下面用一个简单的例子来说明：</p> <pre><code class="prism language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span><span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>keyTest<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>unchange<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>dom未重新渲染<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item in items<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>{<!-- -->{item.message}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>change<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>dom有重新渲染<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item in items<span class="token punctuation">"</span></span><span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item.id<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>{<!-- -->{item.message}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span><span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span><span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>changeOrder<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>changeOrder<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"><span class="token keyword">new</span><span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>         el<span class="token punctuation">:</span><span class="token string">'#keyTest'</span><span class="token punctuation">,</span>         data<span class="token punctuation">:</span><span class="token punctuation">{<!-- --></span>             items<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">{<!-- --></span>message<span class="token punctuation">:</span><span class="token string">'Foo'</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span><span class="token string">"1"</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{<!-- --></span>message<span class="token punctuation">:</span><span class="token string">'Bar'</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span><span class="token string">"2"</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">,</span>         mounted<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>             document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"unchange"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>nextElementSibling<span class="token punctuation">.</span>style<span class="token punctuation">.</span>color<span class="token operator">=</span><span class="token string">"red"</span><span class="token punctuation">;</span>             document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"change"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>nextElementSibling<span class="token punctuation">.</span>style<span class="token punctuation">.</span>color<span class="token operator">=</span><span class="token string">"red"</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>         methods<span class="token punctuation">:</span><span class="token punctuation">{<!-- --></span>             changeOrder<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">let</span> newItems<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>                 newItems<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>items<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                 newItems<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>items<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">this</span><span class="token punctuation">.</span>items<span class="token operator">=</span> newItems<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code></pre> <p>例子包含2个v-for循环，一个不包含key，一个包含key；初始化时会对列表的第一个元素加一个颜色的样式；然后点击按钮触发数组顺序变更，可以看到不包含key的v-for仍然是第一个元素为红色（即dom本身的顺序没有变化），而包含key的v-for则是第二个元素为红色（即dom的顺序发生了变化）：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220607/97f45fcab7fd862a4714ca607535daae.jpg" alt="Vue学习笔记v-for的key"></p> <p>v-for不指定key的应用场景相对较少，多应用于需要高亮显示按条件排序后的前xx条数据（比如需要高亮显示收入排名前三位的职业，然后触发了倒序重排，需要高亮显示收入排名后三位的职业）。</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-38411.htm">java多线程学习2，线程的属性</a></p>
+                                    </div>
+                                        </div>
+
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-28832.htm" title="Python编程语言基础">Python编程语言基础</a></li>
+                        <li class="py-2"><a href="/news/article-30100.htm" title="Tensorflow迁移学习加载预训练模型并修改变量shape和value的方法">Tensorflow迁移学习加载预训练模型并修改变量shape和value的方法</a></li>
+                        <li class="py-2"><a href="/news/article-22803.htm" title="Kafka如何保证可靠的数据传递">Kafka如何保证可靠的数据传递</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-11-free-node-subscribe.htm" title="「10月11日」最高速度21.6M/S，2024年SSR/V2ray/Clash/Shadowrocket每天更新免费节点订阅链接">「10月11日」最高速度21.6M/S，2024年SSR/V2ray/Clash/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-14-clash-windows.htm" title="「11月14日」最高速度19.7M/S，2024年Clash/V2ray/Shadowrocket/SSR每天更新免费节点订阅链接">「11月14日」最高速度19.7M/S，2024年Clash/V2ray/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-1-free-node-subscribe-links.htm" title="「1月1日」最高速度19M/S，2025年Clash/Shadowrocket/V2ray/SSR每天更新免费订阅源地址">「1月1日」最高速度19M/S，2025年Clash/Shadowrocket/V2ray/SSR每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-30736.htm" title="深圳市宠物领养之家官网查询电话（深圳宠物领养平台）">深圳市宠物领养之家官网查询电话（深圳宠物领养平台）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-31-free-v2ray.htm" title="「10月31日」最高速度19.4M/S，2024年Shadowrocket/SSR/Clash/V2ray每天更新免费节点订阅链接">「10月31日」最高速度19.4M/S，2024年Shadowrocket/SSR/Clash/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-30101.htm" title="宠物店粮食摆放图片 宠物店粮食摆放图片大全">宠物店粮食摆放图片 宠物店粮食摆放图片大全</a></li>
+                        <li class="py-2"><a href="/news/article-20054.htm" title="C语言栈与队列面试题详解_C 语言">C语言栈与队列面试题详解_C 语言</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about end here-->
+        <!--copy rights start here-->
+    <div class="copy-rights">
+        <div class="container">
+            <div class="copy-rights-main">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                <p>
+                    ClashV2rayFree官网节点站 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
