@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayfree.github.io/news/article-40390.htm" />
+    <title>Vuex用法及封装</title>
+        <meta name="description" content="Vuex的介绍和使用建议看官方文档，本文更多的是我对Vuex的一个总结。  Vuex介绍及使用 Vuex使用中可能遇到的问题  一.Vuex介绍及使用 1.Vuex是什么 官方的介绍是“Vuex 是状" />
+        <link href="/assets/website/css/clashv2rayfree/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/website/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <!--google fonts-->
+    <script src="/assets/website/js/frontend/clashv2rayfree/jquery-1.11.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashv2rayfree/bootstrap.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NF953KP3Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0NF953KP3Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--header-top start here-->
+    <div class="top-header">
+    </div>
+    <!--header-top end here-->
+    <!--header start here-->
+    <!-- NAVBAR
+		================================================== -->
+    <div class="header w3l">
+        <div class="fixed-header">
+            <div class="navbar-wrapper">
+                <div class="container">
+                    <nav class="navbar navbar-inverse navbar-static-top">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                                                <a class="navbar-brand" href="/">Clash V2ray Free</a>
+                                                            </div>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <nav class="cl-effect-16" id="cl-effect-16">
+                                <ul class="nav navbar-nav">
+                                                                        <li>
+                                        <a href="/">首页</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/free-nodes/">免费节点</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/paid-subscribe/">推荐机场</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/news/">新闻资讯</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="#">关于</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">联系</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </nav>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--about strat here-->
+    <div class="about">
+        <div class="container">
+            <div class="about-main">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ol class="breadcrumb">
+                          <li><a href="/">首页</a></li>
+                          <li><a href="/news/">新闻资讯</a></li>
+                          <li class="active">正文</li>
+                        </ol>
+                        <div class="about-top">
+                            <h1>Vuex用法及封装</h1>
+                        </div>
+                        <div class="about-bottom">
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>Vuex的介绍和使用建议看<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://vuex.vuejs.org/zh/"  rel="nofollow">官方文档</a>，本文更多的是我对Vuex的一个总结。</p> <ul> <li>Vuex介绍及使用</li> <li>Vuex使用中可能遇到的问题</li> </ul> <h3>一.Vuex介绍及使用</h3> <p><strong>1.Vuex是什么</strong></p> <p>官方的介绍是“Vuex 是<strong>状态管理模式</strong>”</p> <p>我们在做组件间数据传递的时候，其方式有多种，比如：</p> <ul> <li>组件间通过属性和事件触发的形式进行数据的交互</li> <li>使用缓存localStorage，sessionStorage等</li> <li>router 路由跳转时传值</li> <li>bus总线机制</li> <li>vuex</li> </ul> <p>而vuex最大的特点就是能<strong>实时同步更新数据</strong></p> <p><strong>2.Vuex能解决什么问题</strong></p> <p>在很多场景下，我们可能会有下面的问题：</p> <ul> <li>多个视图依赖于同一状态。</li> <li>来自不同视图的行为需要变更同一状态。</li> </ul> <p><strong>3.什么情况下使用 Vuex</strong></p> <p>官方建议在开发中大型项目的情况下考虑使用Vuex。就我个人而言，当页面的非父子组件间需要<strong>实时同步更新数据</strong>时，才使用vuex，其他情况都不使用。</p> <p><strong>4.Vuex如何使用</strong></p> <p>首先，必须牢记下面这张图</p> <p style="text-align:center;"><img decoding="async" alt="" class="has" height="400" src="http://img.555519.xyz/uploads/20221230/e27c4292ea0538259256f4e3c5b4b7a3.jpg"></p> <p>图中，整个虚线部分就是Vuex，我们可以把它看成一个公共仓库store。store中有Actions（行为）、Mutations（变动）和State（状态）。整个的逻辑是组件通过Dispatch调用Actions中的方法，Actions通过Commit调用Mutations中的方法，Mutatisons改变State中的值。</p> <p>我们看下如何简单使用。首先，在store目录下的index.js文件中写入如下代码：</p> <pre class="has"><code class="language-javascript">import Vue from 'vue' import Vuex from 'vuex'  Vue.use(Vuex)  export default new Vuex.Store({   state: {     city: '重庆'   },   actions: {     changeCity(ctx, city) {       ctx.commit('changeCity2', city) // 调用mutations中的方法改变city     }   },   mutations: {     changeCity2(state, city) {       state.city = city     }   },   getters: { // 类似计算属性，计算state中的数据提供新的数据     doubleCity (state) {       return state.city + ' ' + state.city     }   } })</code></pre> <p>然后，我们在main.js中引入store</p> <pre class="has"><code class="language-javascript">import Vue from 'vue' import App from './App' import store from './store/index'  new Vue({   el: '#app',   store,   components: { App },   template: '&lt;App/&gt;' }) </code></pre> <p>接着，我们就能在组件中使用</p> <pre class="has"><code class="language-html">&lt;div&gt;{<!-- -->{this.$store.state.city}}&lt;/div&gt;</code></pre> <p>我们也可以使用Vuex提供的语法糖，将city映射到组件数据中</p> <p>先引入</p> <pre class="has"><code class="language-javascript">import {mapState} from 'vuex'</code></pre> <p>再映射，这里我们映射到computed中</p> <pre class="has"><code class="language-javascript">  computed: {     // ...为展开运算符 将vuex中的公用属性city映射到计算属性city中     ...mapState(['city'])   }</code></pre> <p>上面，我们只是调用了city数据，那如何改变city呢？</p> <pre class="has"><code class="language-javascript">this.$store.dispatch('changeCity', '北京')</code></pre> <p>我们也可以使用Vuex中的语法糖，将方法映射到组件中</p> <pre class="has"><code class="language-javascript">import {mapActions} from 'vuex'</code></pre> <pre class="has"><code class="language-javascript">    methods: {       ...mapActions([         'changeCity'       ])     }</code></pre> <p>通过上面的操作，我们发现要改变city，需要先调用actions，再调用mutations来改变city，我们能不能直接调用mutations来改变city呢？这是可以的</p> <pre class="has"><code class="language-javascript">this.$store.commit('changeCity2', '北京')</code></pre> <p>当然，我们也可以使用Vuex的语法糖mapMutations来映射，这里不再介绍。</p> <p>注：本着能少写就少写的原则，我们在一般的开发中，可能会省略actions步骤。</p> <p><strong>5.Vuex的简单封装</strong></p> <p>随着项目越来越复杂，若将所有代码写在一起会显得越来越臃肿，所以我们一般都要进行封装分离。这里，我们将state和mutations进行封装，其他的类似。</p> <p>新建state.js</p> <pre class="has"><code class="language-javascript">let state = {   city: '重庆' }  export default state</code></pre> <p>新建mutations.js</p> <pre class="has"><code class="language-javascript">let mutations = {   changeCity (state, city) {     state.city = city   } }  export default mutations </code></pre> <p>然后，我们的代码就可以改成如下这般</p> <pre class="has"><code class="language-javascript">import Vue from 'vue' import Vuex from 'vuex' import state from './state' import mutations from './mutations'  Vue.use(Vuex)  export default new Vuex.Store({   state,   mutations })</code></pre> <h3>二.Vuex使用中可能遇到的问题</h3> <p><strong>1.刷新页面数据被重置为初始状态</strong></p> <p>对于这个问题，我们一般通过 Vuex 与缓存结合使用来解决。</p> <p>读取数据时</p> <pre class="has"><code class="language-javascript">let defaultCity = '' if (localStorage.getItem('city')) {   defaultCity= localStorage.getItem('city') }  const state = {   city: defaultCity }  export default state</code></pre> <p>改变数据时</p> <pre class="has"><code class="language-javascript">const mutations = {   changeCity (state, val) {     localStorage.setItem('city', val)     state.city= val   } }  export default mutations</code></pre> <p>&nbsp;</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-39892.htm">动物疫苗需要每年都打吗多少钱 动物疫苗需要每年都打吗多少钱一针</a></p>
+                                        <p>下一个：<a href="/news/article-40391.htm">做狗粮的设备多少钱 做狗粮的设备多少钱一套</a></p>
+                                    </div>
+                                        </div>
+
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-20054.htm" title="C语言栈与队列面试题详解_C 语言">C语言栈与队列面试题详解_C 语言</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-18-free-shadowrocket-node.htm" title="「11月18日」最高速度22.7M/S，2024年Clash/V2ray/SSR/Shadowrocket每天更新免费节点订阅链接">「11月18日」最高速度22.7M/S，2024年Clash/V2ray/SSR/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-26059.htm" title="动物疫苗接种方法有哪些种类图片 动物疫苗接种方法有哪些种类图片大全">动物疫苗接种方法有哪些种类图片 动物疫苗接种方法有哪些种类图片大全</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-2-free-node-subscribe.htm" title="「1月2日」最高速度19.2M/S，2025年Clash/SSR/Shadowrocket/V2ray每天更新免费订阅源地址">「1月2日」最高速度19.2M/S，2025年Clash/SSR/Shadowrocket/V2ray每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-30-free-node-subscribe-links.htm" title="「10月30日」最高速度18.9M/S，2024年SSR/V2ray/Clash/Shadowrocket每天更新免费节点订阅链接">「10月30日」最高速度18.9M/S，2024年SSR/V2ray/Clash/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-25-node-share-links.htm" title="「11月25日」最高速度22.5M/S，2024年Shadowrocket/SSR/Clash/V2ray每天更新免费节点订阅链接">「11月25日」最高速度22.5M/S，2024年Shadowrocket/SSR/Clash/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-19598.htm" title="动物疫苗可以自己打吗现在疫情严重吗知乎（宠物疫苗能自己打吗）">动物疫苗可以自己打吗现在疫情严重吗知乎（宠物疫苗能自己打吗）</a></li>
+                        <li class="py-2"><a href="/news/article-35408.htm" title="上海农业大学动物医院官网（上海农业大学动物医院官网招聘）">上海农业大学动物医院官网（上海农业大学动物医院官网招聘）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-22-clash-v2ray-ss-ssr.htm" title="「11月22日」最高速度20.3M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接">「11月22日」最高速度20.3M/S，2024年SSR/Clash/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-28832.htm" title="Python编程语言基础">Python编程语言基础</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">48</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about end here-->
+        <!--copy rights start here-->
+    <div class="copy-rights">
+        <div class="container">
+            <div class="copy-rights-main">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                <p>
+                    ClashV2rayFree官网节点站 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
