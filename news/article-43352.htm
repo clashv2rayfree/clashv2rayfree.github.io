@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayfree.github.io/news/article-43352.htm" />
+    <title>如果我在INTERVAL关键字中使用了一组封闭的单位值，MySQL将返回什么？</title>
+        <meta name="description" content="MySQL将考虑随附的一组单位值中提供的两个中的第一个值。在根据INTERVAL关键字给出的单位，根据封闭集合中的考虑值，计算间隔后，它将返回输出以及警告。 以下示例将对其进行澄清- mysql&gt" />
+    
+    <meta name="author" content="ClashV2rayFree官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayfree.github.io/news/article-43352.htm" />
+    <meta property="og:site_name" content="ClashV2rayFree官网节点站" />
+    <meta property="og:title" content="如果我在INTERVAL关键字中使用了一组封闭的单位值，MySQL将返回什么？" />
+    <meta property="og:image" content="https://clashv2rayfree.github.io/uploads/20240412/dd1a69f2603911b1df7ac0b848942804.webp" />
+        <meta property="og:release_date" content="2025-01-20T07:11:25" />
+    <meta property="og:updated_time" content="2025-01-20T07:11:25" />
+        <meta property="og:description" content="MySQL将考虑随附的一组单位值中提供的两个中的第一个值。在根据INTERVAL关键字给出的单位，根据封闭集合中的考虑值，计算间隔后，它将返回输出以及警告。 以下示例将对其进行澄清- mysql&gt" />
+        
+    <link href="/assets/website/css/clashv2rayfree/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/website/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <!--google fonts-->
+    <script src="/assets/website/js/frontend/clashv2rayfree/jquery-1.11.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashv2rayfree/bootstrap.min.js"></script>
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="如果我在INTERVAL关键字中使用了一组封闭的单位值，MySQL将返回什么？">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NF953KP3Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0NF953KP3Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--header-top start here-->
+    <div class="top-header">
+    </div>
+    <!--header-top end here-->
+    <!--header start here-->
+    <!-- NAVBAR
+		================================================== -->
+    <div class="header w3l">
+        <div class="fixed-header">
+            <div class="navbar-wrapper">
+                <div class="container">
+                    <nav class="navbar navbar-inverse navbar-static-top">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                                                <a class="navbar-brand" href="/">Clash V2ray Free</a>
+                                                            </div>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <nav class="cl-effect-16" id="cl-effect-16">
+                                <ul class="nav navbar-nav">
+                                                                        <li>
+                                        <a href="/">首页</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/free-nodes/">免费节点</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/paid-subscribe/">推荐机场</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/news/">新闻资讯</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="#">关于</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">联系</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </nav>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--about strat here-->
+    <div class="about">
+        <div class="container">
+            <div class="about-main">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ol class="breadcrumb">
+                          <li><a href="/">首页</a></li>
+                          <li><a href="/news/">新闻资讯</a></li>
+                          <li class="active">正文</li>
+                        </ol>
+                        <div class="about-top">
+                            <h1>如果我在INTERVAL关键字中使用了一组封闭的单位值，MySQL将返回什么？</h1>
+                        </div>
+                        <div class="about-bottom">
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p>MySQL将考虑随附的一组单位值中提供的两个中的第一个值。在根据INTERVAL关键字给出的单位，根据封闭集合中的考虑值，计算间隔后，它将返回输出以及警告。</p> <p>以下示例将对其进行澄清-</p> <pre>mysql&gt;&nbsp;Select&nbsp;TIMESTAMP('2017-10-22&nbsp;04:05:36'&nbsp;+&nbsp;INTERVAL&nbsp;'4&nbsp;2'&nbsp;Hour)AS&nbsp;'HOUR&nbsp;VALUE&nbsp;INCREASED&nbsp;BY&nbsp;4'; +---------------------------+ |&nbsp;HOUR&nbsp;VALUE&nbsp;INCREASED&nbsp;BY&nbsp;4&nbsp;| +---------------------------+ |&nbsp;2017-10-22&nbsp;08:05:36&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| +---------------------------+ 1&nbsp;row&nbsp;in&nbsp;set,&nbsp;1&nbsp;warning&nbsp;(0.00&nbsp;sec)  mysql&gt;&nbsp;Show&nbsp;warnings; +---------+------+------------------------------------------+ |&nbsp;Level&nbsp;&nbsp;&nbsp;|&nbsp;Code&nbsp;|&nbsp;Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| +---------+------+------------------------------------------+ |&nbsp;Warning&nbsp;|&nbsp;1292&nbsp;|&nbsp;Truncated&nbsp;incorrect&nbsp;INTEGER&nbsp;value:&nbsp;'4&nbsp;2'&nbsp;| +---------+------+------------------------------------------+ 1&nbsp;row&nbsp;in&nbsp;set&nbsp;(0.00&nbsp;sec)</pre> <div></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-42859.htm">给动物打针需要资格证吗?（动物 打针）</a></p>
+                                        <p>下一个：<a href="/news/article-43353.htm">怎么看幼猫性格好坏（怎么消除小猫刚到家的恐惧感）</a></p>
+                                    </div>
+                                        </div>
+
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-20055.htm" title="宠物医院美团好评文案 宠物医院美团好评文案大全">宠物医院美团好评文案 宠物医院美团好评文案大全</a></li>
+                        <li class="py-2"><a href="/news/article-23259.htm" title="宠物粮食销售方法有哪些（宠物粮销售渠道）">宠物粮食销售方法有哪些（宠物粮销售渠道）</a></li>
+                        <li class="py-2"><a href="/news/article-29290.htm" title="北京宠物免费领养中心在哪里（北京宠物免费领养中心在哪里啊）">北京宠物免费领养中心在哪里（北京宠物免费领养中心在哪里啊）</a></li>
+                        <li class="py-2"><a href="/news/article-40876.htm" title="动物疫苗保质期一般多久有效果（动物疫苗常温多长时间失效）">动物疫苗保质期一般多久有效果（动物疫苗常温多长时间失效）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-20-free-v2ray.htm" title="「11月20日」最高速度19.9M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费节点订阅链接">「11月20日」最高速度19.9M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-19-free-v2ray.htm" title="「1月19日」最高速度19.8M/S，2025年Clash/V2ray/Shadowrocket/SSR每天更新免费订阅源地址">「1月19日」最高速度19.8M/S，2025年Clash/V2ray/Shadowrocket/SSR每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-15-free-node-subscribe-links.htm" title="「1月15日」最高速度20.5M/S，2025年V2ray/Shadowrocket/Clash/SSR每天更新免费订阅源地址">「1月15日」最高速度20.5M/S，2025年V2ray/Shadowrocket/Clash/SSR每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-11-free-node-subscribe.htm" title="「12月11日」最高速度20M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费订阅源地址">「12月11日」最高速度20M/S，2024年Clash/SSR/V2ray/Shadowrocket每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-34552.htm" title="王允海动物医院简介资料（王允武医生）">王允海动物医院简介资料（王允武医生）</a></li>
+                        <li class="py-2"><a href="/news/article-35888.htm" title="青浦二中升学率高吗（青浦二中升学率高吗知乎）">青浦二中升学率高吗（青浦二中升学率高吗知乎）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">66</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about end here-->
+        <!--copy rights start here-->
+    <div class="copy-rights">
+        <div class="container">
+            <div class="copy-rights-main">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                <p>
+                    ClashV2rayFree官网节点站 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
