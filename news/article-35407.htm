@@ -1,11 +1,22 @@
 <!DOCTYPE HTML>
-<html lang="zh-CN">
+<html xml:lang="zh-CN" lang="zh-CN">
 
 <head>
         <link rel="canonical" href="https://clashv2rayfree.github.io/news/article-35407.htm" />
     <title>Controller层代码这么写，简洁又优雅！</title>
         <meta name="description" content="文章来源：https://c1n.cn/LE5Ww‍‍‍ 目录   一个优秀的 Controller 层逻辑   从现状看问题   改造 Controller 层逻辑   总结   一个优秀的 Con" />
-        <link href="/assets/website/css/clashv2rayfree/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    
+    <meta name="author" content="ClashV2rayFree官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayfree.github.io/news/article-35407.htm" />
+    <meta property="og:site_name" content="ClashV2rayFree官网节点站" />
+    <meta property="og:title" content="Controller层代码这么写，简洁又优雅！" />
+    <meta property="og:image" content="https://clashv2rayfree.github.io/uploads/20240412/2422ffe74930c36a04fc48478b6d208f.webp" />
+        <meta property="og:release_date" content="2025-01-04T10:22:38" />
+    <meta property="og:updated_time" content="2025-01-04T10:22:38" />
+        <meta property="og:description" content="文章来源：https://c1n.cn/LE5Ww‍‍‍ 目录   一个优秀的 Controller 层逻辑   从现状看问题   改造 Controller 层逻辑   总结   一个优秀的 Con" />
+        
+    <link href="/assets/website/css/clashv2rayfree/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Custom Theme files -->
     <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -24,6 +35,23 @@
     <!--google fonts-->
     <script src="/assets/website/js/frontend/clashv2rayfree/jquery-1.11.0.min.js"></script>
     <script src="/assets/website/js/frontend/clashv2rayfree/bootstrap.min.js"></script>
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Controller层代码这么写，简洁又优雅！">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0NF953KP3Y"></script>
 <script>
@@ -125,16 +153,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-26986.htm" title="动物医院好评语100字通用（动物医院好评语100字通用版）">动物医院好评语100字通用（动物医院好评语100字通用版）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-18-shadowrocket-node.htm" title="「10月18日」最高速度19.2M/S，2024年Shadowrocket/Clash/V2ray/SSR每天更新免费节点订阅链接">「10月18日」最高速度19.2M/S，2024年Shadowrocket/Clash/V2ray/SSR每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-22346.htm" title="虚拟机搭建负载均衡，mysql主从复制和读写分离（四、搭建主从复制和读写分离）">虚拟机搭建负载均衡，mysql主从复制和读写分离（四、搭建主从复制和读写分离）</a></li>
-                        <li class="py-2"><a href="/news/article-19598.htm" title="动物疫苗可以自己打吗现在疫情严重吗知乎（宠物疫苗能自己打吗）">动物疫苗可以自己打吗现在疫情严重吗知乎（宠物疫苗能自己打吗）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-9-clash-windows.htm" title="「10月9日」最高速度21.5M/S，2024年Shadowrocket/V2ray/SSR/Clash每天更新免费节点订阅链接">「10月9日」最高速度21.5M/S，2024年Shadowrocket/V2ray/SSR/Clash每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-23-clash-node-daily-updates.htm" title="「10月23日」最高速度21.3M/S，2024年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接">「10月23日」最高速度21.3M/S，2024年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-32638.htm" title="宠物医院申请条件（宠物医院的条件）">宠物医院申请条件（宠物医院的条件）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-15-shadowrocket-node.htm" title="「11月15日」最高速度20.8M/S，2024年Clash/Shadowrocket/SSR/V2ray每天更新免费节点订阅链接">「11月15日」最高速度20.8M/S，2024年Clash/Shadowrocket/SSR/V2ray每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-25-free-v2ray-subscribe.htm" title="「12月25日」最高速度20.5M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费订阅源地址">「12月25日」最高速度20.5M/S，2024年V2ray/SSR/Shadowrocket/Clash每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-33592.htm" title="Goland proto文件 File Watch 自动生成">Goland proto文件 File Watch 自动生成</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-5-free-node-subscribe-links.htm" title="「1月5日」最高速度20.7M/S，2025年Shadowrocket/SSR/Clash/V2ray每天更新免费订阅源地址">「1月5日」最高速度20.7M/S，2025年Shadowrocket/SSR/Clash/V2ray每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-46832.htm" title="被猫抓伤渗了一点血超过24小时没***会不会马上发作?（被猫抓了一下轻微破皮过了24小时怎么办）">被猫抓伤渗了一点血超过24小时没***会不会马上发作?（被猫抓了一下轻微破皮过了24小时怎么办）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-15-free-node-subscribe-links.htm" title="「1月15日」最高速度20.5M/S，2025年V2ray/Shadowrocket/Clash/SSR每天更新免费订阅源地址">「1月15日」最高速度20.5M/S，2025年V2ray/Shadowrocket/Clash/SSR每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-9-free-shadowrocket-node.htm" title="「12月9日」最高速度18.8M/S，2024年Clash/V2ray/SSR/Shadowrocket每天更新免费节点订阅链接">「12月9日」最高速度18.8M/S，2024年Clash/V2ray/SSR/Shadowrocket每天更新免费节点订阅链接</a></li>
                         <li class="py-2"><a href="/news/article-19141.htm" title="动物医院名字怎么取好听的网名（动物医院名字怎么取好听的网名女）">动物医院名字怎么取好听的网名（动物医院名字怎么取好听的网名女）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-28-free-v2ray-subscribe.htm" title="「10月28日」最高速度19.1M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接">「10月28日」最高速度19.1M/S，2024年V2ray/Clash/Shadowrocket/SSR每天更新免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-20973.htm" title="初中学历可以考什么证书（初中学历考什么证书才能月入过万）">初中学历可以考什么证书（初中学历考什么证书才能月入过万）</a></li>
+                        <li class="py-2"><a href="/news/article-21888.htm" title="css本文在背景之上,css实现文字在背景图片之上">css本文在背景之上,css实现文字在背景图片之上</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-2-clash-node-daily-updates.htm" title="「12月2日」最高速度18.9M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接">「12月2日」最高速度18.9M/S，2024年Clash/SSR/Shadowrocket/V2ray每天更新免费节点订阅链接</a></li>
                     </ul>
     </div>
 </div>
@@ -146,16 +174,16 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
             </li>
                     </ul>
     </div>
