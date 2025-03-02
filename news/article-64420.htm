@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayfree.github.io/news/article-64420.htm" />
+    <title>将SpringBoot项目及vue项目分别打包部署到阿里云服务器</title>
+        <meta name="description" content="因为现在都是前后端分离，本文章中后端使用的是springboot，前端使用的是vue 服务器类型为centos 7  使用xshell连接服务器 在idea中将项目打包（因为在后面要使用nginx，它" />
+    
+    <meta name="author" content="ClashV2rayFree官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayfree.github.io/news/article-64420.htm" />
+    <meta property="og:site_name" content="ClashV2rayFree官网节点站" />
+    <meta property="og:title" content="将SpringBoot项目及vue项目分别打包部署到阿里云服务器" />
+    <meta property="og:image" content="https://clashv2rayfree.github.io/uploads/20240412/e3c5e21e1625e6664453df160a14fa78.webp" />
+        <meta property="og:release_date" content="2025-02-28T06:55:54" />
+    <meta property="og:updated_time" content="2025-02-28T06:55:54" />
+        <meta property="og:description" content="因为现在都是前后端分离，本文章中后端使用的是springboot，前端使用的是vue 服务器类型为centos 7  使用xshell连接服务器 在idea中将项目打包（因为在后面要使用nginx，它" />
+        
+    <link href="/assets/website/css/clashv2rayfree/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/website/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <!--google fonts-->
+    <script src="/assets/website/js/frontend/clashv2rayfree/jquery-1.11.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashv2rayfree/bootstrap.min.js"></script>
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="将SpringBoot项目及vue项目分别打包部署到阿里云服务器">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NF953KP3Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0NF953KP3Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--header-top start here-->
+    <div class="top-header">
+    </div>
+    <!--header-top end here-->
+    <!--header start here-->
+    <!-- NAVBAR
+		================================================== -->
+    <div class="header w3l">
+        <div class="fixed-header">
+            <div class="navbar-wrapper">
+                <div class="container">
+                    <nav class="navbar navbar-inverse navbar-static-top">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                                                <a class="navbar-brand" href="/">Clash V2ray Free</a>
+                                                            </div>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <nav class="cl-effect-16" id="cl-effect-16">
+                                <ul class="nav navbar-nav">
+                                                                        <li>
+                                        <a href="/">首页</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/free-nodes/">免费节点</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/paid-subscribe/">推荐机场</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/client.htm">客户端</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/news/">新闻资讯</a>
+                                    </li>
+                                                                    </ul>
+                            </nav>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </nav>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--about strat here-->
+    <div class="about">
+        <div class="container">
+            <div class="about-main">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ol class="breadcrumb">
+                          <li><a href="/">首页</a></li>
+                          <li><a href="/news/">新闻资讯</a></li>
+                          <li class="active">正文</li>
+                        </ol>
+                        <div class="about-top">
+                            <h1>将SpringBoot项目及vue项目分别打包部署到阿里云服务器</h1>
+                        </div>
+                        <div class="about-bottom">
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>因为现在都是前后端分离，本文章中后端使用的是springboot，前端使用的是vue<br /> 服务器类型为centos 7</p> <ol> <li><mark>使用xshell连接服务器</mark></li> <li><mark>在idea中将项目打包（因为在后面要使用nginx，它的端口为80，后端项目就不要改成80了）</mark><br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/6aad56ed13dea8b3c1bf52ea3a786681.jpg" alt="将SpringBoot项目及vue项目分别打包部署到阿里云服务器"></li> <li><mark>在项目目录中查看jar包</mark><br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/ec9cc1ec6c52023fad2c94f08e91af0b.jpg" alt="将SpringBoot项目及vue项目分别打包部署到阿里云服务器"></li> <li><mark>打包vue项目前要改动一下几个方面</mark><br /> ①<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/385dd5b5e7e90603038f7b6ebbd579ef.jpg" alt="将SpringBoot项目及vue项目分别打包部署到阿里云服务器"><br /> ②<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/a2c1c915483af124a90bd347fc18c89a.jpg" alt="将SpringBoot项目及vue项目分别打包部署到阿里云服务器"><br /> ③<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220603/7f943d0435d9dee646ae5c11178badfc.jpg" alt="将SpringBoot项目及vue项目分别打包部署到阿里云服务器"></li> <li><mark>打包vue项目（build成功后目录中就会出现一个dist文件）</mark></li> <li><mark>xshell连接成功后为了方便管理，可以在根目录中建一个文件夹，在这个文件夹中再建两个文件夹分别管理后端和前端</mark></li> <li><mark>在新建的管理后端文件夹中使用xftp5将打包好的springboot的jar包（上述3中的jar）放入，之后输入如下命令</mark></li> </ol> <pre><code>nohup Java –jar jar包名 &amp;</code></pre> <p>PS：<br /> 1.加&amp;表示一直后台运行，不加表示临时运行，关闭窗口项目即停止运行<br /> 2.nohup:即项目在运行前新建一个nohup.out文件用来记录该项目的运行日志情况</p> <ol start="8"> <li>查看正在运行的java进程（停止进程：kill 进程号）</li> </ol> <pre><code>ps -aux | grep java</code></pre> <ol start="9"> <li><mark>使用如下命令下载nginx</mark></li> </ol> <pre><code>yum install nginx</code></pre> <p><mark>下载成功后使用如下命令进入nginx的默认站点目录</mark></p> <pre><code>cd /usr/share/nginx/html</code></pre> <ol start="9"> <li><mark>进入nginx默认目录后使用xftp5将前端打包好的dist文件中的所有文件传至这个目录中记住在使用xftp5传的时候要覆盖选中全部应用</mark></li> <li><mark>使用如下命令启动nginx</mark></li> </ol> <pre><code>systemctl start nginx.service</code></pre> <p>nginx：</p> <ol> <li>https://blog.csdn.net/w1316022737/article/details/85041778</li> <li>https://www.cnblogs.com/hailang8/p/8664413.html<br /><strong>启动成功之后直接在浏览器中输入你的ip即可</strong></li> </ol> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-63818.htm">动物疫苗知识点总结大全（动物疫苗知识点总结大全图片）</a></p>
+                                        <p>下一个：<a href="/news/article-64421.htm">狗粮牌子推荐（狗粮牌子推荐排行榜）</a></p>
+                                    </div>
+                                        </div>
+
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-41869.htm" title="长沙美容专业学校（长沙美容专业的大专）">长沙美容专业学校（长沙美容专业的大专）</a></li>
+                        <li class="py-2"><a href="/news/article-28379.htm" title="猫咪3针疫苗一共多少元冬天打（猫咪三针疫苗需要多久）">猫咪3针疫苗一共多少元冬天打（猫咪三针疫苗需要多久）</a></li>
+                        <li class="py-2"><a href="/news/article-52430.htm" title="宠物医生专业的专科大学有哪些（宠物医生大专学校排名）">宠物医生专业的专科大学有哪些（宠物医生大专学校排名）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-13-shadowrocket-node.htm" title="「11月13日」最高速度19.2M/S，2024年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接">「11月13日」最高速度19.2M/S，2024年V2ray/Shadowrocket/SSR/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-24-free-ssr-node.htm" title="「12月24日」最高速度20.5M/S，2024年Shadowrocket/Clash/V2ray/SSR每天更新免费订阅源地址">「12月24日」最高速度20.5M/S，2024年Shadowrocket/Clash/V2ray/SSR每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-58422.htm" title="动物打过狂犬疫苗人还需要打吗（动物打了狂犬疫苗还会得狂犬病吗）">动物打过狂犬疫苗人还需要打吗（动物打了狂犬疫苗还会得狂犬病吗）</a></li>
+                        <li class="py-2"><a href="/news/article-50833.htm" title="JavaScript中querySelector和getElementByld(getXXXBy XX)的区别">JavaScript中querySelector和getElementByld(getXXXBy XX)的区别</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-11-free-node-subscribe-links.htm" title="「11月11日」最高速度21.1M/S，2024年V2ray/Shadowrocket/Clash/SSR每天更新免费节点订阅链接">「11月11日」最高速度21.1M/S，2024年V2ray/Shadowrocket/Clash/SSR每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-7-free-v2ray-subscribe.htm" title="「12月7日」最高速度20.8M/S，2024年Shadowrocket/SSR/V2ray/Clash每天更新免费节点订阅链接">「12月7日」最高速度20.8M/S，2024年Shadowrocket/SSR/V2ray/Clash每天更新免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-34551.htm" title="tensorflow根据输入更改tensor shape">tensorflow根据输入更改tensor shape</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">83</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about end here-->
+        <!--copy rights start here-->
+    <div class="copy-rights">
+        <div class="container">
+            <div class="copy-rights-main">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                <p>
+                    ClashV2rayFree官网节点站 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
