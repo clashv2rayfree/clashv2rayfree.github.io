@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayfree.github.io/news/article-66911.htm" />
+    <title>[ Shell ] 通过 Shell 脚本导出 CDL 网表</title>
+        <meta name="description" content="https://www.cnblogs.com/yeungchie/ 通过si 导出电路网表，实际上在 Virtuoso 中通过菜单 File - Export - CDL 和 Calibre LVS" />
+    
+    <meta name="author" content="ClashV2rayFree官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayfree.github.io/news/article-66911.htm" />
+    <meta property="og:site_name" content="ClashV2rayFree官网节点站" />
+    <meta property="og:title" content="[ Shell ] 通过 Shell 脚本导出 CDL 网表" />
+    <meta property="og:image" content="https://clashv2rayfree.github.io/uploads/20240412/9f483fe1cf86cc5873528d0e2f896018.webp" />
+        <meta property="og:release_date" content="2025-03-04T10:13:48" />
+    <meta property="og:updated_time" content="2025-03-04T10:13:48" />
+        <meta property="og:description" content="https://www.cnblogs.com/yeungchie/ 通过si 导出电路网表，实际上在 Virtuoso 中通过菜单 File - Export - CDL 和 Calibre LVS" />
+        
+    <link href="/assets/website/css/clashv2rayfree/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/website/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <!--google fonts-->
+    <script src="/assets/website/js/frontend/clashv2rayfree/jquery-1.11.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashv2rayfree/bootstrap.min.js"></script>
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="[ Shell ] 通过 Shell 脚本导出 CDL 网表">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NF953KP3Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0NF953KP3Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--header-top start here-->
+    <div class="top-header">
+    </div>
+    <!--header-top end here-->
+    <!--header start here-->
+    <!-- NAVBAR
+		================================================== -->
+    <div class="header w3l">
+        <div class="fixed-header">
+            <div class="navbar-wrapper">
+                <div class="container">
+                    <nav class="navbar navbar-inverse navbar-static-top">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                                                <a class="navbar-brand" href="/">Clash V2ray Free</a>
+                                                            </div>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <nav class="cl-effect-16" id="cl-effect-16">
+                                <ul class="nav navbar-nav">
+                                                                        <li>
+                                        <a href="/">首页</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/free-nodes/">免费节点</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/paid-subscribe/">推荐机场</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/client.htm">客户端</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/news/">新闻资讯</a>
+                                    </li>
+                                                                    </ul>
+                            </nav>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </nav>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--about strat here-->
+    <div class="about">
+        <div class="container">
+            <div class="about-main">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ol class="breadcrumb">
+                          <li><a href="/">首页</a></li>
+                          <li><a href="/news/">新闻资讯</a></li>
+                          <li class="active">正文</li>
+                        </ol>
+                        <div class="about-top">
+                            <h1>[ Shell ] 通过 Shell 脚本导出 CDL 网表</h1>
+                        </div>
+                        <div class="about-bottom">
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/yeungchie/"  title="https://www.cnblogs.com/yeungchie/" target="_blank" rel="nofollow">https://www.cnblogs.com/yeungchie/</a></p> <p>通过<code>si</code> 导出电路网表，实际上在 Virtuoso 中通过菜单 File - Export - CDL 和 Calibre LVS 中 Export from schematic viewer 也是通过<code>si</code> 来导出电路网表的，下面讲下如何使用。</p> <h2 id="如何运行-si">如何运行 si</h2> <p>下面是 si 的运行命令，<code>$cdslibFile</code> 为 cds.lib 文件。</p> <pre><code class="language-bash">si -batch -command netlist -cdslib $cdslibFile</code></pre> <h3 id="sienv-文件">si.env 文件</h3> <p>在 si 的运行路径下需要提前准备好一个 si.env 文件，si 通过读取这个文件的内容来配置导出 cdl 所需要的信息。</p> <p>文件的如何编写可以参考 help 文档：</p> <ul> <li>Virtuoso Shared Tools <ul> <li>Design Data Translators Reference <ul> <li>Design Translation Using CDL Out <ul> <li>Using CDL Out <ul> <li>Preparing the si.env File</li> </ul> </li> </ul> </li> </ul> </li> </ul> </li> </ul> <p>简单看看就行，我一般是直接通过 GUI 界面尝试导出一份 cdl，然后在运行路径下会有一份 si.env 文件，下面是一个例子：</p> <pre><code class="language-lisp">simLibName = "stdcel" simCellName = "TOP" simViewName = "schematic" simSimulator = "auCdl" simNotIncremental = 't simReNetlistAll = nil simViewList = '("auCdl" "cdl" "schematic" "cmos_sch" "gate_sch" "cmos.sch" "gate.sch" "symbol") simStopList = '("auCdl" "cdl") hnlNetlistFileName = "TOP.cdl" resistorModel = "" shortRES = 2000.0 preserveRES = 't checkRESVAL = 't checkRESSIZE = 'nil preserveCAP = 't checkCAPVAL = 't checkCAPAREA = 'nil preserveDIO = 't checkDIOAREA = 't checkDIOPERI = 't checkCAPPERI = 'nil simPrintInhConnAttributes = 'nil checkScale = "meter" checkLDD = 'nil pinMAP = 'nil preserveBangInNetlist = 'nil shrinkFACTOR = 0.0 globalPowerSig = "" globalGndSig = "" displayPININFO = 't preserveALL = 't setEQUIV = "" incFILE = "./Subcircuit/3t_device.cdl" auCdlDefNetlistProc = "ansCdlHnlPrintInst"</code></pre> <p>这个例子中导出的顶层电路单元是<code>stdcel/TOP/schematic</code>，我们只关心其中几个常用的变量：</p> <ul> <li>simLibName ( Library Name )<code>stdcel</code></li> <li>simCellName ( Top Cell Name )<code>TOP</code></li> <li>simViewName ( View Name )<code>schematic</code></li> <li>hnlNetlistFileName ( Output CDL Netlist File )</li> <li>incFILE ( Include File )</li> <li>auCdlDefNetlistProc ( Analog Netlisting Type )<code>这个变量决定 pin 的连接方式</code> <ul> <li>ansCdlSubcktCall ( Connection By Order )<code>顺序连接</code></li> <li>ansCdlHnlPrintInst ( Connection By Name )<code>命名端口连接，一般选择这个来保证 IP/Digital 网表的连接</code></li> </ul> </li> </ul> <blockquote> <p>Run Directory 直接由 si 的运行路径来决定。</p> </blockquote> <h2 id="编写脚本-export_cdl">编写脚本 export_cdl</h2> <p>明白了 si 的使用方法，现在可以写一个 shell 脚本，在 Terminal 操作，实现便捷地导出指定电路单元的 cdl 文件。</p> <details> <summary>点击查看完整代码</summary> <pre><code class="language-bash">#!/bin/bash #-------------------------- # Program  : export_cdl.sh # Language : Bash # Author   : YEUNGCHIE # Version  : 2022.04.03 #-------------------------- HelpInfo(){     cat &lt;&lt;EOF ------------------------------------------------- Export CDL ( Circuit Description Language ) File ------------------------------------------------- Usage: export_cdl -cdslib cdslibFile -lib libName -cell cellName [ OPTIONS ]      -cdslib     Path of cds.lib file     -lib        Schematic top cell libName     -cell       Schematic top cell cellName     -view       Schematic top cell viewName ( Default: schematic )     -file       Output netlist file name    ( Default: ./&lt;cellName&gt;.cdl )     -include    Include subckt file name     -order      Netlisting Type Connection By Order ( The default is By Name )     -h, -help   Display this help  Examples:   export_cdl  -cdslib ./cds.lib  -lib Xeon  -cell X999  -include ./subckt.cdl  Output:     Netlist file: X999.cdl EOF }  viewName='schematic' connType='ansCdlHnlPrintInst'  # 命令行参数分析 while [[ -n $1 ]]; do     if [[ -n $opt ]]; then         case $opt in             lib_opt)        libName=$1      ;;             cell_opt)       cellName=$1     ;;             view_opt)       viewName=$1     ;;             file_opt)       netlistFile=$1  ;;             cdslib_opt)     cdslibFile=$1   ;;             include_opt)    includeFile=$1  ;;         esac         unset opt     else         case $1 in             -lib)       opt='lib_opt'       ;;             -cell)      opt='cell_opt'      ;;             -view)      opt='view_opt'      ;;             -file)      opt='file_opt'      ;;             -cdslib)    opt='cdslib_opt'    ;;             -include)   opt='include_opt'   ;;             -order)                 connType='ansCdlSubcktCall'             ;;             -h|-help)                 HelpDoc &gt;&amp;2                 exit 1             ;;             *)                 echo "Invalid option - '$1'" &gt;&amp;2                 echo "Try -h or -help for more infomation." &gt;&amp;2                 exit 1             ;;         esac     fi     shift done  # 参数检查 if [[ ! ( $cdslibFile &amp;&amp; $libName &amp;&amp; $cellName ) ]]; then     ## 缺少必要参数时，打印 help 并退出     HelpInfo &gt;&amp;2     exit 1 elif [[ -f $cdslibFile ]]; then     ## 将相对路径改为绝对路径     cdslibDir=$(cd $(dirname $cdslibFile); pwd -P)     fileName=$(basename $cdslibFile)     cdslibFile="$cdslibDir/$fileName" else     ## 找不到 cds.lib 文件，打印报错     echo "No such file - $cdslibFile" &gt;&amp;2     echo "Try -h or -help for more infomation." &gt;&amp;2     exit 1 fi  ## 当网表文件名未定义时，设置默认文件名 if [[ ! $netlistFile ]]; then netlistFile="${cellName}.cdl" ; fi  # si.env 文件生成 cat &gt; si.env &lt;&lt;EOF simLibName = "$libName" simCellName = "$cellName" simViewName = "$viewName" simSimulator = "auCdl" simNotIncremental = 't simReNetlistAll = nil simViewList = '("auCdl" "cdl" "schematic" "cmos_sch" "gate_sch" "cmos.sch" "gate.sch" "symbol") simStopList = '("auCdl" "cdl") simNetlistHier = t hnlNetlistFileName = "$netlistFile" resistorModel = "" shortRES = 2000.0 preserveRES = 't checkRESVAL = 't checkRESSIZE = 'nil preserveCAP = 't checkCAPVAL = 't checkCAPAREA = 'nil preserveDIO = 't checkDIOAREA = 't checkDIOPERI = 't checkCAPPERI = 'nil simPrintInhConnAttributes = 'nil checkScale = "meter" checkLDD = 'nil pinMAP = 'nil preserveBangInNetlist = 'nil shrinkFACTOR = 0.0 globalPowerSig = "" globalGndSig = "" displayPININFO = 't preserveALL = 't setEQUIV = "" incFILE = "" auCdlDefNetlistProc = "$connType" EOF  # 运行 si si -batch -command netlist -cdslib $cdslibFile  status=$?  # 删除中间文件 if [[ -f .stimulusFile.auCdl ]]; then rm -rf .stimulusFile.auCdl ; fi if [[ -f si.env              ]]; then rm -rf si.env              ; fi if [[ -f netlist             ]]; then rm -rf netlist             ; fi if [[ -d ihnl                ]]; then rm -rf ihnl                ; fi if [[ -d map                 ]]; then rm -rf map                 ; fi  exit $status</code></pre> </details> <h3 id="运行实例">运行实例</h3> <p>例：cdslib 文件为<code>./cds.lib</code></p> <ol> <li> <p>导出<code>verify</code> 库中的<code>ad01d0</code> 单元的电路网表。</p> <pre><code class="language-bash">export_cdl -cdslib cds.lib -lib verify -cell ad01d0</code></pre> <p>导出的 cdl 文件名为<code>ad01d0.cdl</code></p> </li> <li> <p>导出<code>verify</code> 库中的<code>inv0d0</code> 单元的电路网表，同时包含 subckt 网表文件<code>./netlist</code>，并指定 cdl 文件名为<code>inv.cdl</code> 。</p> <pre><code class="language-bash">export_cdl -cdslib ./cds.lib -lib verify -cell inv0d0 -include ./netlist</code></pre> <p>导出的 cdl 文件名为<code>inv.cdl</code></p> </li> </ol> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-66290.htm">动物医院好评100字通用评论内容（动物医院好评模板）</a></p>
+                                        <p>下一个：<a href="/news/article-66912.htm">WPF路由事件</a></p>
+                                    </div>
+                                        </div>
+
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-2-13-clash-windows.htm" title="「2月13日」最高速度18.6M/S，2025年SSR/Clash/Shadowrocket/V2ray每天更新免费订阅源地址">「2月13日」最高速度18.6M/S，2025年SSR/Clash/Shadowrocket/V2ray每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-51370.htm" title="动物疫苗防疫站几点上班时间 动物疫苗防疫站几点上班时间表">动物疫苗防疫站几点上班时间 动物疫苗防疫站几点上班时间表</a></li>
+                        <li class="py-2"><a href="/news/article-47318.htm" title="卖猫的宠物市场（卖猫的宠物市场在哪里）">卖猫的宠物市场（卖猫的宠物市场在哪里）</a></li>
+                        <li class="py-2"><a href="/news/article-40390.htm" title="Vuex用法及封装">Vuex用法及封装</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-16-free-node-subscribe-links.htm" title="「2月16日」最高速度20.9M/S，2025年V2ray/Shadowrocket/Clash/SSR每天更新免费订阅源地址">「2月16日」最高速度20.9M/S，2025年V2ray/Shadowrocket/Clash/SSR每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-37914.htm" title="济南美联广场美食（济南美莲广场有什么好玩的）">济南美联广场美食（济南美莲广场有什么好玩的）</a></li>
+                        <li class="py-2"><a href="/news/article-43352.htm" title="如果我在INTERVAL关键字中使用了一组封闭的单位值，MySQL将返回什么？">如果我在INTERVAL关键字中使用了一组封闭的单位值，MySQL将返回什么？</a></li>
+                        <li class="py-2"><a href="/news/article-67570.htm" title="动物疫苗接种注意事项和要求是什么（动物疫苗使用时的注意事项）">动物疫苗接种注意事项和要求是什么（动物疫苗使用时的注意事项）</a></li>
+                        <li class="py-2"><a href="/news/article-46832.htm" title="被猫抓伤渗了一点血超过24小时没***会不会马上发作?（被猫抓了一下轻微破皮过了24小时怎么办）">被猫抓伤渗了一点血超过24小时没***会不会马上发作?（被猫抓了一下轻微破皮过了24小时怎么办）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-1-free-clash-subscribe.htm" title="「2月1日」最高速度18.8M/S，2025年V2ray/Clash/SSR/Shadowrocket每天更新免费订阅源地址">「2月1日」最高速度18.8M/S，2025年V2ray/Clash/SSR/Shadowrocket每天更新免费订阅源地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">83</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about end here-->
+        <!--copy rights start here-->
+    <div class="copy-rights">
+        <div class="container">
+            <div class="copy-rights-main">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                <p>
+                    ClashV2rayFree官网节点站 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
