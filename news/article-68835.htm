@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayfree.github.io/news/article-68835.htm" />
+    <title>详解盒子模型和div布局</title>
+        <meta name="description" content="background的覆盖范围是content区域加上padding区域加上border区域(border-color:transparent设置透明后可以看到)。 许多浏览器都有自己默认的margi" />
+    
+    <meta name="author" content="ClashV2rayFree官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayfree.github.io/news/article-68835.htm" />
+    <meta property="og:site_name" content="ClashV2rayFree官网节点站" />
+    <meta property="og:title" content="详解盒子模型和div布局" />
+    <meta property="og:image" content="https://clashv2rayfree.github.io/uploads/20240412/8a51294aeb6262b8a6fee3753ee43d0d.webp" />
+        <meta property="og:release_date" content="2025-03-07T06:34:49" />
+    <meta property="og:updated_time" content="2025-03-07T06:34:49" />
+        <meta property="og:description" content="background的覆盖范围是content区域加上padding区域加上border区域(border-color:transparent设置透明后可以看到)。 许多浏览器都有自己默认的margi" />
+        
+    <link href="/assets/website/css/clashv2rayfree/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/website/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <!--google fonts-->
+    <script src="/assets/website/js/frontend/clashv2rayfree/jquery-1.11.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashv2rayfree/bootstrap.min.js"></script>
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="详解盒子模型和div布局">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NF953KP3Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0NF953KP3Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--header-top start here-->
+    <div class="top-header">
+    </div>
+    <!--header-top end here-->
+    <!--header start here-->
+    <!-- NAVBAR
+		================================================== -->
+    <div class="header w3l">
+        <div class="fixed-header">
+            <div class="navbar-wrapper">
+                <div class="container">
+                    <nav class="navbar navbar-inverse navbar-static-top">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                                                <a class="navbar-brand" href="/">Clash V2ray Free</a>
+                                                            </div>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <nav class="cl-effect-16" id="cl-effect-16">
+                                <ul class="nav navbar-nav">
+                                                                        <li>
+                                        <a href="/">首页</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/free-nodes/">免费节点</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/paid-subscribe/">推荐机场</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/client.htm">客户端</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/news/">新闻资讯</a>
+                                    </li>
+                                                                    </ul>
+                            </nav>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </nav>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--about strat here-->
+    <div class="about">
+        <div class="container">
+            <div class="about-main">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ol class="breadcrumb">
+                          <li><a href="/">首页</a></li>
+                          <li><a href="/news/">新闻资讯</a></li>
+                          <li class="active">正文</li>
+                        </ol>
+                        <div class="about-top">
+                            <h1>详解盒子模型和div布局</h1>
+                        </div>
+                        <div class="about-bottom">
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220605/2ac13ada3ab23a8f5a5f0d24784e4614.jpg" alt="详解盒子模型和div布局"></p> <p><span style="font-size:12px">background的覆盖范围是content区域加上padding区域加上border区域(border-color:transparent设置透明后可以看到)。</span></p> <p><span style="font-size:12px">许多浏览器都有自己默认的margin和padding值，我们可以通过将元素的margin和padding设置为0来覆盖原本的浏览器样式。</span></p> <pre><code class="language-html">* {   margin: 0;   padding: 0; }</code></pre> <p></p> <p><span style="font-size:24px"><strong>float：</strong></span></p> <p>当一个div容器里没有内容且不指明width时，他的宽度默认100%，但是当为这个div设置float：left时，width值变为0.</p> <p><strong><span style="font-size:14px">对于兄弟级别的div：</span></strong></p> <p>1.每个div原本都是独占一行的</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220605/7a2b95dd68c097b63bf01d0afd444b40.jpg" alt="详解盒子模型和div布局"><br /> 2.但是当前一个节点的div设置float:left;时，后div将出现在第一个div的下面。原因：第一个div漂浮起来了(float),它原本的位置就空出来了，于是第二个div就占据了第一个的位置，所以他们的状态是一种重叠的状态。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220605/de4a04462e35c154a3abd0a967b072ae.jpg" alt="详解盒子模型和div布局"></p> <p>3.当所有兄弟级别的div都设置float:left;时，每个div就失去了独占一排的状态，可以并排存在。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220605/9ff1678b703b9a36f90c78320e8826a9.jpg" alt="详解盒子模型和div布局"></p> <p><strong><span style="font-size:14px">对于父子级别的div：</span></strong></p> <p>1.如果不指定父元素的高度，则父元素的高度为0，因为子元素漂浮起来，并没有把父元素撑开</p> <pre><code class="language-html">&lt;!DOCTYPE html&gt; &lt;html lang="en"&gt; &lt;head&gt; 	&lt;meta charset="UTF-8"&gt; 	&lt;title&gt;Document&lt;/title&gt; &lt;style&gt;      #father{      	width: 250px;      	background:purple;      }      #child1{      	width: 100px;         height: 100px;      	background: orange;      	float: left;      }      #child2{      	background: green;      	width: 200px;      	height: 200px;      	float:left;      } &lt;/style&gt; &lt;/head&gt;     &lt;body&gt;          &lt;div id = "father"&gt;             &lt;div id = "child1"&gt;&lt;/div&gt;             &lt;div id = "child2"&gt;&lt;/div&gt;          &lt;/div&gt;        &lt;/body&gt; &lt;/html&gt;</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220605/7a2b95dd68c097b63bf01d0afd444b40.jpg" alt="详解盒子模型和div布局"></p> <p>2.如果指定了父元素的高度，则父元素保持原高度不变.同理，子元素浮动并不能撑开父元素。</p> <p>浮动子元素在父容器内的排列规则：浮动元素优先排一列，若宽度溢出父容器则另起一行排列。若竖排列子元素合高度若大于父元素高度，则向下溢出。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220605/ba32eb03fdd37e58b75ba43c5e087649.jpg" alt="详解盒子模型和div布局"></p> <p>3..如果子元素没有浮动效果且父元素高度没有指定大小，则父元素会被撑开</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220605/1d7ebb0f6108717b05951b6993e8cf83.jpg" alt="详解盒子模型和div布局"></p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-68833.htm">pytorch多GPU训练保存的模型，在单GPU环境下加载出错</a></p>
+                                        <p>下一个：<a href="/news/article-69482.htm">python2.7 之无解的yaml版本问题</a></p>
+                                    </div>
+                                        </div>
+
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-37448.htm" title="C/C++内存申请函数总结">C/C++内存申请函数总结</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-6-free-ssr-subscribe.htm" title="「3月6日」最高速度22.2M/S，2025年Clash/SSR/Shadowrocket/V2ray每天更新免费订阅源地址">「3月6日」最高速度22.2M/S，2025年Clash/SSR/Shadowrocket/V2ray每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-53499.htm" title="如何才能成为兽医（如何才能成为兽医护士）">如何才能成为兽医（如何才能成为兽医护士）</a></li>
+                        <li class="py-2"><a href="/news/article-57366.htm" title="成都宠物领养中心地址查询电话（成都宠物领养中心免费）">成都宠物领养中心地址查询电话（成都宠物领养中心免费）</a></li>
+                        <li class="py-2"><a href="/news/article-57368.htm" title="厦门哪里可以领养宠物猫（厦门哪里有领养猫的）">厦门哪里可以领养宠物猫（厦门哪里有领养猫的）</a></li>
+                        <li class="py-2"><a href="/news/article-60825.htm" title="vue变更v-for列表多个项目的颜色和选择项目">vue变更v-for列表多个项目的颜色和选择项目</a></li>
+                        <li class="py-2"><a href="/news/article-38905.htm" title="宠物店一个月能赚多少钱（宠物店一个月能赚多少钱工资）">宠物店一个月能赚多少钱（宠物店一个月能赚多少钱工资）</a></li>
+                        <li class="py-2"><a href="/news/article-68175.htm" title="Redis的数据淘汰策略和数据过期后的删除策略">Redis的数据淘汰策略和数据过期后的删除策略</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-25-free-ssr-subscribe.htm" title="「2月25日」最高速度18.7M/S，2025年V2ray/SSR/Clash/Shadowrocket每天更新免费订阅源地址">「2月25日」最高速度18.7M/S，2025年V2ray/SSR/Clash/Shadowrocket每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-11-free-high-speed-nodes.htm" title="「2月11日」最高速度21.4M/S，2025年Clash/Shadowrocket/SSR/V2ray每天更新免费订阅源地址">「2月11日」最高速度21.4M/S，2025年Clash/Shadowrocket/SSR/V2ray每天更新免费订阅源地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">83</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about end here-->
+        <!--copy rights start here-->
+    <div class="copy-rights">
+        <div class="container">
+            <div class="copy-rights-main">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                <p>
+                    ClashV2rayFree官网节点站 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
