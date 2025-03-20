@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayfree.github.io/news/article-76785.htm" />
+    <title>android 退出程序后自动重新启动,进程停止后控制Android Activity重新启动</title>
+        <meta name="description" content="我的应用程序运行在运行Android Gingerbread 2.3.7的自定义版本的特殊设备上 在某些情况下系统将终止我的应用程序.我假设设备制造商考虑这些紧急情况,应立即关闭所有第三方应用程序,以" />
+    
+    <meta name="author" content="ClashV2rayFree官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayfree.github.io/news/article-76785.htm" />
+    <meta property="og:site_name" content="ClashV2rayFree官网节点站" />
+    <meta property="og:title" content="android 退出程序后自动重新启动,进程停止后控制Android Activity重新启动" />
+    <meta property="og:image" content="https://clashv2rayfree.github.io/uploads/20240412/b07b11320b5a7f785b914f9a99276125.webp" />
+        <meta property="og:release_date" content="2025-03-19T09:08:37" />
+    <meta property="og:updated_time" content="2025-03-19T09:08:37" />
+        <meta property="og:description" content="我的应用程序运行在运行Android Gingerbread 2.3.7的自定义版本的特殊设备上 在某些情况下系统将终止我的应用程序.我假设设备制造商考虑这些紧急情况,应立即关闭所有第三方应用程序,以" />
+        
+    <link href="/assets/website/css/clashv2rayfree/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/website/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <!--google fonts-->
+    <script src="/assets/website/js/frontend/clashv2rayfree/jquery-1.11.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashv2rayfree/bootstrap.min.js"></script>
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="android 退出程序后自动重新启动,进程停止后控制Android Activity重新启动">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NF953KP3Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0NF953KP3Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--header-top start here-->
+    <div class="top-header">
+    </div>
+    <!--header-top end here-->
+    <!--header start here-->
+    <!-- NAVBAR
+		================================================== -->
+    <div class="header w3l">
+        <div class="fixed-header">
+            <div class="navbar-wrapper">
+                <div class="container">
+                    <nav class="navbar navbar-inverse navbar-static-top">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                                                <a class="navbar-brand" href="/">Clash V2ray Free</a>
+                                                            </div>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <nav class="cl-effect-16" id="cl-effect-16">
+                                <ul class="nav navbar-nav">
+                                                                        <li>
+                                        <a href="/">首页</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/free-nodes/">免费节点</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/paid-subscribe/">推荐机场</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/client.htm">客户端</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/news/">新闻资讯</a>
+                                    </li>
+                                                                    </ul>
+                            </nav>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </nav>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--about strat here-->
+    <div class="about">
+        <div class="container">
+            <div class="about-main">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ol class="breadcrumb">
+                          <li><a href="/">首页</a></li>
+                          <li><a href="/news/">新闻资讯</a></li>
+                          <li class="active">正文</li>
+                        </ol>
+                        <div class="about-top">
+                            <h1>android 退出程序后自动重新启动,进程停止后控制Android Activity重新启动</h1>
+                        </div>
+                        <div class="about-bottom">
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <div style="font-size:16px;"> <p>我的应用程序运行在运行Android Gingerbread 2.3.7的自定义版本的特殊设备上</p> <p>在某些情况下系统将终止我的应用程序.我假设设备制造商考虑这些紧急情况,应立即关闭所有第三方应用程序,以便设备可以完成其主要任务.</p> <p>我可以使用模拟器复制我在设备上看到的行为,并在DDMS中选择我的任务并单击"停止进程"按钮.这是我看到的行为.</p> <p>我的应用程序通常会执行四个活动,活动A启动活动B,B启动活动C,C启动活动D.因此,当活动D在顶部运行时,我的堆栈是:</p> <p>A B C D</p> <p>如果此时进程终止,则活动D不会接收onPause()或onStop()调用.它没有机会拯救其国家.</p> <p>在该过程停止后,Android的ActivityManager为我的应用程序启动一个新任务并启动Activity C.我认为这是重新启动崩溃的应用程序的标准Android行为.</p> <p>我的问题是我能控制这种重启行为吗？如果Android要重新启动我的应用程序,我需要恢复活动堆栈,活动C没有意义独立运行(单击后退按钮将退出应用程序,这对此活动没有意义).</p> <p>我可以阻止重启吗？我可以按顺序重新启动所有活动吗？我可以重新启动只是启动活动A吗？</p> <p>我确实发现了这个有趣的讨论,我相信这解释了为什么重新启动Activity C而不是Activity D.</p> <p>在重新启动活动时 - 如果运行前台活动的进程消失,如果系统没有有效的保存状态,系统将丢弃该活动(通常意味着它已暂停并且已将系统提供给系统暂停之前的onSaveInstanceState的结果).一旦决定是否抛弃该活动,它将恢复现在位于堆栈顶部的任何活动.如果这是你的一项活动 - 或者是因为你有一个在崩溃的那个后面,或者一个崩溃的那个在某种程度上它是稳定的暂停状态 - 那么它将再次开始你的过程以显示最高活动.</p> <p>还有一些类似的问题,如防止活动堆栈被恢复？这个有趣的主题</p> </div></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-76124.htm">宠物家庭寄养合同对甲方有益（宠物家庭寄养合同对甲方有益处吗）</a></p>
+                                        <p>下一个：<a href="/news/article-76786.htm">适合新手男人开的店（男人应该开什么店）</a></p>
+                                    </div>
+                                        </div>
+
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-1-5-free-node-subscribe-links.htm" title="「1月5日」最高速度20.7M/S，2025年Shadowrocket/SSR/Clash/V2ray每天更新免费订阅源地址">「1月5日」最高速度20.7M/S，2025年Shadowrocket/SSR/Clash/V2ray每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-59656.htm" title="包含免费宠物领养平台有哪些公司的词条">包含免费宠物领养平台有哪些公司的词条</a></li>
+                        <li class="py-2"><a href="/news/article-57366.htm" title="成都宠物领养中心地址查询电话（成都宠物领养中心免费）">成都宠物领养中心地址查询电话（成都宠物领养中心免费）</a></li>
+                        <li class="py-2"><a href="/news/article-40876.htm" title="动物疫苗保质期一般多久有效果（动物疫苗常温多长时间失效）">动物疫苗保质期一般多久有效果（动物疫苗常温多长时间失效）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-13-free-clash-subscribe.htm" title="「3月13日」最高速度19.3M/S，2025年SSR/Clash/Shadowrocket/V2ray每天更新免费订阅源地址">「3月13日」最高速度19.3M/S，2025年SSR/Clash/Shadowrocket/V2ray每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-60237.htm" title="Vue.js 3.x 双向绑定原理_在线工具">Vue.js 3.x 双向绑定原理_在线工具</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-20-free-clash-subscribe.htm" title="「2月20日」最高速度21.9M/S，2025年Shadowrocket/V2ray/SSR/Clash每天更新免费订阅源地址">「2月20日」最高速度21.9M/S，2025年Shadowrocket/V2ray/SSR/Clash每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-66290.htm" title="动物医院好评100字通用评论内容（动物医院好评模板）">动物医院好评100字通用评论内容（动物医院好评模板）</a></li>
+                        <li class="py-2"><a href="/news/article-42859.htm" title="给动物打针需要资格证吗?（动物 打针）">给动物打针需要资格证吗?（动物 打针）</a></li>
+                        <li class="py-2"><a href="/news/article-43856.htm" title="宠物饲料加工企业 宠物饲料加工企业排名">宠物饲料加工企业 宠物饲料加工企业排名</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">60</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">83</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about end here-->
+        <!--copy rights start here-->
+    <div class="copy-rights">
+        <div class="container">
+            <div class="copy-rights-main">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                <p>
+                    ClashV2rayFree官网节点站 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
