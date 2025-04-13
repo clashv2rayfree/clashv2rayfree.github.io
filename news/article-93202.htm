@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayfree.github.io/news/article-93202.htm" />
+    <title>如何在IDEA 中配置 Maven</title>
+        <meta name="description" content="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maven 是一个能使我们的java程序开发节省时间和精力，是开发变得相对简单，还能使开发规范化的工具。" />
+    
+    <meta name="author" content="ClashV2rayFree官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayfree.github.io/news/article-93202.htm" />
+    <meta property="og:site_name" content="ClashV2rayFree官网节点站" />
+    <meta property="og:title" content="如何在IDEA 中配置 Maven" />
+    <meta property="og:image" content="https://clashv2rayfree.github.io/uploads/20240412/3d545cead6f0fcc36e1021593f6cbbc7.webp" />
+        <meta property="og:release_date" content="2025-04-11T08:56:42" />
+    <meta property="og:updated_time" content="2025-04-11T08:56:42" />
+        <meta property="og:description" content="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maven 是一个能使我们的java程序开发节省时间和精力，是开发变得相对简单，还能使开发规范化的工具。" />
+        
+    <link href="/assets/website/css/clashv2rayfree/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/website/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <!--google fonts-->
+    <script src="/assets/website/js/frontend/clashv2rayfree/jquery-1.11.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashv2rayfree/bootstrap.min.js"></script>
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="如何在IDEA 中配置 Maven">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NF953KP3Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0NF953KP3Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--header-top start here-->
+    <div class="top-header">
+    </div>
+    <!--header-top end here-->
+    <!--header start here-->
+    <!-- NAVBAR
+		================================================== -->
+    <div class="header w3l">
+        <div class="fixed-header">
+            <div class="navbar-wrapper">
+                <div class="container">
+                    <nav class="navbar navbar-inverse navbar-static-top">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                                                <a class="navbar-brand" href="/">Clash V2ray Free</a>
+                                                            </div>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <nav class="cl-effect-16" id="cl-effect-16">
+                                <ul class="nav navbar-nav">
+                                                                        <li>
+                                        <a href="/">首页</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/free-nodes/">免费节点</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/paid-subscribe/">推荐机场</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/client.htm">客户端</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/news/">新闻资讯</a>
+                                    </li>
+                                                                    </ul>
+                            </nav>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </nav>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--about strat here-->
+    <div class="about">
+        <div class="container">
+            <div class="about-main">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ol class="breadcrumb">
+                          <li><a href="/">首页</a></li>
+                          <li><a href="/news/">新闻资讯</a></li>
+                          <li class="active">正文</li>
+                        </ol>
+                        <div class="about-top">
+                            <h1>如何在IDEA 中配置 Maven</h1>
+                        </div>
+                        <div class="about-bottom">
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maven 是一个能使我们的java程序开发节省时间和精力，是开发变得相对简单，还能使开发规范化的工具。在我们开发过程中导入的第三方jar包可能需要其他jar包的支持才能使用，而我们要去弄明白这些依赖的jar包，然后导入，这一过程可能需要耗费我们大量的精力和时间。有时候如果需要的jar数量过于panda，无疑会给我们的开发添堵。&nbsp;而使用 Maven 后，<span style="color:#fe2c24;"><strong>Maven 就可以替我们自动的将当前 jar 包所依赖的其他所有 jar 包全部导入进来，</strong></span>&nbsp;不需要我们自己再去导入相关jar包，能够节省大量的时间和精力，我们也可以不用去了解哪个jar包依赖了哪个jar包，直接配置Maven仓库就行。但相对地会对它产生极大的依赖。</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;以下是在IDEA中配置Maven的两种方式：</p> <p><strong><span style="color:#fe2c24;">第一种是配置IDEA中自带的Maven插件。</span></strong></p> <p><strong><span style="color:#fe2c24;"></span></strong><span style="color:#0d0016;">&nbsp; 我们在新建模块或者项目时，可以直接新建一个Maven项目，如图所示。要使这个Maven项目能够正常的运行，需要做一些相关配置</span></p> <p><img fetchpriority="high" decoding="async" alt="" height="616" src="http://img.555519.xyz/uploads3/20220603/4176fa35dc64956e8812d7b7e316265e.jpg"></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一步：在IDEA的安装目录下找到maven的配置文件：IntelliJ IDEA 2018.3.6\plugins\maven\lib\maven3\conf/settings.xml，然后在里面配置本地仓库的位置</p> <pre><code>&lt;localRepository&gt;E:\LocalRepository（本地仓库的位置）&lt;/localRepository&gt;</code></pre> <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;第二步：为了使maven能够自动从中央仓库下载需要的jar包，我们需要给它配置阿里云镜像仓库：在&nbsp; settings.xml 文件的标&lt;mirrors&gt;&lt;/mirrors&gt;标签里面配置以下标签：</p> <pre><code>&lt;mirror&gt;  &lt;id&gt;nexus-aliyun&lt;/id&gt;  &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;  &lt;name&gt;Nexus aliyun&lt;/name&gt;  &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt; &lt;/mirror&gt;</code></pre> <p><img decoding="async" alt="" height="1161" src="http://img.555519.xyz/uploads3/20220603/30def03d90ec42ed16259e842195ca8d.jpg"></p> <p>&nbsp; &nbsp; &nbsp; &nbsp; 第三步：配置完第二步后，我们打开IDEA的Settings/Build,Execution,Deployment/Maven目录，可以发现Maven的主目录为IDEA自带的maven目录，配置文件为自带maven目录下的config/settings.xml文件，本地仓库为我们在配置文件中配置的本地仓库地址。</p> <p>&nbsp; &nbsp; &nbsp; &nbsp; 最后设置Maven自动导包功能：勾上Settings/Build,Execution,Deployment/Maven/Importing下的Import Maven projects automatically选项，给maven设置自动导jar包的功能。</p> <p><img decoding="async" alt="" height="1150" src="http://img.555519.xyz/uploads3/20220603/cdf8f96f97b932ea13b1840191466d16.jpg"></p> <p><strong><span style="color:#fe2c24;">第二种是配置我们自己安装的maven核心程序。</span></strong></p> <p><strong><span style="color:#fe2c24;"></span></strong><span style="color:#0d0016;">&nbsp; 我们在新建模块或者项目时，可以直接新建一个Maven项目，如图所示。要使这个Maven项目能够正常的运行，需要做一些相关配置</span></p> <p><img loading="lazy" decoding="async" alt="" height="1163" src="http://img.555519.xyz/uploads3/20220603/3f7b74d2784e5562850a7117532a4add.jpg"></p> <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;然后保存就可以了。</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-92449.htm">长春宠物医院24小时（长春良心的宠物医院）</a></p>
+                                        <p>下一个：<a href="/news/article-93203.htm">分布式之一行代码解决缓存击穿问题</a></p>
+                                    </div>
+                                        </div>
+
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-28-free-subscribe-node.htm" title="「3月28日」最高速度18.8M/S，2025年Shadowrocket/Clash/SSR/V2ray每天更新免费订阅源地址">「3月28日」最高速度18.8M/S，2025年Shadowrocket/Clash/SSR/V2ray每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-73427.htm" title="查看pytorch运行时真正调用的cuda版本">查看pytorch运行时真正调用的cuda版本</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-22-clash-windows.htm" title="「3月22日」最高速度20.8M/S，2025年Clash/SSR/Shadowrocket/V2ray每天更新免费订阅源地址">「3月22日」最高速度20.8M/S，2025年Clash/SSR/Shadowrocket/V2ray每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-76123.htm" title="C++语言表达式求值">C++语言表达式求值</a></li>
+                        <li class="py-2"><a href="/news/article-81579.htm" title="狗粮生产赚钱吗现在（狗粮生产赚钱吗现在多少钱）">狗粮生产赚钱吗现在（狗粮生产赚钱吗现在多少钱）</a></li>
+                        <li class="py-2"><a href="/news/article-68176.htm" title="Vue-CLI 项目搭建详细步骤">Vue-CLI 项目搭建详细步骤</a></li>
+                        <li class="py-2"><a href="/news/article-83021.htm" title="动物医院翻译英语怎么说（动物医院的英文单词）">动物医院翻译英语怎么说（动物医院的英文单词）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-9-free-clash-subscribe.htm" title="「3月9日」最高速度18.2M/S，2025年Shadowrocket/V2ray/SSR/Clash每天更新免费订阅源地址">「3月9日」最高速度18.2M/S，2025年Shadowrocket/V2ray/SSR/Clash每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-70126.htm" title="动物疫苗过敏应该用什么药物急救处理好（动物疫苗反应有哪些）">动物疫苗过敏应该用什么药物急救处理好（动物疫苗反应有哪些）</a></li>
+                        <li class="py-2"><a href="/news/article-88757.htm" title="国内动物疫苗上市公司 国内动物疫苗上市公司有哪些">国内动物疫苗上市公司 国内动物疫苗上市公司有哪些</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">39</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about end here-->
+        <!--copy rights start here-->
+    <div class="copy-rights">
+        <div class="container">
+            <div class="copy-rights-main">
+                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <p>
+                    ClashV2rayFree官网节点站 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
