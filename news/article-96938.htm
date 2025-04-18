@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayfree.github.io/news/article-96938.htm" />
+    <title>Spark连接Hive，进行Hive数据表的读写操作</title>
+        <meta name="description" content="Hadoop安装-1，hadoop安装-2  spark安装 Hive安装    将Hive的conf目录下的hive-site-xml文件拷贝到spark的conf目录下； 将Hive中的mysql" />
+    
+    <meta name="author" content="ClashV2rayFree官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayfree.github.io/news/article-96938.htm" />
+    <meta property="og:site_name" content="ClashV2rayFree官网节点站" />
+    <meta property="og:title" content="Spark连接Hive，进行Hive数据表的读写操作" />
+    <meta property="og:image" content="https://clashv2rayfree.github.io/uploads/20240412/72f6826af5452ce6927f6b8658454153.webp" />
+        <meta property="og:release_date" content="2025-04-16T08:37:55" />
+    <meta property="og:updated_time" content="2025-04-16T08:37:55" />
+        <meta property="og:description" content="Hadoop安装-1，hadoop安装-2  spark安装 Hive安装    将Hive的conf目录下的hive-site-xml文件拷贝到spark的conf目录下； 将Hive中的mysql" />
+        
+    <link href="/assets/website/css/clashv2rayfree/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/website/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <!--google fonts-->
+    <script src="/assets/website/js/frontend/clashv2rayfree/jquery-1.11.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashv2rayfree/bootstrap.min.js"></script>
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Spark连接Hive，进行Hive数据表的读写操作">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NF953KP3Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0NF953KP3Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--header-top start here-->
+    <div class="top-header">
+    </div>
+    <!--header-top end here-->
+    <!--header start here-->
+    <!-- NAVBAR
+		================================================== -->
+    <div class="header w3l">
+        <div class="fixed-header">
+            <div class="navbar-wrapper">
+                <div class="container">
+                    <nav class="navbar navbar-inverse navbar-static-top">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                                                <a class="navbar-brand" href="/">Clash V2ray Free</a>
+                                                            </div>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <nav class="cl-effect-16" id="cl-effect-16">
+                                <ul class="nav navbar-nav">
+                                                                        <li>
+                                        <a href="/">首页</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/free-nodes/">免费节点</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/paid-subscribe/">推荐机场</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/client.htm">客户端</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/news/">新闻资讯</a>
+                                    </li>
+                                                                    </ul>
+                            </nav>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </nav>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--about strat here-->
+    <div class="about">
+        <div class="container">
+            <div class="about-main">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ol class="breadcrumb">
+                          <li><a href="/">首页</a></li>
+                          <li><a href="/news/">新闻资讯</a></li>
+                          <li class="active">正文</li>
+                        </ol>
+                        <div class="about-top">
+                            <h1>Spark连接Hive，进行Hive数据表的读写操作</h1>
+                        </div>
+                        <div class="about-bottom">
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> </h1> <ol> <li> <a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/sgyuanshi/article/details/90679022"  rel="nofollow">Hadoop安装-1</a>，<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/sgyuanshi/article/details/97507613"  rel="nofollow">hadoop安装-2</a> </li> <li><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/sgyuanshi/article/details/97510887"  rel="nofollow">spark安装</a></li> <li><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/sgyuanshi/article/details/113871248"  rel="nofollow">Hive安装</a></li> </ol> </h1> <ol> <li>将Hive的conf目录下的<strong>hive-site-xml</strong>文件拷贝到spark的conf目录下；</li> <li>将Hive中的mysql驱动包（mysql-connector-java-8.0.22.jar，根据自己mysql的版本进行选择）也拷贝到spark的jars目录下；</li> </ol> </h1> <p>当完成了上面的步骤之后，在spaek-shell中，就可以访问hive了。</p> <pre><code class="prism language-scala"><span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>spark<span class="token punctuation">.</span>sql<span class="token punctuation">.</span>SparkSession   <span class="token keyword">val</span> warehouseLocation <span class="token operator">=</span> <span class="token string">"spark-warehouse"</span>  <span class="token keyword">val</span> spark <span class="token operator">=</span> SparkSession   <span class="token punctuation">.</span>builder<span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token punctuation">.</span>appName<span class="token punctuation">(</span><span class="token string">"Spark Hive Example"</span><span class="token punctuation">)</span>   <span class="token punctuation">.</span>config<span class="token punctuation">(</span><span class="token string">"spark.sql.warehouse.dir"</span><span class="token punctuation">,</span> warehouseLocation<span class="token punctuation">)</span>   <span class="token punctuation">.</span>enableHiveSupport<span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token punctuation">.</span>getOrCreate<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token keyword">import</span> spark<span class="token punctuation">.</span>implicits<span class="token punctuation">.</span>_ <span class="token keyword">import</span> spark<span class="token punctuation">.</span>sql  <span class="token comment">// 到这里，你就可以随意读取Hive了</span> <span class="token comment">// test是hive中的表名</span> df <span class="token operator">=</span> sql<span class="token punctuation">(</span><span class="token string">"select * from test"</span><span class="token punctuation">)</span> <span class="token comment">// 返回spaek的DataFrame</span> df<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token comment">// 这里可以用sql语句，对Hive中的数据表进行任何的读写操作</span> sql<span class="token punctuation">(</span><span class="token string">"....."</span><span class="token punctuation">)</span> </code></pre> <p><strong>当然，这是在集群中的任意一个节点服务器中执行。<br /> 因此，你也可以使用spark-submit的方式。</strong><br /> 最后，spark访问hive为什么这么简单呢？基本不需要什么复杂的配置？<br /> 这是因为hive的元数据实际还是存放在hdfs，所以，你的hadoop和spark集群配置才是关键工作，spark访问的根头还是hdfs。</p> </h1> <p>一、 <strong>Unable to instantiate SparkSession with Hive support because Hive classes are not found：</strong></p> <p><strong>这个就是需要把spark-hive相关的包加到项目中。</strong></p> <p>坑人的是maven仓库官网中对spark-hive的引用是这样：</p> <p>libraryDependencies += “org.apache.spark” %% “spark-hive” % “2.4.4” % “provided”<br /> 但是实际上，应该写成libraryDependencies += “org.apache.spark” %% “spark-hive” % “2.4.4”</p> <p>二、<strong>Hive Schema version xxx does not match metastore’s schema version xxx Metastore is not upgraded or corrupt</strong></p> <p>解决方案：</p> <p>1.登陆mysql，修改hive metastore版本：<br /> 进入mysql：mysql -uroot -p （123456）</p> <pre><code class="prism language-sql"><span class="token keyword">use</span> hive<span class="token punctuation">;</span> <span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> version<span class="token punctuation">;</span> <span class="token keyword">update</span> VERSION <span class="token keyword">set</span> SCHEMA_VERSION<span class="token operator">=</span><span class="token string">'2.1.1'</span> <span class="token keyword">where</span>  VER_ID<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> </code></pre> <p>2.简单粗暴：在hvie-site.xml中关闭版本验证</p> <pre><code class="prism language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>hive.metastore.schema.verification<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>false<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span> </code></pre> <p>三、<strong>Attempt to invoke the “HikariCP” plugin to create a ConnectionPool gave an error : The connection pool plugin of type “HikariCP” was not found in the CLASSPATH!</strong></p> <p>修改hive的数据库连接方式：</p> <pre><code class="prism language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>datanucleus.connectionPoolingType<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span>dbcp<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">&gt;</span></span>   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">&gt;</span></span>   	Expects one of [bonecp, dbcp, hikaricp, none].   	Specify connection pool library for datanucleus   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span> </code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-96238.htm">延吉市宠物店电话（延吉市宠物店电话地址）</a></p>
+                                        <p>下一个：<a href="/news/article-96939.htm">宠物领养条约内容 宠物领养条约内容是什么</a></p>
+                                    </div>
+                                        </div>
+
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-74772.htm" title="孕妇让猫抓破了流血了（孕妇让猫抓破了流了一点点血）">孕妇让猫抓破了流血了（孕妇让猫抓破了流了一点点血）</a></li>
+                        <li class="py-2"><a href="/news/article-68835.htm" title="详解盒子模型和div布局">详解盒子模型和div布局</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-11-node-share.htm" title="「3月11日」最高速度18.5M/S，2025年Shadowrocket/Clash/V2ray/SSR每天更新免费订阅源地址">「3月11日」最高速度18.5M/S，2025年Shadowrocket/Clash/V2ray/SSR每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-72760.htm" title="动物疫苗贵吗多少钱一次打（动物的疫苗多少钱）">动物疫苗贵吗多少钱一次打（动物的疫苗多少钱）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-13-free-node-subscribe-links.htm" title="「4月13日」最高速度20.6M/S，2025年SSR/Clash/V2ray/Shadowrocket每天更新免费订阅源地址">「4月13日」最高速度20.6M/S，2025年SSR/Clash/V2ray/Shadowrocket每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-84443.htm" title="给动物打狂犬疫苗能持续多久不死（动物打的狂犬疫苗管多久）">给动物打狂犬疫苗能持续多久不死（动物打的狂犬疫苗管多久）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-6-free-v2ray-subscribe.htm" title="「4月6日」最高速度22.5M/S，2025年Shadowrocket/Clash/V2ray/SSR每天更新免费订阅源地址">「4月6日」最高速度22.5M/S，2025年Shadowrocket/Clash/V2ray/SSR每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-12-free-ssr-subscribe.htm" title="「3月12日」最高速度20.3M/S，2025年Clash/V2ray/Shadowrocket/SSR每天更新免费订阅源地址">「3月12日」最高速度20.3M/S，2025年Clash/V2ray/Shadowrocket/SSR每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-66290.htm" title="动物医院好评100字通用评论内容（动物医院好评模板）">动物医院好评100字通用评论内容（动物医院好评模板）</a></li>
+                        <li class="py-2"><a href="/news/article-67569.htm" title="猫打疫苗一共打几针多少钱知乎（猫打疫苗一共几针,多少钱）">猫打疫苗一共打几针多少钱知乎（猫打疫苗一共几针,多少钱）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">52</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about end here-->
+        <!--copy rights start here-->
+    <div class="copy-rights">
+        <div class="container">
+            <div class="copy-rights-main">
+                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <p>
+                    ClashV2rayFree官网节点站 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayfree.github.io/news/article-98410.htm" />
+    <title>DataLoader 和 Dataset</title>
+        <meta name="description" content="Dataset是一个包装类，用来将数据包装为Dataset类，然后传入DataLoader中，我们再使用DataLoader这个类来更加快捷的对数据进行操作。 DataLoader是一个比较重要的类，" />
+    
+    <meta name="author" content="ClashV2rayFree官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayfree.github.io/news/article-98410.htm" />
+    <meta property="og:site_name" content="ClashV2rayFree官网节点站" />
+    <meta property="og:title" content="DataLoader 和 Dataset" />
+    <meta property="og:image" content="https://clashv2rayfree.github.io/uploads/20240412/764bff712828223755e1b6166b54cbb4.webp" />
+        <meta property="og:release_date" content="2025-04-18T09:37:12" />
+    <meta property="og:updated_time" content="2025-04-18T09:37:12" />
+        <meta property="og:description" content="Dataset是一个包装类，用来将数据包装为Dataset类，然后传入DataLoader中，我们再使用DataLoader这个类来更加快捷的对数据进行操作。 DataLoader是一个比较重要的类，" />
+        
+    <link href="/assets/website/css/clashv2rayfree/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/website/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <!--google fonts-->
+    <script src="/assets/website/js/frontend/clashv2rayfree/jquery-1.11.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashv2rayfree/bootstrap.min.js"></script>
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="DataLoader 和 Dataset">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NF953KP3Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0NF953KP3Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--header-top start here-->
+    <div class="top-header">
+    </div>
+    <!--header-top end here-->
+    <!--header start here-->
+    <!-- NAVBAR
+		================================================== -->
+    <div class="header w3l">
+        <div class="fixed-header">
+            <div class="navbar-wrapper">
+                <div class="container">
+                    <nav class="navbar navbar-inverse navbar-static-top">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                                                <a class="navbar-brand" href="/">Clash V2ray Free</a>
+                                                            </div>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <nav class="cl-effect-16" id="cl-effect-16">
+                                <ul class="nav navbar-nav">
+                                                                        <li>
+                                        <a href="/">首页</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/free-nodes/">免费节点</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/paid-subscribe/">推荐机场</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/client.htm">客户端</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/news/">新闻资讯</a>
+                                    </li>
+                                                                    </ul>
+                            </nav>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </nav>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--about strat here-->
+    <div class="about">
+        <div class="container">
+            <div class="about-main">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ol class="breadcrumb">
+                          <li><a href="/">首页</a></li>
+                          <li><a href="/news/">新闻资讯</a></li>
+                          <li class="active">正文</li>
+                        </ol>
+                        <div class="about-top">
+                            <h1>DataLoader 和 Dataset</h1>
+                        </div>
+                        <div class="about-bottom">
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-dracula"> <p><strong>Dataset</strong>是一个<strong>包装类</strong>，用来将数据包装为Dataset类，然后传入<strong>DataLoader</strong>中，我们再使用DataLoader这个类来更加快捷的对数据进行操作。</p> <p>DataLoader是一个比较重要的类，它为我们提供的常用操作有：batch_size(每个batch的大小), shuffle(是否进行shuffle操作), num_workers(加载数据的时候使用几个子进程)<br /> 当我们集成了一个 Dataset类之后，我们需要重写 len 方法，该方法提供了dataset的大小； getitem 方法， 该方法支持从 0 到 len(self)的索引</p> <pre><code class="prism language-python"><span class="token keyword">from</span> torch<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>data <span class="token keyword">import</span> Dataset <span class="token keyword">class</span> <span class="token class-name">PTB</span><span class="token punctuation">(</span>Dataset<span class="token punctuation">)</span><span class="token punctuation">:</span>     <span class="token triple-quoted-string string">"""battery dataset."""</span>     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> data_dir<span class="token punctuation">,</span> split<span class="token punctuation">,</span>battery_dataset<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>         <span class="token triple-quoted-string string">"""         Args:             csv_file (string): Path to the csv file with annotations.             data_dir (string): data path0         """</span>         <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>         self<span class="token punctuation">.</span>data_dir <span class="token operator">=</span> data_dir         <span class="token keyword">try</span><span class="token punctuation">:</span>             <span class="token keyword">for</span> <span class="token builtin">file</span> <span class="token keyword">in</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>self<span class="token punctuation">.</span>data_dir<span class="token punctuation">)</span><span class="token punctuation">:</span>                 <span class="token comment"># print("file",os.path.join(data_dir,file))</span>                 df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>data_dir<span class="token punctuation">,</span><span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">"gbk"</span><span class="token punctuation">)</span>                  <span class="token comment"># self.battery_frame = df.values</span>                 <span class="token comment"># # print("self.battery_frame",self.battery_frame)</span>                 <span class="token comment"># # print("self.battery_frame",self.battery_frame.shape)</span>                 <span class="token comment"># battery_dataset.append(self.battery_frame)</span>                  windows<span class="token operator">=</span><span class="token number">32</span>                 windows_move<span class="token operator">=</span><span class="token number">1</span>                 <span class="token keyword">if</span> df<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">&gt;=</span>windows<span class="token punctuation">:</span>                     self<span class="token punctuation">.</span>battery_frame <span class="token operator">=</span> df<span class="token punctuation">.</span>values                     <span class="token comment"># print("self.battery_frame",self.battery_frame)</span>                     <span class="token comment"># print("self.battery_frame",self.battery_frame.shape)</span>                                          feature_num <span class="token operator">=</span> self<span class="token punctuation">.</span>battery_frame<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">-</span>windows<span class="token operator">+</span>windows_move                     <span class="token keyword">for</span> index <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>feature_num<span class="token punctuation">,</span>windows_move<span class="token punctuation">)</span><span class="token punctuation">:</span>                         feature_df <span class="token operator">=</span> self<span class="token punctuation">.</span>battery_frame<span class="token punctuation">[</span>index<span class="token punctuation">:</span><span class="token punctuation">(</span>index <span class="token operator">+</span> windows<span class="token punctuation">)</span><span class="token punctuation">]</span>                                         battery_dataset<span class="token punctuation">.</span>append<span class="token punctuation">(</span>feature_df<span class="token punctuation">)</span>                     self<span class="token punctuation">.</span>battery_dataset <span class="token operator">=</span> battery_dataset         <span class="token keyword">except</span> RuntimeError<span class="token punctuation">:</span>             <span class="token keyword">pass</span>         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>battery_dataset<span class="token punctuation">)</span><span class="token punctuation">)</span>     <span class="token keyword">def</span> <span class="token function">__len__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>         <span class="token comment">#返回文件数据的数目</span>         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>battery_dataset<span class="token punctuation">)</span><span class="token punctuation">)</span>         <span class="token keyword">return</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>battery_dataset<span class="token punctuation">)</span>         <span class="token comment"># return 1800000</span>     <span class="token keyword">def</span> <span class="token function">__getitem__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> idx<span class="token punctuation">)</span><span class="token punctuation">:</span>         <span class="token comment">#接收一个索引，返回一个样本(tensor维度相同)</span>         <span class="token keyword">print</span> <span class="token punctuation">(</span>idx<span class="token punctuation">)</span>         <span class="token comment"># battery = self.battery_frame.get_chunk(128).as_matrix().astype('float')</span>         <span class="token comment"># battery = self.battery_dataset[idx].as_matrix().astype('float')</span>         battery <span class="token operator">=</span> self<span class="token punctuation">.</span>battery_dataset<span class="token punctuation">[</span>idx<span class="token punctuation">]</span>         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"__getitem__"</span><span class="token punctuation">,</span>battery<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>          <span class="token keyword">return</span> battery </code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-97698.htm">自己家宠物猫挠出血不打针有事吗（自己家养的宠物猫被挠出血了）</a></p>
+                                        <p>下一个：<a href="/news/article-98412.htm">养猫有什么禁忌的地方吗（养猫的大忌）</a></p>
+                                    </div>
+                                        </div>
+
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-93875.htm" title="宠物粮食店铺起名大全集（宠物粮卖点）">宠物粮食店铺起名大全集（宠物粮卖点）</a></li>
+                        <li class="py-2"><a href="/news/article-97698.htm" title="自己家宠物猫挠出血不打针有事吗（自己家养的宠物猫被挠出血了）">自己家宠物猫挠出血不打针有事吗（自己家养的宠物猫被挠出血了）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-30-free-node-subscribe-links.htm" title="「3月30日」最高速度19.6M/S，2025年Shadowrocket/V2ray/SSR/Clash每天更新免费订阅源地址">「3月30日」最高速度19.6M/S，2025年Shadowrocket/V2ray/SSR/Clash每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-90955.htm" title="动物疫苗排名前十的有哪些（十大动物疫苗公司）">动物疫苗排名前十的有哪些（十大动物疫苗公司）</a></li>
+                        <li class="py-2"><a href="/news/article-85878.htm" title="Vue异步更新机制以及$nextTick原理">Vue异步更新机制以及$nextTick原理</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-31-free-shadowrocket-node.htm" title="「3月31日」最高速度18.8M/S，2025年SSR/V2ray/Shadowrocket/Clash每天更新免费订阅源地址">「3月31日」最高速度18.8M/S，2025年SSR/V2ray/Shadowrocket/Clash每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-76785.htm" title="android 退出程序后自动重新启动,进程停止后控制Android Activity重新启动">android 退出程序后自动重新启动,进程停止后控制Android Activity重新启动</a></li>
+                        <li class="py-2"><a href="/news/article-80213.htm" title="开宠物店靠什么赚钱（开宠物店挣钱么）">开宠物店靠什么赚钱（开宠物店挣钱么）</a></li>
+                        <li class="py-2"><a href="/news/article-76124.htm" title="宠物家庭寄养合同对甲方有益（宠物家庭寄养合同对甲方有益处吗）">宠物家庭寄养合同对甲方有益（宠物家庭寄养合同对甲方有益处吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-8-free-shadowrocket-node.htm" title="「3月8日」最高速度19.1M/S，2025年Clash/Shadowrocket/SSR/V2ray每天更新免费订阅源地址">「3月8日」最高速度19.1M/S，2025年Clash/Shadowrocket/SSR/V2ray每天更新免费订阅源地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">52</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about end here-->
+        <!--copy rights start here-->
+    <div class="copy-rights">
+        <div class="container">
+            <div class="copy-rights-main">
+                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <p>
+                    ClashV2rayFree官网节点站 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
