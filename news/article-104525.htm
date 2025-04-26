@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://clashv2rayfree.github.io/news/article-104525.htm" />
+    <title>hbase的概述和hbase架构及基本组件</title>
+        <meta name="description" content="一、hbase的概述 概述  HBase是一个构建在HDFS上的分布式列存储系统；HBase是基于Google BigTable模型开发的，典型的key/value系统；HBase是Apache Ha" />
+    
+    <meta name="author" content="ClashV2rayFree官网节点站">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://clashv2rayfree.github.io/news/article-104525.htm" />
+    <meta property="og:site_name" content="ClashV2rayFree官网节点站" />
+    <meta property="og:title" content="hbase的概述和hbase架构及基本组件" />
+    <meta property="og:image" content="https://clashv2rayfree.github.io/uploads/20240412/1861f9ed7ecca60749ddb15901abb17e.webp" />
+        <meta property="og:release_date" content="2025-04-26T07:38:59" />
+    <meta property="og:updated_time" content="2025-04-26T07:38:59" />
+        <meta property="og:description" content="一、hbase的概述 概述  HBase是一个构建在HDFS上的分布式列存储系统；HBase是基于Google BigTable模型开发的，典型的key/value系统；HBase是Apache Ha" />
+        
+    <link href="/assets/website/css/clashv2rayfree/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="/assets/website/css/clashv2rayfree/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/website/img/clashv2rayfree/favicon.ico" type="image/x-icon"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+    <!--google fonts-->
+    <script src="/assets/website/js/frontend/clashv2rayfree/jquery-1.11.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashv2rayfree/bootstrap.min.js"></script>
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="hbase的概述和hbase架构及基本组件">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NF953KP3Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0NF953KP3Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!--header-top start here-->
+    <div class="top-header">
+    </div>
+    <!--header-top end here-->
+    <!--header start here-->
+    <!-- NAVBAR
+		================================================== -->
+    <div class="header w3l">
+        <div class="fixed-header">
+            <div class="navbar-wrapper">
+                <div class="container">
+                    <nav class="navbar navbar-inverse navbar-static-top">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                                                <a class="navbar-brand" href="/">Clash V2ray Free</a>
+                                                            </div>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <nav class="cl-effect-16" id="cl-effect-16">
+                                <ul class="nav navbar-nav">
+                                                                        <li>
+                                        <a href="/">首页</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/free-nodes/">免费节点</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/paid-subscribe/">推荐机场</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/client.htm">客户端</a>
+                                    </li>
+                                                                        <li>
+                                        <a href="/news/">新闻资讯</a>
+                                    </li>
+                                                                    </ul>
+                            </nav>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </nav>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--header end here-->
+    <!--about strat here-->
+    <div class="about">
+        <div class="container">
+            <div class="about-main">
+                <div class="row">
+                    <div class="col-md-9">
+                        <ol class="breadcrumb">
+                          <li><a href="/">首页</a></li>
+                          <li><a href="/news/">新闻资讯</a></li>
+                          <li class="active">正文</li>
+                        </ol>
+                        <div class="about-top">
+                            <h1>hbase的概述和hbase架构及基本组件</h1>
+                        </div>
+                        <div class="about-bottom">
+                                            <input type="hidden" id="share-website-info" data-name="" data-url="">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="htmledit_views"> <div class="article_content clearfix csdn-tracking-statistics" style="padding:0px;margin:0px;"> <div class="markdown_views" style="padding:0px;margin:0px;font-family:'-apple-system', 'SF UI Text', Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif, SimHei, SimSun;"> <h2 style="padding:0px;">一、hbase的概述</h2> <p><span style="font-weight:700;">概述</span></p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220901/de03aae1f06aaf4c2352b30c81e64894.jpg" alt="hbase的概述和hbase架构及基本组件"></p> <p>HBase是一个构建在HDFS上的分布式列存储系统；<br />HBase是基于Google BigTable模型开发的，典型的key/value系统；<br />HBase是Apache Hadoop生态系统中的重要一员，主要用于海量结构化数据存储；<br />从逻辑上讲，HBase将数据按照表、行和列进行存储。<br />与hadoop一样，Hbase目标主要依靠横向扩展，通过不断增加廉价的商用服务器，来增加计算和存储能力。<br />Hbase表的特点<br />大：一个表可以有数十亿行，上百万列；<br />无模式：每行都有一个可排序的主键和任意多的列，列可以根据需要动态的增加，同一张表中不同的行可以有截然不同的列；<br />面向列：面向列（族）的存储和权限控制，列（族）独立检索；<br />稀疏：空（null）列并不占用存储空间，表可以设计的非常稀疏；<br />数据多版本：每个单元中的数据可以有多个版本，默认情况下版本号自动分配，是单元格插入时的时间戳；<br />数据类型单一：Hbase中的数据都是字符串，没有类型。</p> <p><span style="font-weight:700;">Hbase物理模型</span><br />1、Table中所有行都按照row key的字典序排列；<br />2、Table在行的方向上分割为多个Region；<br />3、Region按大小分割的，每个表开始只有一个region，随着数据增多，region不断增大，当增大到一个阀值的时候，region就会等分会两个新的region，之后会有越来越多的region；<br />4、Region是Hbase中分布式存储和负载均衡的最小单元，不同Region分布到不同RegionServer上。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220901/500e4643edd18f38e0bd0495ef1c978a.jpg" alt="hbase的概述和hbase架构及基本组件"><br />5、Region虽然是分布式存储的最小单元，但并不是存储的最小单元。Region由一个或者多个Store组成，每个store保存一个columns family；每个Strore又由一个memStore和0至多个StoreFile组成，StoreFile包含HFile；memStore存储在内存中，StoreFile存储在HDFS上。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220901/6926c210b9d9db36ddf8622e67c6c0fb.jpg" alt="hbase的概述和hbase架构及基本组件"></p> <h2 style="padding:0px;">二、HBase架构及基本组件</h2> <p><span style="font-weight:700;">Client</span><br />包含访问HBase的接口，并维护cache来加快对HBase的访问，比如region的位置信息.</p> <p><span style="font-weight:700;">HMaster节点用于：</span><br />1.管理HRegionServer，实现其负载均衡。<br />2.管理和分配HRegion，比如在HRegion split时分配新的HRegion；在HRegionServer退出时迁移其内的HRegion到其他HRegionServer上。<br />3.实现DDL操作（Data Definition Language，namespace和table的增删改，column familiy的增删改等）。<br />4.管理namespace和table的元数据（实际存储在HDFS上）。<br />5.权限控制（ACL）。</p> <p><span style="font-weight:700;">HRegionServer节点用于：</span><br />1.存放和管理本地HRegion。<br />2.读写HDFS，管理Table中的数据。<br />3.Client直接通过HRegionServer读写数据（从HMaster中获取元数据，找到RowKey所在的HRegion/HRegionServer后）</p> <p><span style="font-weight:700;">ZooKeeper集群是协调系统，用于：</span><br />1.存放整个 HBase集群的元数据以及集群的状态信息。<br />2.实现HMaster主从节点的failover。</p> <p>HBase Client通过RPC方式和HMaster、HRegionServer通信；一个HRegionServer可以存放1000个HRegion；底层Table数据存储于HDFS中，而HRegion所处理的数据尽量和数据所在的DataNode在一起，实现数据的本地化；数据本地化并不是总能实现，比如在HRegion移动(如因Split)时，需要等下一次Compact才能继续回到本地化。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220901/c1f7f03ecbb600153d672d134f118b30.jpg" alt="hbase的概述和hbase架构及基本组件"><br />这个架构图比较清晰的表达了HMaster和NameNode都支持多个热备份，使用ZooKeeper来做协调；ZooKeeper并不是云般神秘，它一般由三台机器组成一个集群，内部使用PAXOS算法支持三台Server中的一台宕机，也有使用五台机器的，此时则可以支持同时两台宕机，既少于半数的宕机，然而随着机器的增加，它的性能也会下降；RegionServer和DataNode一般会放在相同的Server上实现数据的本地化。</p> <p><span style="font-weight:700;">HRegion</span><br />HBase使用RowKey将表水平切割成多个HRegion，从HMaster的角度，每个HRegion都纪录了它的StartKey和EndKey（第一个HRegion的StartKey为空，最后一个HRegion的EndKey为空），由于RowKey是排序的，因而Client可以通过HMaster快速的定位每个RowKey在哪个HRegion中。HRegion由HMaster分配到相应的HRegionServer中，然后由HRegionServer负责HRegion的启动和管理，和Client的通信，负责数据的读(使用HDFS)。每个HRegionServer可以同时管理1000个左右的HRegion（这个数字怎么来的？没有从代码中看到限制，难道是出于经验？超过1000个会引起性能问题？来回答这个问题：感觉这个1000的数字是从BigTable的论文中来的（5 Implementation节）：Each tablet server manages a set of tablets(typically we have somewhere between ten to a thousand tablets per tablet server)）。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220901/97df70811db487338d7a564d46409447.jpg" alt="hbase的概述和hbase架构及基本组件"></p> <p><span style="font-weight:700;">HMaster</span><br />HMaster没有单点故障问题，可以启动多个HMaster，通过ZooKeeper的Master Election机制保证同时只有一个HMaster出于Active状态，其他的HMaster则处于热备份状态。一般情况下会启动两个HMaster，非Active的HMaster会定期的和Active HMaster通信以获取其最新状态，从而保证它是实时更新的，因而如果启动了多个HMaster反而增加了Active HMaster的负担。前文已经介绍过了HMaster的主要用于HRegion的分配和管理，DDL(Data Definition Language，既Table的新建、删除、修改等)的实现等，既它主要有两方面的职责：<br />1.协调HRegionServer<br />(1).启动时HRegion的分配，以及负载均衡和修复时HRegion的重新分配。<br />(2).监控集群中所有HRegionServer的状态(通过Heartbeat和监听ZooKeeper中的状态)。<br />2.Admin职能<br />(1）.创建、删除、修改Table的定义。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220901/37c1577ac3da58d847ce90b49f25fed5.jpg" alt="hbase的概述和hbase架构及基本组件"></p> </div> </div> <div class="article-bar-bottom" style="padding:0px 0px 16px;margin:36px 0px 0px;border-bottom:1px solid rgb(227,227,227);color:rgb(51,51,51);font-family:'SF Pro Display', Roboto, Noto, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;font-size:14px;"> <div class="article-copyright" style="padding:0px;margin:0px;font-size:12px;color:rgb(153,153,153);">   版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/qq_37095882/article/details/78129158</div> </div> </div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-104210.htm">动物医院所属行业指的是什么意思（动物医院属于什么性质的单位）</a></p>
+                                        <p>下一个：<a href="/news/article-104526.htm">包含福州免费领养宠物的平台有哪些的词条</a></p>
+                                    </div>
+                                        </div>
+
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-69483.htm" title="Python 实现走迷宫深度优先回溯算法（优质代码）">Python 实现走迷宫深度优先回溯算法（优质代码）</a></li>
+                        <li class="py-2"><a href="/news/article-67570.htm" title="动物疫苗接种注意事项和要求是什么（动物疫苗使用时的注意事项）">动物疫苗接种注意事项和要求是什么（动物疫苗使用时的注意事项）</a></li>
+                        <li class="py-2"><a href="/news/article-84443.htm" title="给动物打狂犬疫苗能持续多久不死（动物打的狂犬疫苗管多久）">给动物打狂犬疫苗能持续多久不死（动物打的狂犬疫苗管多久）</a></li>
+                        <li class="py-2"><a href="/news/article-70127.htm" title="宠物粮食加工厂加盟电话号码多少号（宠物粮食加工厂加盟电话号码多少号啊）">宠物粮食加工厂加盟电话号码多少号（宠物粮食加工厂加盟电话号码多少号啊）</a></li>
+                        <li class="py-2"><a href="/news/article-96238.htm" title="延吉市宠物店电话（延吉市宠物店电话地址）">延吉市宠物店电话（延吉市宠物店电话地址）</a></li>
+                        <li class="py-2"><a href="/news/article-93203.htm" title="分布式之一行代码解决缓存击穿问题">分布式之一行代码解决缓存击穿问题</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-13-free-node-subscribe-links.htm" title="「4月13日」最高速度20.6M/S，2025年SSR/Clash/V2ray/Shadowrocket每天更新免费订阅源地址">「4月13日」最高速度20.6M/S，2025年SSR/Clash/V2ray/Shadowrocket每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/news/article-101307.htm" title="VUE element-ui 之table表格第一行插入输入框">VUE element-ui 之table表格第一行插入输入框</a></li>
+                        <li class="py-2"><a href="/news/article-97696.htm" title="宠物粮食生产线设计图片 宠物粮食生产线设计图片大全">宠物粮食生产线设计图片 宠物粮食生产线设计图片大全</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-19-free-clash.htm" title="「4月19日」最高速度19.8M/S，2025年Shadowrocket/Clash/V2ray/SSR每天更新免费订阅源地址">「4月19日」最高速度19.8M/S，2025年Shadowrocket/Clash/V2ray/SSR每天更新免费订阅源地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">75</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about end here-->
+        <!--copy rights start here-->
+    <div class="copy-rights">
+        <div class="container">
+            <div class="copy-rights-main">
+                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                <p>
+                    ClashV2rayFree官网节点站 版权所有
+                    <br />
+                    Powered by WordPress
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
