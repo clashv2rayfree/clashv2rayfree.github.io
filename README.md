@@ -1,4 +1,4 @@
-# 「8月12日」最高速度21.7M/S，2025年SSR/V2ray/Clash/Shadowrocket每天更新免费订阅源地址  更新时间 2025-08-12 09:01:10
+# 「8月18日」最高速度21.3M/S，2025年V2ray/Shadowrocket/SSR/Clash每天更新免费订阅源地址  更新时间 2025-08-18 10:27:22
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://clashv2rayfree.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### Clash订阅链接
 
-- https://clashv2rayfree.github.io/uploads/2025/08/0-20250812.yaml
-- https://clashv2rayfree.github.io/uploads/2025/08/1-20250812.yaml
-- https://clashv2rayfree.github.io/uploads/2025/08/2-20250812.yaml
-- https://clashv2rayfree.github.io/uploads/2025/08/3-20250812.yaml
-- https://clashv2rayfree.github.io/uploads/2025/08/4-20250812.yaml
+- https://clashv2rayfree.github.io/uploads/2025/08/0-20250818.yaml
+- https://clashv2rayfree.github.io/uploads/2025/08/1-20250818.yaml
+- https://clashv2rayfree.github.io/uploads/2025/08/2-20250818.yaml
+- https://clashv2rayfree.github.io/uploads/2025/08/3-20250818.yaml
+- https://clashv2rayfree.github.io/uploads/2025/08/4-20250818.yaml
 
 ### V2ray订阅链接
 
-- https://clashv2rayfree.github.io/uploads/2025/08/0-20250812.txt
-- https://clashv2rayfree.github.io/uploads/2025/08/1-20250812.txt
-- https://clashv2rayfree.github.io/uploads/2025/08/2-20250812.txt
-- https://clashv2rayfree.github.io/uploads/2025/08/3-20250812.txt
-- https://clashv2rayfree.github.io/uploads/2025/08/4-20250812.txt
+- https://clashv2rayfree.github.io/uploads/2025/08/0-20250818.txt
+- https://clashv2rayfree.github.io/uploads/2025/08/1-20250818.txt
+- https://clashv2rayfree.github.io/uploads/2025/08/2-20250818.txt
+- https://clashv2rayfree.github.io/uploads/2025/08/3-20250818.txt
+- https://clashv2rayfree.github.io/uploads/2025/08/4-20250818.txt
 
 ### Sing-box订阅链接
 
-- https://clashv2rayfree.github.io/uploads/2025/08/20250812.json
+- https://clashv2rayfree.github.io/uploads/2025/08/20250818.json
 
 ## 更多clash节点订阅 ：
 
