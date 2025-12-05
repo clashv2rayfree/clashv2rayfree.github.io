@@ -160,19 +160,33 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
 <p style="margin-bottom:3rem;color:#999;font-style:italic;">注：跳转链接可能会 <b style="color:red;">被墙</b> ，如多次打开失败，请先使用下面不稳定免费订阅后，再尝试点击链接</p><p>&nbsp;</p><p></p><h2>订阅文件链接</h2><p>&nbsp;</p><p><strong>Clash订阅链接</strong></p><p>https://clashv2rayfree.github.io/uploads/2025/11/0-20251105.yaml</p><p>https://clashv2rayfree.github.io/uploads/2025/11/1-20251105.yaml</p><p>https://clashv2rayfree.github.io/uploads/2025/11/3-20251105.yaml</p><p>https://clashv2rayfree.github.io/uploads/2025/11/4-20251105.yaml</p><p>&nbsp;</p><p><strong>V2ray订阅链接:</strong></p><p>https://clashv2rayfree.github.io/uploads/2025/11/1-20251105.txt</p><p>https://clashv2rayfree.github.io/uploads/2025/11/3-20251105.txt</p><p><strong>Sing-Box订阅链接</strong></p><p>https://clashv2rayfree.github.io/uploads/2025/11/20251105.json</p><h2>使用必看</h2><p>&nbsp;</p><p>全部节点信息均来自互联网收集，且用且珍惜，推荐机场：「<a href="javascript:;" class="js_to" data-url="https://muguacloud.top/#/register?code=" data-type="Mugua" data-code="vyGmgr86" rel="nofollow noopener" style="color:#c00;">木瓜云</a> 」。仅针对用于学习研究的用户分享，请勿随意传播其他信息。免费节点有效时间比较短，遇到失效是正常现象。</p><h2>深度解析：Clash翻墙全攻略——从入门到精通</h2>  <p>在当今互联网环境中，许多地区的网络访问受到严格限制，翻墙工具因此成为许多人突破信息壁垒的刚需。Clash作为一款功能强大、配置灵活的代理工具，凭借其高效的性能和跨平台支持，逐渐成为技术爱好者和普通用户的首选。本文将深入解析Clash的核心功能、配置方法及实战技巧，帮助你彻底掌握这款工具。  </p>  <h2>一、Clash：翻墙工具中的瑞士军刀</h2>  <p>Clash并非简单的代理软件，而是一个支持多协议、多规则的网络流量管理工具。它通过智能路由和策略组功能，让用户可以自由控制每一条网络流量的走向。与传统的VPN或单一代理工具相比，Clash的最大优势在于其<strong>规则驱动的灵活性</strong>——你可以为不同网站、应用甚至特定域名设置独立的代理规则，实现精准分流。  </p>  <h3>核心特性解析</h3>  <ol> <li><strong>多协议支持</strong>：兼容Shadowsocks、VMess（V2Ray）、Trojan等主流代理协议，甚至能混合使用。  </li> <li><strong>规则引擎</strong>：基于域名、IP、GEOIP等条件实现自动分流，国内直连、国外走代理的智能模式只需一次配置。  </li> <li><strong>流量可视化</strong>：实时监控每个节点的延迟和流量消耗，数据党必备功能。  </li> </ol>  <h2>二、从零开始的Clash部署指南</h2>  <h3>第一步：获取适合的客户端</h3>  <p>Clash的跨平台特性体现在其丰富的客户端生态上：<br /> - <strong>Windows/macOS</strong>：推荐Clash for Windows或ClashX（Mac专属）<br /> - <strong>Android</strong>：开源应用Clash for Android（原Surfboard）<br /> - <strong>iOS</strong>：需通过TestFlight安装第三方客户端如Stash  </p>  <blockquote>   <p><em>技术提示：GitHub是获取官方版本的最佳渠道，避免下载来路不明的修改版以防后门风险。</em>  </p> </blockquote>  <h3>第二步：配置文件的奥秘</h3>  <p>配置文件（YAML格式）是Clash的灵魂所在，包含三大核心模块：  </p>  <p>```yaml proxies:  # 代理服务器列表   - name: "日本节点"     type: ss     server: jp.example.com     port: 443     cipher: aes-256-gcf</p>  <p>proxy-groups:  # 策略组   - name: "智能路由"     type: url-test     proxies: ["日本节点","美国节点"]     url: "http://www.gstatic.com/generate_204"</p>  <p>rules:  # 分流规则   - DOMAIN-SUFFIX,google.com,智能路由   - GEOIP,CN,DIRECT  # 国内直连 ```  </p>  <p><strong>实战技巧</strong>：<br /> - 使用在线订阅转换服务（如ACL4SSR）自动生成优化规则<br /> - 定期更新GEOIP数据库确保精准分流  </p>  <h2>三、高阶玩法：打造企业级翻墙方案</h2>  <h3>1. 负载均衡与故障转移</h3>  <p>通过<code>load-balance</code>策略组实现多节点流量分配，配合<code>fallback</code>策略组自动切换至可用节点。某科技公司IT主管实测，这种配置可使网络中断时间缩短至毫秒级。  </p>  <h3>2. 混合协议战术</h3>  <p>针对特殊网络环境：<br /> - 教育网用户可组合使用VMess+WS+TLS与Trojan<br /> - 企业防火墙严格时尝试Shadowsocks2022新混淆协议  </p>  <h3>3. 移动端优化方案</h3>  <p>Android用户建议开启TUN模式实现全局代理（需Root），iOS用户则需配合Quantumult X等工具实现分应用代理。某数码博主测试显示，这种配置下YouTube 4K视频缓冲时间减少62%。  </p>  <h2>四、安全防护与疑难排解</h2>  <h3>必须防范的三大风险</h3>  <ol> <li><strong>DNS泄漏</strong>：强制使用DOH（DNS-over-HTTPS）并禁用系统默认DNS  </li> <li><strong>IP暴露</strong>：定期通过浏览器指纹测试网站检查WebRTC泄漏  </li> <li><strong>配置劫持</strong>：为订阅链接配置鉴权密钥（<code>&amp;token=your_key</code>）  </li> </ol>  <h3>常见问题速查表</h3>  <p>| 问题现象 | 解决方案 |<br /> |---------|----------|<br /> | 连接成功但无法访问 | 检查规则中是否有<code>GEOIP,CN,DIRECT</code>误判 |<br /> | 速度突然下降 | 切换至<code>url-test</code>策略组自动选择最优节点 |<br /> | macOS报权限错误 | 执行<code>chmod +x /Applications/ClashX.app/Contents/MacOS/ClashX</code> |  </p>  <h2>五、未来展望：Clash生态演进</h2>  <p>随着eBPF等新技术的发展，下一代Clash内核（如Clash.Meta）已开始支持：<br /> - 基于机器学习的流量预测分流<br /> - 硬件级加速（如Intel QAT加密加速）<br /> - 与WireGuard的深度集成  </p>  <p>某网络安全研究员指出："Clash正在从单纯的代理工具进化为网络中间件，未来可能重塑企业级网络架构。"  </p>  <h2>结语：技术自由的双刃剑</h2>  <p>掌握Clash的深度使用，本质上是获得了一种突破数字边界的能</p> </div>
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
-        <p>上一个：<a href="/free-nodes/2025-11-4-node-share-links.htm">「11月4日」最高速度22M/S，2025年SSR节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点每天更新免费订阅源地址</a></p>
         <p>下一个：<a href="/free-nodes/2025-11-6-free-ssr-node.htm">「11月6日」最高速度22.3M/S，2025年V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点每天更新免费订阅源地址</a></p>
     </div>
 <h4>FAQ</h4>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS 在高封锁环境下的优势是什么？</h5></div>
+    <div class="panel-body">
+        VLESS 去掉了内置加密，依赖 TLS 层安全，减少被 DPI 检测的特征。结合 XTLS 或 Reality 模式，可以更好地隐藏流量，提高在高封锁网络中的稳定性与隐蔽性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekobox 是否支持多客户端节点管理？</h5></div>
+    <div class="panel-body">
+        支持。Nekobox 与 Shadowsocks、Clash 等客户端独立运行，互不干扰。用户可通过策略组灵活管理节点，实现多客户端分流和网络优化。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess 的多路复用在短连接环境下有什么优势？</h5></div>
+    <div class="panel-body">
+        多路复用可将多个短连接共享同一 TCP 或 QUIC 隧道，减少重复握手和延迟。适合高频短连接的应用场景，如即时通讯、游戏或网页频繁请求，提升整体响应速度。<hr />    </div>
+</div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 使用 WebSocket + TLS 有哪些优势？</h5></div>
     <div class="panel-body">
         WebSocket + TLS 可将 V2Ray 流量伪装成 HTTPS 请求，隐藏真实通信特征。结合域名伪装和策略组使用，可以有效绕过封锁，提高节点安全性和连接稳定性，保持长期稳定访问。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS 在高封锁环境下的优势是什么？</h5></div>
+    <div class="panel-heading"><h5>VLESS 的 XTLS 模式能提升传输效率吗？</h5></div>
     <div class="panel-body">
-        VLESS 去掉了内置加密，依赖 TLS 层安全，减少被 DPI 检测的特征。结合 XTLS 或 Reality 模式，可以更好地隐藏流量，提高在高封锁网络中的稳定性与隐蔽性。<hr />    </div>
+        XTLS 模式通过减少冗余加密和握手次数，降低延迟，提高吞吐量。在高并发和短连接场景下，效率明显优于普通 TLS，同时保持数据安全性和隐蔽性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hiddify Next 如何导入订阅？</h5></div>
@@ -190,24 +204,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。在高封锁环境下使用，有助于保持节点长期可用，保证数据安全和连接稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS 的 XTLS 模式能提升传输效率吗？</h5></div>
-    <div class="panel-body">
-        XTLS 模式通过减少冗余加密和握手次数，降低延迟，提高吞吐量。在高并发和短连接场景下，效率明显优于普通 TLS，同时保持数据安全性和隐蔽性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess 的多路复用在短连接环境下有什么优势？</h5></div>
-    <div class="panel-body">
-        多路复用可将多个短连接共享同一 TCP 或 QUIC 隧道，减少重复握手和延迟。适合高频短连接的应用场景，如即时通讯、游戏或网页频繁请求，提升整体响应速度。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Mellow TUN 模式如何拦截全局流量？</h5></div>
     <div class="panel-body">
         TUN 模式会拦截系统 IP 层的所有流量，实现全局代理。相比 SOCKS5 只影响部分应用，TUN 可以覆盖游戏、视频和浏览器等所有流量，提高科学上网体验的全面性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekobox 是否支持多客户端节点管理？</h5></div>
-    <div class="panel-body">
-        支持。Nekobox 与 Shadowsocks、Clash 等客户端独立运行，互不干扰。用户可通过策略组灵活管理节点，实现多客户端分流和网络优化。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan TLS 伪装域名如何提高抗封锁能力？</h5></div>
@@ -244,16 +243,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-10-15-node-share.htm" title="「10月15日」最高速度22.9M/S，2025年SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点每天更新免费订阅源地址">「10月15日」最高速度22.9M/S，2025年SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点每天更新免费订阅源地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-2-free-ssr-node.htm" title="「11月2日」最高速度22.8M/S，2025年Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点每天更新免费订阅源地址">「11月2日」最高速度22.8M/S，2025年Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点每天更新免费订阅源地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-10-free-ssr-node.htm" title="「11月10日」最高速度20.8M/S，2025年Clash节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点每天更新免费订阅源地址">「11月10日」最高速度20.8M/S，2025年Clash节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点每天更新免费订阅源地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-3-free-clash-subscribe.htm" title="「10月3日」最高速度18.3M/S，2025年V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点每天更新免费订阅源地址">「10月3日」最高速度18.3M/S，2025年V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点每天更新免费订阅源地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-21-free-shadowrocket-node.htm" title="「10月21日」最高速度19.2M/S，2025年SSR节点/Shadowrocket节点/Clash节点/Singbox节点/V2ray节点每天更新免费订阅源地址">「10月21日」最高速度19.2M/S，2025年SSR节点/Shadowrocket节点/Clash节点/Singbox节点/V2ray节点每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-6-free-ssr-node.htm" title="「11月6日」最高速度22.3M/S，2025年V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点每天更新免费订阅源地址">「11月6日」最高速度22.3M/S，2025年V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-12-free-node-subscribe-links.htm" title="「11月12日」最高速度22M/S，2025年SSR节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点每天更新免费订阅源地址">「11月12日」最高速度22M/S，2025年SSR节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-2-free-clash.htm" title="「12月2日」最高速度18.4M/S，2025年Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点每天更新免费订阅源地址">「12月2日」最高速度18.4M/S，2025年Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-13-free-high-speed-nodes.htm" title="「11月13日」最高速度22.9M/S，2025年Clash节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点每天更新免费订阅源地址">「11月13日」最高速度22.9M/S，2025年Clash节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点每天更新免费订阅源地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-8-shadowrocket-node.htm" title="「11月8日」最高速度21.3M/S，2025年V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点每天更新免费订阅源地址">「11月8日」最高速度21.3M/S，2025年V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点每天更新免费订阅源地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-12-free-subscribe-node.htm" title="「10月12日」最高速度22.2M/S，2025年SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点每天更新免费订阅源地址">「10月12日」最高速度22.2M/S，2025年SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点每天更新免费订阅源地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-13-free-v2ray-subscribe.htm" title="「10月13日」最高速度22.7M/S，2025年Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点每天更新免费订阅源地址">「10月13日」最高速度22.7M/S，2025年Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点每天更新免费订阅源地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-17-free-node-subscribe-links.htm" title="「10月17日」最高速度19.2M/S，2025年V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点每天更新免费订阅源地址">「10月17日」最高速度19.2M/S，2025年V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点每天更新免费订阅源地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-7-free-subscribe-node.htm" title="「10月7日」最高速度19.4M/S，2025年Clash节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点每天更新免费订阅源地址">「10月7日」最高速度19.4M/S，2025年Clash节点/Shadowrocket节点/V2ray节点/Singbox节点/SSR节点每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-10-free-ssr-node.htm" title="「11月10日」最高速度20.8M/S，2025年Clash节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点每天更新免费订阅源地址">「11月10日」最高速度20.8M/S，2025年Clash节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-23-free-clash-subscribe.htm" title="「11月23日」最高速度22.9M/S，2025年Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点每天更新免费订阅源地址">「11月23日」最高速度22.9M/S，2025年Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-21-clash-windows.htm" title="「11月21日」最高速度19.4M/S，2025年Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Singbox节点每天更新免费订阅源地址">「11月21日」最高速度19.4M/S，2025年Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Singbox节点每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-11-free-node-subscribe.htm" title="「11月11日」最高速度22.9M/S，2025年V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点每天更新免费订阅源地址">「11月11日」最高速度22.9M/S，2025年V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-1-clash-v2ray-ss-ssr.htm" title="「12月1日」最高速度18.7M/S，2025年Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点每天更新免费订阅源地址">「12月1日」最高速度18.7M/S，2025年Singbox节点/SSR节点/Shadowrocket节点/Clash节点/V2ray节点每天更新免费订阅源地址</a></li>
                     </ul>
     </div>
 </div>
@@ -265,10 +264,10 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                     </ul>
     </div>
