@@ -1,4 +1,4 @@
-# 「1月31日」最高速度22.5M/S，2025年V2ray节点/Clash节点/Singbox节点/SSR节点/Shadowrocket节点每天更新免费订阅源地址  更新时间 2026-01-31 10:07:43
+# 「2月7日」最高速度18.7M/S，2025年V2ray节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点每天更新免费订阅源地址  更新时间 2026-02-07 06:17:55
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://clashv2rayfree.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://clashv2rayfree.github.io/uploads/2026/01/0-20260131.yaml
-- https://clashv2rayfree.github.io/uploads/2026/01/1-20260131.yaml
-- https://clashv2rayfree.github.io/uploads/2026/01/2-20260131.yaml
-- https://clashv2rayfree.github.io/uploads/2026/01/3-20260131.yaml
-- https://clashv2rayfree.github.io/uploads/2026/01/4-20260131.yaml
+- https://clashv2rayfree.github.io/uploads/2026/02/0-20260207.yaml
+- https://clashv2rayfree.github.io/uploads/2026/02/1-20260207.yaml
+- https://clashv2rayfree.github.io/uploads/2026/02/2-20260207.yaml
+- https://clashv2rayfree.github.io/uploads/2026/02/3-20260207.yaml
+- https://clashv2rayfree.github.io/uploads/2026/02/4-20260207.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://clashv2rayfree.github.io/uploads/2026/01/0-20260131.txt
-- https://clashv2rayfree.github.io/uploads/2026/01/1-20260131.txt
-- https://clashv2rayfree.github.io/uploads/2026/01/2-20260131.txt
-- https://clashv2rayfree.github.io/uploads/2026/01/3-20260131.txt
-- https://clashv2rayfree.github.io/uploads/2026/01/4-20260131.txt
+- https://clashv2rayfree.github.io/uploads/2026/02/0-20260207.txt
+- https://clashv2rayfree.github.io/uploads/2026/02/1-20260207.txt
+- https://clashv2rayfree.github.io/uploads/2026/02/2-20260207.txt
+- https://clashv2rayfree.github.io/uploads/2026/02/3-20260207.txt
+- https://clashv2rayfree.github.io/uploads/2026/02/4-20260207.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://clashv2rayfree.github.io/uploads/2026/01/20260131.json
+- https://clashv2rayfree.github.io/uploads/2026/02/20260207.json
 
 ## 更多Clash节点订阅 ：
 
