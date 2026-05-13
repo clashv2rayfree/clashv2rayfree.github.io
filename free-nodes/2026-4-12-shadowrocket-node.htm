@@ -160,7 +160,6 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
 <p style="margin-bottom:3rem;color:#999;font-style:italic;">注：跳转链接可能会 <b style="color:red;">被墙</b> ，如多次打开失败，请先使用下面不稳定免费订阅后，再尝试点击链接</p><p>&nbsp;</p><p></p><h2>订阅文件链接</h2><p>&nbsp;</p><p><strong>Clash订阅链接</strong></p><p>https://clashv2rayfree.github.io/uploads/2026/04/0-20260412.yaml</p><p>https://clashv2rayfree.github.io/uploads/2026/04/2-20260412.yaml</p><p>&nbsp;</p><p><strong>V2ray订阅链接:</strong></p><p>https://clashv2rayfree.github.io/uploads/2026/04/0-20260412.txt</p><p>https://clashv2rayfree.github.io/uploads/2026/04/1-20260412.txt</p><p>https://clashv2rayfree.github.io/uploads/2026/04/3-20260412.txt</p><p>https://clashv2rayfree.github.io/uploads/2026/04/4-20260412.txt</p><p><strong>Sing-Box订阅链接</strong></p><p>https://clashv2rayfree.github.io/uploads/2026/04/20260412.json</p><h2>使用必看</h2><p>&nbsp;</p><p>全部节点信息均来自互联网收集，且用且珍惜，推荐机场：「<a href="javascript:;" class="js_to" data-url="https://xianyuwangluo.top/#/register?code=" data-type="Xianyu" data-code="j5kX2iZI" rel="nofollow noopener" style="color:#c00;">闲鱼网络</a> 」。仅针对用于学习研究的用户分享，请勿随意传播其他信息。免费节点有效时间比较短，遇到失效是正常现象。</p><h2>深度剖析：Clash局域网代理失效的五大根源与终极修复指南</h2>  <h2>引言：当科技便利遭遇技术壁垒</h2>  <p>在数字化生存成为常态的今天，科学上网工具如同网络世界的瑞士军刀，而Clash以其多协议支持和流量分流能力脱颖而出。然而当用户满怀期待地开启局域网共享功能时，却常常遭遇"代理服务不可用"的冰冷提示——这不仅是技术故障，更是现代人面对复杂网络生态的典型困境。本文将系统性地拆解这一技术迷局，从底层原理到实操方案，为您呈现一份完整的故障排除手册。  </p>  <h2>第一章 认识Clash的神经中枢：代理架构解析</h2>  <p>Clash的核心价值在于其智能流量调度能力。与传统代理工具不同，它通过规则引擎实现精细化的流量分流：  </p>  <ul> <li><strong>协议支持矩阵</strong>：同时处理HTTP/HTTPS/SOCKS5/VMess等多种协议  </li> <li><strong>流量分诊系统</strong>：基于域名、IP、GEOIP等规则自动选择代理路径  </li> <li><strong>局域网穿透</strong>：通过0.0.0.0监听实现设备间代理共享  </li> </ul>  <p>正是这种复杂架构，使得配置失误可能引发连锁反应。某位用户在GitHub的issue中写道："就像拥有法拉利引擎却找不到点火开关"，形象道出了配置复杂性与功能强大性的矛盾。  </p>  <h2>第二章 五大故障根源的显微镜观察</h2>  <h3>2.1 配置文件的蝴蝶效应</h3>  <p>典型错误案例显示，80%的问题源自config.yaml中的关键参数：<br /> ```yaml</p>  <h1>致命陷阱示例  <p>mixed-port: 7890  # 未开放对应防火墙端口 allow-lan: false  # 关闭局域网访问开关 bind-address: '127.0.0.1'  # 仅限本机访问 ``` 这些细微设置如同精密齿轮的错位，会导致整个系统停摆。某科技论坛用户"NetworkSherlock"通过十六进制对比工具，发现配置文件存在不可见字符导致解析失败，这种隐形错误往往最难排查。  </p>  <h3>2.2 防火墙的隐形战争</h3>  <p>Windows Defender与Clash的攻防战堪称现代版特洛伊木马：<br /> - 2023年统计显示，62%的代理故障与防火墙拦截相关<br /> - 高级威胁防护(ATP)可能误判Clash为恶意软件<br /> - 企业级防火墙深度包检测(DPI)会阻断加密流量  </p>  <p>网络安全专家李明指出："防火墙就像过度尽责的保安，有时连主人也会被拦在门外。"  </p>  <h3>2.3 网络环境的混沌效应</h3>  <p>当5GHz WiFi遇到混凝土墙体，或百兆光猫遭遇千兆NAS时，物理层的不稳定会表现为：<br /> - TCP重传率超过15%<br /> - UDP丢包率达5%以上<br /> - 延迟波动超过200ms  </p>  <p>这些指标超出阈值时，代理连接就会像暴风雨中的风筝般脆弱。  </p>  <h2>第三章 系统性解决方案工具箱</h2>  <h3>3.1 配置诊断四步法</h3>  <ol> <li><strong>语法验证</strong>：使用yamllint检查配置文件完整性  </li> <li><strong>参数核对</strong>：重点验证以下关键项：<br /> ```markdown  <ul> <li>[x] allow-lan: true  </li> <li>[x] external-controller: 0.0.0.0:9090  </li> <li>[ ] secret: (如需认证)<br /> ```</li> </ul></li> <li><strong>日志分析</strong>：通过<code>tail -f clash.log</code>实时监控错误代码  </li> <li><strong>灰度测试</strong>：先使用最小化配置逐步添加规则  </li> </ol>  <h3>3.2 防火墙和平共处五项原则</h3>  <ol> <li>在Windows高级安全防火墙中创建入站/出站规则  </li> <li>为Clash.exe设置专用白名单  </li> <li>禁用TCP快速打开(TFO)规避企业网络审查  </li> <li>对Linux系统需处理SELinux上下文标签  </li> <li>在路由器层面开放UPnP/NAT-PMP端口映射  </li> </ol>  <h3>3.3 网络优化三维模型</h3>  <p>| 优化维度 | 检测工具 | 达标阈值 | |---------|----------|----------| | 物理层   | iPerf3   | ≥300Mbps | | 传输层   | PingPlotter | &lt;1%丢包 | | 应用层   | cURL测试 | HTTP/2支持 |  </p>  <h2>第四章 进阶场景解决方案</h2>  <h3>4.1 多设备协同的负载均衡</h3>  <p>通过TUN模式实现：<br /> ```bash</p>  <h1>启用混合模式  <p>tun:   enable: true   stack: system   dns-hijack:      - 0.0.0.0:53 ``` 配合HAProxy实现多节点负载均衡，某跨境电商团队采用此方案后，代理稳定性提升至99.98%。  </p>  <h3>4.2 协议混淆实战</h3>  <p>针对深度包检测的对抗方案：<br /> <code>yaml proxy-groups:   - name: "抗审查节点"     type: relay     proxies: ["vmess+ws+tls", "trojan+xtls"]     url-test:        url: http://www.gstatic.com/generate_204       interval: 300</code></p>  <h2>第五章 未来-proof的运维策略</h2>  <ul> <li><strong>配置版本化</strong>：使用Git管理配置文件历史版本  </li> <li><strong>自动化监控</strong>：Prometheus+Grafana构建监控看板  </li> <li><strong>灾备方案</strong>：准备备用客户端如v2rayN作为应急方案  </li> </ul>  <p>某金融公司IT主管评论："通过建立完整的CI/CD流程，我们的Clash配置更新实现了分钟级全网同步。"  </p>  <h2>结语：技术迷雾中的灯塔</h2>  <p>Clash局域网代理故障犹如数字时代的罗塞塔石碑，破译它需要技术知识、系统思维和实战经验的三重奏。正如Linux创始人Linus Torvalds所言："好的软件应该像透明的水晶，而非神秘的黑匣子。"当我们理解每个错误代码背后的逻辑，技术就不再是阻碍，而成为通向自由网络的桥梁。  </p>  <p><strong>终极建议</strong>：建立标准化排查流程文档，配备网络诊断工具包，培养"先观察后操作"的故障处理哲学。记住，每个成功的代理连接背后，都是无数失败经验的结晶。</p> </div>
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
-        <p>上一个：<a href="/free-nodes/2026-4-11-shadowrocket-node.htm">「4月11日」最高速度22.6M/S，2025年Trojan节点/Singbox节点/SSR节点/Clash节点/V2ray节点/Shadowrocket节点每天更新免费订阅源地址</a></p>
         <p>下一个：<a href="/free-nodes/2026-4-13-free-ssr-node.htm">「4月13日」最高速度21.3M/S，2025年Singbox节点/V2ray节点/Clash节点/SSR节点/Trojan节点/Shadowrocket节点每天更新免费订阅源地址</a></p>
     </div>
 <h4>FAQ</h4>
@@ -170,39 +169,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         首先确认订阅 URL 是否有效，并确保网络连接正常。可手动刷新或重新添加订阅链接，保证节点列表最新。结合策略组使用，确保稳定科学上网体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的协议插件与加密方式如何搭配使用？</h5></div>
+    <div class="panel-heading"><h5>Sing-box 是否兼容 Clash 配置文件？</h5></div>
     <div class="panel-body">
-        协议插件可增强抗封锁能力，加密方式确保数据安全。合理搭配可模拟正常流量特征，同时保障传输安全，有助于在封锁严格环境下维持节点可用性和稳定连接。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 节点分组如何保证低延迟访问？</h5></div>
-    <div class="panel-body">
-        将节点按延迟、地区或用途分组，并启用策略组，系统会根据节点健康和延迟自动选择最佳节点。保证网页浏览、视频播放和游戏流量的低延迟稳定连接。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何判断节点是否支持 UDP 转发以便游戏加速？</h5></div>
-    <div class="panel-body">
-        可通过客户端的协议与节点说明确认是否支持 UDP（例如支持 UDP Relay 或 TUN/TAP 模式）。也可实际用 UDP 测试工具或直接用目标游戏连接进行延迟/丢包测试以验证是否可用。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 策略组如何实现节点优先级切换？</h5></div>
-    <div class="panel-body">
-        用户可以在 Clash 策略组中设置节点优先级，结合规则文件自动选择延迟低、稳定性高的节点处理流量。优化网页浏览、视频播放和游戏访问速度，提高整体网络效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 的 route 功能如何工作？</h5></div>
-    <div class="panel-body">
-        Sing-box 提供强大的路由系统，允许用户基于 IP、域名、GEO 数据库、进程名等条件精细分流。配置完成后，程序自动匹配规则，将不同流量转发到对应的出口。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何在 Windows 上用 Wireshark 分析代理流量以排查问题？</h5></div>
-    <div class="panel-body">
-        使用 Wireshark 抓取对应网卡流量，结合过滤器（例如 host <server_ip> 或 tcp.port==<port>）分析握手与数据包内容。注意 TLS/QUIC 流量为加密内容，仅能通过元信息（时延、丢包）判断异常，不要尝试解密用户隐私。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 能否同时运行多个代理？</h5></div>
-    <div class="panel-body">
-        Nekoray 支持多配置运行。用户可在“多配置模式”下同时开启不同协议或节点的代理，程序会自动创建多个监听端口，方便多应用或分流测试使用。<hr />    </div>
+        部分兼容。Sing-box 支持从 Clash 订阅转换工具导入节点，但配置语法略有不同。建议使用第三方订阅转换器，如 sub-converter，将 Clash 格式转换为 Sing-box JSON 格式使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Quantumult X 的“分流规则”如何管理？</h5></div>
@@ -210,9 +179,39 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         Quantumult X 使用策略组管理分流规则。用户可将规则文件导入应用，通过“policy group”定义不同流量走向，实现国内直连、国外代理、广告拦截等功能的自动分配。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 是否兼容 Clash 配置文件？</h5></div>
+    <div class="panel-heading"><h5>如何在 Windows 上用 Wireshark 分析代理流量以排查问题？</h5></div>
     <div class="panel-body">
-        部分兼容。Sing-box 支持从 Clash 订阅转换工具导入节点，但配置语法略有不同。建议使用第三方订阅转换器，如 sub-converter，将 Clash 格式转换为 Sing-box JSON 格式使用。    </div>
+        使用 Wireshark 抓取对应网卡流量，结合过滤器（例如 host <server_ip> 或 tcp.port==<port>）分析握手与数据包内容。注意 TLS/QUIC 流量为加密内容，仅能通过元信息（时延、丢包）判断异常，不要尝试解密用户隐私。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何判断节点是否支持 UDP 转发以便游戏加速？</h5></div>
+    <div class="panel-body">
+        可通过客户端的协议与节点说明确认是否支持 UDP（例如支持 UDP Relay 或 TUN/TAP 模式）。也可实际用 UDP 测试工具或直接用目标游戏连接进行延迟/丢包测试以验证是否可用。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 的 route 功能如何工作？</h5></div>
+    <div class="panel-body">
+        Sing-box 提供强大的路由系统，允许用户基于 IP、域名、GEO 数据库、进程名等条件精细分流。配置完成后，程序自动匹配规则，将不同流量转发到对应的出口。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekoray 能否同时运行多个代理？</h5></div>
+    <div class="panel-body">
+        Nekoray 支持多配置运行。用户可在“多配置模式”下同时开启不同协议或节点的代理，程序会自动创建多个监听端口，方便多应用或分流测试使用。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mihomo 节点分组如何保证低延迟访问？</h5></div>
+    <div class="panel-body">
+        将节点按延迟、地区或用途分组，并启用策略组，系统会根据节点健康和延迟自动选择最佳节点。保证网页浏览、视频播放和游戏流量的低延迟稳定连接。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 策略组如何实现节点优先级切换？</h5></div>
+    <div class="panel-body">
+        用户可以在 Clash 策略组中设置节点优先级，结合规则文件自动选择延迟低、稳定性高的节点处理流量。优化网页浏览、视频播放和游戏访问速度，提高整体网络效率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 的协议插件与加密方式如何搭配使用？</h5></div>
+    <div class="panel-body">
+        协议插件可增强抗封锁能力，加密方式确保数据安全。合理搭配可模拟正常流量特征，同时保障传输安全，有助于在封锁严格环境下维持节点可用性和稳定连接。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -244,16 +243,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-4-12-shadowrocket-node.htm" title="「4月12日」最高速度22.8M/S，2025年SSR节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点每天更新免费订阅源地址">「4月12日」最高速度22.8M/S，2025年SSR节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点每天更新免费订阅源地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-22-node-share.htm" title="「4月22日」最高速度22.4M/S，2025年Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Trojan节点每天更新免费订阅源地址">「4月22日」最高速度22.4M/S，2025年Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Trojan节点每天更新免费订阅源地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-28-free-node-subscribe-links.htm" title="「4月28日」最高速度21.9M/S，2025年V2ray节点/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点每天更新免费订阅源地址">「4月28日」最高速度21.9M/S，2025年V2ray节点/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点每天更新免费订阅源地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-29-free-clash-subscribe.htm" title="「4月29日」最高速度20M/S，2025年Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点每天更新免费订阅源地址">「4月29日」最高速度20M/S，2025年Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点每天更新免费订阅源地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-1-free-v2ray.htm" title="「5月1日」最高速度22M/S，2025年Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点/SSR节点/Clash节点每天更新免费订阅源地址">「5月1日」最高速度22M/S，2025年Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点/SSR节点/Clash节点每天更新免费订阅源地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-24-free-v2ray-subscribe.htm" title="「4月24日」最高速度18.4M/S，2025年Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Clash节点每天更新免费订阅源地址">「4月24日」最高速度18.4M/S，2025年Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Clash节点每天更新免费订阅源地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-5-2-free-clash-subscribe.htm" title="「5月2日」最高速度21.5M/S，2025年V2ray节点/Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点每天更新免费订阅源地址">「5月2日」最高速度21.5M/S，2025年V2ray节点/Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点每天更新免费订阅源地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-15-node-share.htm" title="「4月15日」最高速度18.5M/S，2025年Clash节点/V2ray节点/Singbox节点/Trojan节点/SSR节点/Shadowrocket节点每天更新免费订阅源地址">「4月15日」最高速度18.5M/S，2025年Clash节点/V2ray节点/Singbox节点/Trojan节点/SSR节点/Shadowrocket节点每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-3-free-clash.htm" title="「5月3日」最高速度19.5M/S，2025年Trojan节点/V2ray节点/Clash节点/Singbox节点/SSR节点/Shadowrocket节点每天更新免费订阅源地址">「5月3日」最高速度19.5M/S，2025年Trojan节点/V2ray节点/Clash节点/Singbox节点/SSR节点/Shadowrocket节点每天更新免费订阅源地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-4-30-clash-node-daily-updates.htm" title="「4月30日」最高速度22.6M/S，2025年Shadowrocket节点/Trojan节点/Singbox节点/Clash节点/SSR节点/V2ray节点每天更新免费订阅源地址">「4月30日」最高速度22.6M/S，2025年Shadowrocket节点/Trojan节点/Singbox节点/Clash节点/SSR节点/V2ray节点每天更新免费订阅源地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-14-free-v2ray-subscribe.htm" title="「4月14日」最高速度20.9M/S，2025年SSR节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点每天更新免费订阅源地址">「4月14日」最高速度20.9M/S，2025年SSR节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-19-free-clash-subscribe.htm" title="「4月19日」最高速度21M/S，2025年Clash节点/Singbox节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点每天更新免费订阅源地址">「4月19日」最高速度21M/S，2025年Clash节点/Singbox节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-15-node-share.htm" title="「4月15日」最高速度18.5M/S，2025年Clash节点/V2ray节点/Singbox节点/Trojan节点/SSR节点/Shadowrocket节点每天更新免费订阅源地址">「4月15日」最高速度18.5M/S，2025年Clash节点/V2ray节点/Singbox节点/Trojan节点/SSR节点/Shadowrocket节点每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-9-clash-windows.htm" title="「5月9日」最高速度22.5M/S，2025年SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点/Clash节点每天更新免费订阅源地址">「5月9日」最高速度22.5M/S，2025年SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点/Clash节点每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-13-free-ssr-node.htm" title="「4月13日」最高速度21.3M/S，2025年Singbox节点/V2ray节点/Clash节点/SSR节点/Trojan节点/Shadowrocket节点每天更新免费订阅源地址">「4月13日」最高速度21.3M/S，2025年Singbox节点/V2ray节点/Clash节点/SSR节点/Trojan节点/Shadowrocket节点每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-18-free-shadowrocket-node.htm" title="「4月18日」最高速度20.5M/S，2025年V2ray节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点/Clash节点每天更新免费订阅源地址">「4月18日」最高速度20.5M/S，2025年V2ray节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点/Clash节点每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-8-free-node-subscribe-links.htm" title="「5月8日」最高速度22.6M/S，2025年SSR节点/Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点每天更新免费订阅源地址">「5月8日」最高速度22.6M/S，2025年SSR节点/Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-12-shadowrocket-node.htm" title="「4月12日」最高速度22.8M/S，2025年SSR节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点每天更新免费订阅源地址">「4月12日」最高速度22.8M/S，2025年SSR节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点每天更新免费订阅源地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-21-free-clash-subscribe.htm" title="「4月21日」最高速度19.7M/S，2025年Singbox节点/Trojan节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点每天更新免费订阅源地址">「4月21日」最高速度19.7M/S，2025年Singbox节点/Trojan节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点每天更新免费订阅源地址</a></li>
                     </ul>
     </div>
 </div>
@@ -265,10 +264,10 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">2</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
+                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">22</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
+                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
             </li>
                     </ul>
     </div>
